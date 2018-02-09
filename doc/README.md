@@ -54,6 +54,39 @@
 
 ## size
 
-## changeStatus
+````code
+{
+    title: '基础使用',
+    desc: '**通过改变包裹的div的`width`和`font-size`来自适应大小**',
+    html: '<div id="size-demo" ></div>',
+    js: './size.demo.js',
+    source: './Size.js',
+    open: true
+}
+````
+
+## change
+
+````code
+{
+    title: '基础使用',
+    desc: '**改变数据**',
+    html: '<div id="change-demo" ></div>',
+    js: './change.demo.js',
+    source: './Change.js',
+    open: true
+}
+````
 
 ## costom
+
+````code
+{
+    title: '基础使用',
+    desc: '**这里尝试下各种属性改变吧 ( 表单没做校验,请手下留情测试 ) **',
+    html: '<div id="costom-demo" ></div>',
+    js: './costom.demo.js',
+    source: './Costom.js',
+    open: false
+}
+````

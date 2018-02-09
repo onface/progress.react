@@ -57,10 +57,10 @@
     <table style="width:100%;" data-comments="In order to github typesetting so use the table tag" >
         <tr>
             <td align="center" >
-                <a class="face-one-feature-item" href="https://github.com/onface">
-                    <img src="https://github.com/onface.png" width="150 height="150" alt="" class="face-one-feature-item-avatar">
+                <a class="face-one-feature-item" href="https://github.com/Grifree">
+                    <img src="https://github.com/Grifree.png" width="150 height="150" alt="" class="face-one-feature-item-avatar">
                     <br />
-                    <div class="face-one-feature-item-label">onface</div>
+                    <div class="face-one-feature-item-label">Grifree</div>
                 </a>
             </td>
         </tr>

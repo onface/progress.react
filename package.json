@@ -15,7 +15,7 @@
         "test": "./node_modules/karma/bin/karma start ./compile/karma.conf.js --browsers Chrome",
         "test:ci": "./node_modules/karma/bin/karma start ./compile/karma.ci.js"
     },
-    "$username": "onface",
+    "$username": "Grifree",
     "$repository": "progress.react",
     "dependencies": {
         "classnames": "^2.2.5",

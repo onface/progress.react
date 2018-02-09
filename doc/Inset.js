@@ -1,6 +1,5 @@
 var React = require('react')
 var Progress = require('progress.react')
-var { ProgressGroup } = Progress
 class Inset extends React.Component {
     render () {
         return (

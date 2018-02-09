@@ -1,6 +1,5 @@
 var React = require('react')
 var Progress = require('progress.react')
-var { ProgressGroup } = Progress
 class Inset extends React.Component {
     render () {
         return (
@@ -17,6 +16,12 @@ class Inset extends React.Component {
                 />
                 <Progress type={'circle'} percent={100} status={'success'} />
                 <Progress type={'circle'} percent={120} />
+                <Progress
+                    type={'circle'}
+                    percent={80}
+                    dashboard={true}
+                    info={()=>{ return (<b>仪表盘</b>) }}
+                />
             </div>
         )
     }
