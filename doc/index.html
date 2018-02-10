@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="theme/face/face.css">
+<meta name="keywords" content="">
+<meta name="description" content="文档">
+<title>文档</title>
+</head>
+<body>
+<div class="face-one-head">
+    <a class="face-one-head-logo" href="../index.html">
+        <img src="theme/media/logo.svg" alt="" class="face-one-head-logo-photo" />
+        face
+    </a>
+    <span class="face-one-head-slogan">
+        Write less code, do more things!
+    </span>
+    <!-- <div class="face-one-head-search">
+        <span class="face-one-head-search-icon fi fi-search"></span>
+        <input type="text" class="face-one-head-search-input" placeholder="搜索..." />
+    </div> -->
+    <div class="face-one-head-nav">
+        <span class="face-one-head-nav-switch fi fi-bars"></span>
+        <div class="face-one-head-nav-F-cnt">
+            <a href="../index.html" class="face-one-head-nav-link">首页</a>
+            <a href="intro.html" class="face-one-head-nav-link">指引</a>
+            <a href="index.html" class="face-one-head-nav-link">示例</a>
+            <a href="API.html" class="face-one-head-nav-link">API</a>
+        </div>
+        <script>
+        Array.from(document.querySelectorAll('.face-one-head-nav-link')).forEach(function (node) {
+            if (node.href) {
+                var pathname = node.href.replace(/\?.*/, '')
+                if (pathname === location.origin + location.pathname) {
+                    node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-head-nav-link--on')
+                }
+            }
+        })
+        </script>
+    </div>
+</div>
+
+<div class="face-one-layout">
+<div class="face-one-layout-F-line">
+<div class="face-one-layout-sidebar">
+<div class="face-one-nav">
+<span class="face-one-nav-switch fi fi-angle-double-right"></span>
+<div class="face-one-nav-F-inner">
+<div class="face-one-nav-item">
+    <a href="intro.html" class="face-one-nav-item-label">指引</a>
+</div>
+<div class="face-one-nav-item">
+    <a href="index.html" class="face-one-nav-item-label">示例</a>
+</div>
+<!-- face-one-nav-item--group-on 控制默认展开 -->
+<div class="face-one-nav-item face-one-nav-item--group face-one-nav-item--group-on">
+    <span class="face-one-nav-item-switch fi fi-angle-down"></span>
+    <span class="face-one-nav-item-label">
+        API
+    </span>
+    <div class="face-one-nav-item-group">
+        <a href="API.html#Progress" class="face-one-nav-item-group-item">Progress</a>
+        <a href="API.html#ProgressGroup" class="face-one-nav-item-group-item">ProgressGroup</a>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+<div class="face-one-layout-cnt">
+<div id="face-one-cnt" class="face-one-cnt markdown-body">
+<div id="face-one-sidebar" class="face-one-sidebar"></div>
+<h1 id="文档" ><a class="markrun-anchor" href="../Users/guyifei/Documents/github/progress.react/#文档"><span class="markrun-anchor-link"></span></a>文档</h1><h2 id="basic" ><a class="markrun-anchor" href="../Users/guyifei/Documents/github/progress.react/#basic"><span class="markrun-anchor-link"></span></a>basic</h2>
+    <div class="face-one-code  face-one-code--open  face-one-code--horiz">
+                        <div class="face-one-code-F-view">
+                            <div class="face-one-code-example">
+                                <div id="basic-demo" ></div>
+                            </div>
+                            <div class="face-one-code-info">
+                                <div class="face-one-code-info-title">基础使用</div>
+                                <div class="face-one-code-info-desc">
+                                    <p><strong>线形进度条</strong></p>
+                                </div>
+                                <span class="face-one-code-info-switchCode fi fi-angle-double-down"></span>
+                            </div>
+                        </div>
+                        <div class="face-one-code-source">
+                            <div class="face-one-code-source-tool">
+                                <span class="face-one-code-source-tool-copy fi fi-files-o"></span>
+                            </div>
+                            <pre><code class="lang-js"><span class="xml">var React = require('react')
+var Progress = require('progress.react')
+class Basic extends React.Component {
+    render () {
+        return (
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"basicDemo"</span>
+                <span class="hljs-attr">style</span>=</span></span><span class="hljs-template-variable">{{width:'300px',fontSize:'16px'}}</span><span class="xml"><span class="hljs-tag"> 
+            &gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">Progress</span> <span class="hljs-attr">percent</span>=<span class="hljs-string">{0}</span> /&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">Progress</span> <span class="hljs-attr">percent</span>=<span class="hljs-string">{6.2345}</span> <span class="hljs-attr">accuracy</span>=<span class="hljs-string">{2}/</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">Progress</span> <span class="hljs-attr">percent</span>=<span class="hljs-string">{20}</span> <span class="hljs-attr">barColor</span>=<span class="hljs-string">{</span>'<span class="hljs-attr">red</span>'} /&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">Progress</span> <span class="hljs-attr">percent</span>=<span class="hljs-string">{40}</span> <span class="hljs-attr">active</span>=<span class="hljs-string">{true}</span> /&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">Progress</span> <span class="hljs-attr">percent</span>=<span class="hljs-string">{60}</span> <span class="hljs-attr">info</span>=<span class="hljs-string">{false}</span> /&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">Progress</span>
+                    <span class="hljs-attr">percent</span>=<span class="hljs-string">{80}</span>
+                    <span class="hljs-attr">status</span>=<span class="hljs-string">{</span>'<span class="hljs-attr">error</span>'} 
+                    <span class="hljs-attr">info</span>=<span class="hljs-string">{function(percent){</span>
+                        <span class="hljs-attr">return</span> (&lt;<span class="hljs-attr">span</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"fi fi-times-circle"</span>&gt;</span> 失败<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>)
+                    }}
+                /&gt;
+                <span class="hljs-tag">&lt;<span class="hljs-name">Progress</span> <span class="hljs-attr">percent</span>=<span class="hljs-string">{100}</span> <span class="hljs-attr">status</span>=<span class="hljs-string">{</span>'<span class="hljs-attr">success</span>'} /&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">Progress</span> <span class="hljs-attr">percent</span>=<span class="hljs-string">{120}</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        )
+    }
+}
+
+module.exports = Basic</span>
+</code></pre>
+                        </div>
+                        
+                    </div>
+                                
+<h2 id="inset" ><a class="markrun-anchor" href="../Users/guyifei/Documents/github/progress.react/#inset"><span class="markrun-anchor-link"></span></a>inset</h2>
+    <div class="face-one-code  face-one-code--open  face-one-code--horiz">
+                        <div class="face-one-code-F-view">
+                            <div class="face-one-code-example">
+                                <div id="inset-demo" ></div>
+                            </div>
+                            <div class="face-one-code-info">
+                                <div class="face-one-code-info-title">基础使用</div>
+                                <div class="face-one-code-info-desc">
+                                    <p><strong>线形进度条 — 内显</strong></p>
+                                </div>
+                                <span class="face-one-code-info-switchCode fi fi-angle-double-down"></span>
+                            </div>
+                        </div>
+                        <div class="face-one-code-source">
+                            <div class="face-one-code-source-tool">
+                                <span class="face-one-code-source-tool-copy fi fi-files-o"></span>
+                            </div>
+                            <pre><code class="lang-js"><span class="hljs-keyword">var</span> <span class="hljs-type">React</span> = require(<span class="hljs-symbol">'reac</span>t')
+<span class="hljs-keyword">var</span> <span class="hljs-type">Progress</span> = require(<span class="hljs-symbol">'progress</span>.react')
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Inset</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+    render () {
+        <span class="hljs-keyword">return</span> (
+            &lt;div className=<span class="hljs-string">"insetDemo"</span>
+                style={{width:<span class="hljs-symbol">'300p</span>x',fontSize:<span class="hljs-symbol">'16p</span>x'}} 
+            &gt;
+                &lt;<span class="hljs-type">Progress</span> <span class="hljs-class"><span class="hljs-keyword">type</span></span>={<span class="hljs-symbol">'inse</span>t'} insetText={<span class="hljs-literal">true</span>} percent={<span class="hljs-number">20</span>} /&gt; &lt;br/&gt;
+                &lt;<span class="hljs-type">Progress</span> <span class="hljs-class"><span class="hljs-keyword">type</span></span>={<span class="hljs-symbol">'inse</span>t'} insetText={<span class="hljs-literal">true</span>} percent={<span class="hljs-number">40</span>} active={<span class="hljs-literal">true</span>} /&gt; &lt;br/&gt;
+                &lt;<span class="hljs-type">Progress</span> <span class="hljs-class"><span class="hljs-keyword">type</span></span>={<span class="hljs-symbol">'inse</span>t'} insetText={<span class="hljs-literal">true</span>} percent={<span class="hljs-number">60</span>} info={<span class="hljs-literal">false</span>} /&gt; &lt;br/&gt;
+                &lt;<span class="hljs-type">Progress</span> <span class="hljs-class"><span class="hljs-keyword">type</span></span>={<span class="hljs-symbol">'inse</span>t'} insetText={<span class="hljs-literal">true</span>} percent={<span class="hljs-number">80</span>} status={<span class="hljs-symbol">'erro</span>r'} 
+                    info={function(percent){
+                        <span class="hljs-keyword">return</span> (&lt;span className=<span class="hljs-string">"fi fi-times-circle"</span>&gt; 失败&lt;/span&gt;)
+                    }}
+                /&gt; &lt;br/&gt;
+                &lt;<span class="hljs-type">Progress</span> <span class="hljs-class"><span class="hljs-keyword">type</span></span>={<span class="hljs-symbol">'inse</span>t'} percent={<span class="hljs-number">100</span>} status={<span class="hljs-symbol">'succes</span>s'} 
+                    insetText={function(percent){
+                        <span class="hljs-keyword">return</span> (&lt;span className=<span class="hljs-string">"fi fi-check-circle"</span>&gt;&lt;/span&gt;)
+                    }}
+                /&gt; &lt;br/&gt;
+                &lt;<span class="hljs-type">Progress</span> <span class="hljs-class"><span class="hljs-keyword">type</span></span>={<span class="hljs-symbol">'inse</span>t'} percent={<span class="hljs-number">85.24564</span>} accuracy={<span class="hljs-number">2</span>}
+                    insetText={function(percent){
+                        <span class="hljs-keyword">return</span> (&lt;span&gt;加载中 : {percent}%&lt;/span&gt;)
+                    }}
+                /&gt;
+            &lt;/div&gt;
+        )
+    }
+}
+
+module.exports = <span class="hljs-type">Inset</span>
+</code></pre>
+                        </div>
+                        
+                    </div>
+                                
+<h2 id="circle" ><a class="markrun-anchor" href="../Users/guyifei/Documents/github/progress.react/#circle"><span class="markrun-anchor-link"></span></a>circle</h2>
+    <div class="face-one-code  face-one-code--open  face-one-code--horiz">
+                        <div class="face-one-code-F-view">
+                            <div class="face-one-code-example">
+                                <div id="circle-demo" ></div>
+                            </div>
+                            <div class="face-one-code-info">
+                                <div class="face-one-code-info-title">基础使用</div>
+                                <div class="face-one-code-info-desc">
+                                    <p><strong>环形进度条</strong></p>
+                                </div>
+                                <span class="face-one-code-info-switchCode fi fi-angle-double-down"></span>
+                            </div>
+                        </div>
+                        <div class="face-one-code-source">
+                            <div class="face-one-code-source-tool">
+                                <span class="face-one-code-source-tool-copy fi fi-files-o"></span>
+                            </div>
+                            <pre><code class="lang-js"><span class="hljs-keyword">var</span> <span class="hljs-type">React</span> = require(<span class="hljs-symbol">'reac</span>t')
+<span class="hljs-keyword">var</span> <span class="hljs-type">Progress</span> = require(<span class="hljs-symbol">'progress</span>.react')
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Inset</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+    render () {
+        <span class="hljs-keyword">return</span> (
+            &lt;div className=<span class="hljs-string">"circleDemo"</span>
+                style={{width:<span class="hljs-symbol">'100p</span>x',fontSize:<span class="hljs-symbol">'16p</span>x'}} 
+            &gt;
+                &lt;<span class="hljs-type">Progress</span> <span class="hljs-class"><span class="hljs-keyword">type</span></span>={<span class="hljs-symbol">'circl</span>e'} percent={<span class="hljs-number">0</span>} /&gt;
+                &lt;<span class="hljs-type">Progress</span> <span class="hljs-class"><span class="hljs-keyword">type</span></span>={<span class="hljs-symbol">'circl</span>e'} percent={<span class="hljs-number">40</span>} /&gt;
+                &lt;<span class="hljs-type">Progress</span> <span class="hljs-class"><span class="hljs-keyword">type</span></span>={<span class="hljs-symbol">'circl</span>e'} percent={<span class="hljs-number">60</span>} info={<span class="hljs-literal">false</span>} /&gt;
+                &lt;<span class="hljs-type">Progress</span> <span class="hljs-class"><span class="hljs-keyword">type</span></span>={<span class="hljs-symbol">'circl</span>e'} percent={<span class="hljs-number">80</span>} status={<span class="hljs-symbol">'erro</span>r'} 
+                    info={function(percent){
+                        <span class="hljs-keyword">return</span> (&lt;span className=<span class="hljs-string">"fi fi-times"</span>&gt;&lt;/span&gt;)
+                    }}
+                /&gt;
+                &lt;<span class="hljs-type">Progress</span> <span class="hljs-class"><span class="hljs-keyword">type</span></span>={<span class="hljs-symbol">'circl</span>e'} percent={<span class="hljs-number">100</span>} status={<span class="hljs-symbol">'succes</span>s'} /&gt;
+                &lt;<span class="hljs-type">Progress</span> <span class="hljs-class"><span class="hljs-keyword">type</span></span>={<span class="hljs-symbol">'circl</span>e'} percent={<span class="hljs-number">120</span>} /&gt;
+                &lt;<span class="hljs-type">Progress</span>
+                    <span class="hljs-class"><span class="hljs-keyword">type</span></span>={<span class="hljs-symbol">'circl</span>e'}
+                    percent={<span class="hljs-number">80</span>}
+                    dashboard={<span class="hljs-literal">true</span>}
+                    info={()=&gt;{ <span class="hljs-keyword">return</span> (&lt;b&gt;仪表盘&lt;/b&gt;) }}
+                /&gt;
+            &lt;/div&gt;
+        )
+    }
+}
+
+module.exports = <span class="hljs-type">Inset</span>
+</code></pre>
+                        </div>
+                        
+                    </div>
+                                
+<h2 id="size" ><a class="markrun-anchor" href="../Users/guyifei/Documents/github/progress.react/#size"><span class="markrun-anchor-link"></span></a>size</h2>
+    <div class="face-one-code  face-one-code--open  face-one-code--horiz">
+                        <div class="face-one-code-F-view">
+                            <div class="face-one-code-example">
+                                <div id="size-demo" ></div>
+                            </div>
+                            <div class="face-one-code-info">
+                                <div class="face-one-code-info-title">基础使用</div>
+                                <div class="face-one-code-info-desc">
+                                    <p><strong>通过改变包裹的div的<code>width</code>和<code>font-size</code>来自适应大小</strong></p>
+                                </div>
+                                <span class="face-one-code-info-switchCode fi fi-angle-double-down"></span>
+                            </div>
+                        </div>
+                        <div class="face-one-code-source">
+                            <div class="face-one-code-source-tool">
+                                <span class="face-one-code-source-tool-copy fi fi-files-o"></span>
+                            </div>
+                            <pre><code class="lang-js"><span class="hljs-selector-tag">var</span> React = require(<span class="hljs-string">'react'</span>)
+<span class="hljs-selector-tag">var</span> Progress = require(<span class="hljs-string">'progress.react'</span>)
+class Size extends React<span class="hljs-selector-class">.Component</span> {
+    render () {
+        return (
+            &lt;<span class="hljs-selector-tag">div</span> className=<span class="hljs-string">"basicDemo"</span>&gt;
+                &lt;<span class="hljs-selector-tag">div</span> style={{<span class="hljs-attribute">width</span>:<span class="hljs-string">'300px'</span>,fontSize:<span class="hljs-string">'16px'</span>}} &gt;
+                    &lt;Progress percent={<span class="hljs-number">80</span>} /&gt;
+                &lt;/div&gt;
+                &lt;<span class="hljs-selector-tag">div</span> style={{<span class="hljs-attribute">width</span>:<span class="hljs-string">'300px'</span>,fontSize:<span class="hljs-string">'32px'</span>}} &gt;
+                    &lt;Progress percent={<span class="hljs-number">80</span>} /&gt;
+                &lt;/div&gt;
+                &lt;<span class="hljs-selector-tag">div</span> style={{<span class="hljs-attribute">width</span>:<span class="hljs-string">'600px'</span>,fontSize:<span class="hljs-string">'32px'</span>}} &gt;
+                    &lt;Progress percent={<span class="hljs-number">80</span>} /&gt;
+                &lt;/div&gt;
+                &lt;hr/&gt;
+                &lt;<span class="hljs-selector-tag">div</span> style={{<span class="hljs-attribute">width</span>:<span class="hljs-string">'100px'</span>,fontSize:<span class="hljs-string">'16px'</span>}} &gt;
+                    &lt;Progress percent={<span class="hljs-number">80</span>} type={<span class="hljs-string">'circle'</span>} /&gt;
+                &lt;/div&gt;
+                &lt;<span class="hljs-selector-tag">div</span> style={{<span class="hljs-attribute">width</span>:<span class="hljs-string">'100px'</span>,fontSize:<span class="hljs-string">'32px'</span>}} &gt;
+                    &lt;Progress percent={<span class="hljs-number">80</span>} type={<span class="hljs-string">'circle'</span>} /&gt;
+                &lt;/div&gt;
+                &lt;<span class="hljs-selector-tag">div</span> style={{<span class="hljs-attribute">width</span>:<span class="hljs-string">'200px'</span>,fontSize:<span class="hljs-string">'32px'</span>}} &gt;
+                    &lt;Progress percent={<span class="hljs-number">80</span>} type={<span class="hljs-string">'circle'</span>} /&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        )
+    }
+}
+
+module<span class="hljs-selector-class">.exports</span> = Size
+</code></pre>
+                        </div>
+                        
+                    </div>
+                                
+<h2 id="change" ><a class="markrun-anchor" href="../Users/guyifei/Documents/github/progress.react/#change"><span class="markrun-anchor-link"></span></a>change</h2>
+    <div class="face-one-code  face-one-code--open  face-one-code--horiz">
+                        <div class="face-one-code-F-view">
+                            <div class="face-one-code-example">
+                                <div id="change-demo" ></div>
+                            </div>
+                            <div class="face-one-code-info">
+                                <div class="face-one-code-info-title">基础使用</div>
+                                <div class="face-one-code-info-desc">
+                                    <p><strong>改变数据</strong></p>
+                                </div>
+                                <span class="face-one-code-info-switchCode fi fi-angle-double-down"></span>
+                            </div>
+                        </div>
+                        <div class="face-one-code-source">
+                            <div class="face-one-code-source-tool">
+                                <span class="face-one-code-source-tool-copy fi fi-files-o"></span>
+                            </div>
+                            <pre><code class="lang-js">var React = require('react')
+var Progress = require('progress.react')
+class <span class="hljs-keyword">Change</span> extends React.Component {
+    <span class="hljs-keyword">constructor</span>(props){
+        super(props)
+        this.state = {
+            <span class="hljs-keyword">percent</span> : <span class="hljs-number">0</span>
+        }
+    }
+    render () {
+        let <span class="hljs-keyword">self</span> = this
+
+        <span class="hljs-keyword">return</span> (
+            &lt;<span class="hljs-keyword">div</span> className=<span class="hljs-string">"changeDemo"</span> &gt;
+                &lt;<span class="hljs-keyword">div</span> <span class="hljs-keyword">style</span>={{width:<span class="hljs-string">'300px'</span>,fontSize:<span class="hljs-string">'16px'</span>}} &gt;
+                    &lt;Progress 
+                        <span class="hljs-keyword">percent</span>={self.state.percent}
+                        <span class="hljs-keyword">status</span>={self.state.percent == <span class="hljs-number">100</span> ? <span class="hljs-string">'success'</span> : <span class="hljs-string">'default'</span>}
+                        info={(<span class="hljs-keyword">value</span>)=&gt;{
+                            <span class="hljs-keyword">if</span>(self.state.percent == <span class="hljs-number">100</span>){
+                                <span class="hljs-keyword">return</span> (&lt;span className=<span class="hljs-string">"fi fi-check-circle"</span>&gt;&lt;/span&gt;)
+                            }<span class="hljs-keyword">else</span>{
+                                <span class="hljs-keyword">return</span> (&lt;i&gt;{<span class="hljs-keyword">value</span>}%&lt;/i&gt;)
+                            }
+                        }}
+                    /&gt;
+                &lt;/<span class="hljs-keyword">div</span>&gt;
+                &lt;<span class="hljs-keyword">div</span> <span class="hljs-keyword">style</span>={{width:<span class="hljs-string">'100px'</span>,fontSize:<span class="hljs-string">'16px'</span>}} &gt;
+                    &lt;Progress <span class="hljs-keyword">percent</span>={self.state.percent} <span class="hljs-keyword">type</span>=<span class="hljs-string">"circle"</span>/&gt;
+                    &lt;Progress <span class="hljs-keyword">percent</span>={self.state.percent} <span class="hljs-keyword">type</span>=<span class="hljs-string">"circle"</span> dashboard={<span class="hljs-literal">true</span>} /&gt;
+                &lt;/<span class="hljs-keyword">div</span>&gt;
+                &lt;button
+                    onClick={<span class="hljs-keyword">function</span>(){
+                        let <span class="hljs-keyword">percent</span> = self.state.percent
+                        self.setState({
+                            <span class="hljs-keyword">percent</span> : <span class="hljs-keyword">percent</span> + <span class="hljs-number">20</span> &gt; <span class="hljs-number">100</span> ? <span class="hljs-number">100</span> : <span class="hljs-keyword">percent</span> + <span class="hljs-number">20</span>
+                        })
+                    }}
+                &gt;+&lt;/button&gt;
+                &lt;button
+                    onClick={<span class="hljs-keyword">function</span>(){
+                        let <span class="hljs-keyword">percent</span> = self.state.percent
+                        self.setState({
+                            <span class="hljs-keyword">percent</span> : <span class="hljs-keyword">percent</span> - <span class="hljs-number">20</span> &lt; <span class="hljs-number">0</span> ? <span class="hljs-number">0</span> : <span class="hljs-keyword">percent</span> - <span class="hljs-number">20</span>
+                        })
+                    }}
+                &gt;-&lt;/button&gt;
+            &lt;/<span class="hljs-keyword">div</span>&gt;
+        )
+    }
+}
+
+module.exports = <span class="hljs-keyword">Change</span>
+</code></pre>
+                        </div>
+                        
+                    </div>
+                                
+<h2 id="costom" ><a class="markrun-anchor" href="../Users/guyifei/Documents/github/progress.react/#costom"><span class="markrun-anchor-link"></span></a>costom</h2>
+    <div class="face-one-code  ">
+                        <div class="face-one-code-F-view">
+                            <div class="face-one-code-example">
+                                <div id="costom-demo" ></div>
+                            </div>
+                            <div class="face-one-code-info">
+                                <div class="face-one-code-info-title">Progress</div>
+                                <div class="face-one-code-info-desc">
+                                    <p><strong>这里尝试下各种属性改变吧 ( 表单没做校验,请手下留情测试 ) </strong></p>
+                                </div>
+                                <span class="face-one-code-info-switchCode fi fi-code"></span>
+                            </div>
+                        </div>
+                        <div class="face-one-code-source">
+                            <div class="face-one-code-source-tool">
+                                <span class="face-one-code-source-tool-copy fi fi-files-o"></span>
+                            </div>
+                            <pre><code class="lang-js">var React = require('react')
+var Progress = require('progress.react')
+class Costom extends React.Component {
+    constructor(props){
+        super(props)
+        this.<span class="hljs-keyword">state</span> = {
+            accuracy: <span class="hljs-number">0</span> ,
+            percent: <span class="hljs-number">80.00</span> ,
+            info: true ,
+            active: false ,
+            type:'line' ,
+            status:'<span class="hljs-keyword">default</span>' ,
+            barColor:'',
+            insetText: false,
+            dashboard:false
+        }
+    }
+    change = (key, value) =&gt; {
+        this.<span class="hljs-built_in">set</span>State({
+            [key] : value
+        })
+    }
+    render () {
+        let <span class="hljs-literal">self</span> = this
+        let <span class="hljs-keyword">state</span> = <span class="hljs-literal">self</span>.<span class="hljs-keyword">state</span>
+        return (
+            <span class="hljs-variable">&lt;div className="costomDemo"&gt;</span>
+                type&amp;nbsp;:&amp;nbsp;
+                <span class="hljs-variable">&lt;select value={state.type} onChange={(e)=&gt;</span>{ <span class="hljs-literal">self</span>.change('type',e.target.value) }}&gt;
+                    <span class="hljs-variable">&lt;option&gt;</span>line&lt;/option&gt;
+                    <span class="hljs-variable">&lt;option&gt;</span>inset&lt;/option&gt;
+                    <span class="hljs-variable">&lt;option&gt;</span>circle&lt;/option&gt;
+                &lt;/select&gt;&amp;ensp;
+                status&amp;nbsp;:&amp;nbsp;
+                <span class="hljs-variable">&lt;select value={state.status} onChange={(e)=&gt;</span>{ <span class="hljs-literal">self</span>.change('status',e.target.value) }}&gt;
+                    <span class="hljs-variable">&lt;option&gt;</span>default&lt;/option&gt;
+                    <span class="hljs-variable">&lt;option&gt;</span>success&lt;/option&gt;
+                    <span class="hljs-variable">&lt;option&gt;</span>error&lt;/option&gt;
+                &lt;/select&gt;&amp;ensp;
+                percent&amp;nbsp;:&amp;nbsp;
+                <span class="hljs-variable">&lt;input
+                    style={{width:'100px'}}
+                    value={state.percent}
+                    type="number"
+                    step={0.1}
+                    min={0}
+                    max={100}
+                    onChange={(e)=&gt;</span>{
+                        <span class="hljs-literal">self</span>.change('percent',parseFloat(e.target.value))
+                    }}
+                /&gt;&amp;ensp;
+                accuracy&amp;nbsp;:&amp;nbsp;
+                <span class="hljs-variable">&lt;input
+                    value={state.accuracy}
+                    type="number"
+                    min={0}
+                    max={10}
+                    onChange={(e)=&gt;</span>{
+                        <span class="hljs-literal">self</span>.change('accuracy',parseInt(e.target.value))
+                    }}
+                /&gt;&amp;ensp;
+                active&amp;nbsp;:&amp;nbsp;
+                <span class="hljs-variable">&lt;input checked={state.active} type="checkbox" onChange={(e)=&gt;</span>{ <span class="hljs-literal">self</span>.change('active',!<span class="hljs-keyword">state</span>.active) }} /&gt;&amp;ensp;  
+                info&amp;nbsp;:&amp;nbsp;
+                <span class="hljs-variable">&lt;input checked={state.info} type="checkbox" onChange={(e)=&gt;</span>{ <span class="hljs-literal">self</span>.change('info',!<span class="hljs-keyword">state</span>.info) }} /&gt;&amp;ensp;
+                insetText&amp;nbsp;:&amp;nbsp;
+                <span class="hljs-variable">&lt;input checked={state.insetText} type="checkbox" onChange={(e)=&gt;</span>{ <span class="hljs-literal">self</span>.change('insetText',!<span class="hljs-keyword">state</span>.insetText) }} /&gt;&amp;ensp;
+                barColor&amp;nbsp;:&amp;nbsp;
+                <span class="hljs-variable">&lt;input
+                    style={{width:'150px'}}
+                    value={state.barColor}
+                    onChange={(e)=&gt;</span>{
+                        <span class="hljs-literal">self</span>.change('barColor',e.target.value)
+                    }}
+                /&gt;&amp;ensp;
+                dashboard&amp;nbsp;:&amp;nbsp;
+                <span class="hljs-variable">&lt;input checked={state.dashboard} type="checkbox" onChange={(e)=&gt;</span>{ <span class="hljs-literal">self</span>.change('dashboard',!<span class="hljs-keyword">state</span>.dashboard) }} /&gt;&amp;ensp;
+                <span class="hljs-variable">&lt;br/&gt;</span><span class="hljs-variable">&lt;br/&gt;</span>
+                <span class="hljs-variable">&lt;div style={{width:'300px',fontSize:'16px'}} &gt;</span>
+                    <span class="hljs-variable">&lt;Progress {...state} /&gt;</span>
+                &lt;/div&gt;
+            &lt;/div&gt;
+        )
+    }
+}
+
+module.exports = Costom
+</code></pre>
+                        </div>
+                        
+                    </div>
+                                
+<h2 id="group" ><a class="markrun-anchor" href="../Users/guyifei/Documents/github/progress.react/#group"><span class="markrun-anchor-link"></span></a>group</h2>
+    <div class="face-one-code  face-one-code--open ">
+                        <div class="face-one-code-F-view">
+                            <div class="face-one-code-example">
+                                <div id="group-demo" ></div>
+                            </div>
+                            <div class="face-one-code-info">
+                                <div class="face-one-code-info-title">基础使用</div>
+                                <div class="face-one-code-info-desc">
+                                    <p><strong>多进度条叠加</strong></p>
+                                </div>
+                                <span class="face-one-code-info-switchCode fi fi-code"></span>
+                            </div>
+                        </div>
+                        <div class="face-one-code-source">
+                            <div class="face-one-code-source-tool">
+                                <span class="face-one-code-source-tool-copy fi fi-files-o"></span>
+                            </div>
+                            <pre><code class="lang-js"><span class="hljs-keyword">var</span> <span class="hljs-type">React</span> = require(<span class="hljs-symbol">'reac</span>t')
+<span class="hljs-keyword">var</span> <span class="hljs-type">Progress</span> = require(<span class="hljs-symbol">'progress</span>.react')
+<span class="hljs-keyword">var</span> { <span class="hljs-type">ProgressGroup</span> } = <span class="hljs-type">Progress</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Group</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+    render () {
+        <span class="hljs-keyword">return</span> (
+            &lt;div className=<span class="hljs-string">"groupDemo"</span>
+                style={{width:<span class="hljs-symbol">'300p</span>x',fontSize:<span class="hljs-symbol">'16p</span>x'}} 
+            &gt;
+                &lt;<span class="hljs-type">ProgressGroup</span> percent={[<span class="hljs-number">20</span>]} info={<span class="hljs-literal">false</span>} /&gt;
+                &lt;h5&gt;status&lt;/h5&gt;
+                &lt;<span class="hljs-type">ProgressGroup</span> percent={[<span class="hljs-number">90</span>,<span class="hljs-number">20</span>,<span class="hljs-number">10</span>]} /&gt;
+                &lt;<span class="hljs-type">ProgressGroup</span> percent={[<span class="hljs-number">90</span>,<span class="hljs-number">20</span>,<span class="hljs-number">10</span>]} status={<span class="hljs-symbol">'succes</span>s'} /&gt;
+                &lt;<span class="hljs-type">ProgressGroup</span> percent={[<span class="hljs-number">90</span>,<span class="hljs-number">20</span>,<span class="hljs-number">10</span>]} status={<span class="hljs-symbol">'erro</span>r'} /&gt;
+                &lt;<span class="hljs-type">ProgressGroup</span> percent={[<span class="hljs-number">80</span>,<span class="hljs-number">40</span>]} <span class="hljs-class"><span class="hljs-keyword">type</span></span>={<span class="hljs-symbol">'inse</span>t'} active={<span class="hljs-literal">true</span>} /&gt;
+                &lt;h5&gt;insetText&lt;/h5&gt;
+                &lt;<span class="hljs-type">ProgressGroup</span>
+                    <span class="hljs-class"><span class="hljs-keyword">type</span></span>={<span class="hljs-symbol">'inse</span>t'}
+                    percent={[<span class="hljs-number">80</span>,<span class="hljs-number">60</span>,<span class="hljs-number">40</span>,<span class="hljs-number">20</span>]}
+                    insetText={[<span class="hljs-literal">true</span>]} <span class="hljs-comment">// =&gt; [true,false,false,false]</span>
+                /&gt; &lt;br/&gt;
+                &lt;h5&gt;accuracy&lt;/h5&gt;
+                &lt;<span class="hljs-type">ProgressGroup</span>
+                    <span class="hljs-class"><span class="hljs-keyword">type</span></span>={<span class="hljs-symbol">'inse</span>t'}
+                    percent={[<span class="hljs-number">96.3246</span>,<span class="hljs-number">62.7564</span>,<span class="hljs-number">42.1</span>,<span class="hljs-number">21</span>]}
+                    insetText={[<span class="hljs-literal">true</span>,<span class="hljs-literal">true</span>,<span class="hljs-literal">true</span>,<span class="hljs-literal">true</span>]}
+                    accuracy={<span class="hljs-number">2</span>} <span class="hljs-comment">// =&gt; [2,2,2,2]</span>
+                /&gt; &lt;br/&gt;
+                &lt;<span class="hljs-type">ProgressGroup</span>
+                    <span class="hljs-class"><span class="hljs-keyword">type</span></span>={<span class="hljs-symbol">'inse</span>t'}
+                    percent={[<span class="hljs-number">96.3246</span>,<span class="hljs-number">62.7564</span>,<span class="hljs-number">42.1</span>,<span class="hljs-number">21</span>]}
+                    insetText={[<span class="hljs-literal">true</span>,<span class="hljs-literal">true</span>,<span class="hljs-literal">true</span>,<span class="hljs-literal">true</span>]}
+                    accuracy={[<span class="hljs-number">2</span>]} <span class="hljs-comment">// =&gt; [2,0,0,0]</span>
+                /&gt; &lt;br/&gt;
+                &lt;<span class="hljs-type">ProgressGroup</span>
+                    <span class="hljs-class"><span class="hljs-keyword">type</span></span>={<span class="hljs-symbol">'inse</span>t'}
+                    percent={[<span class="hljs-number">96.3246</span>,<span class="hljs-number">62.7564</span>,<span class="hljs-number">42.1</span>,<span class="hljs-number">21</span>]}
+                    insetText={[<span class="hljs-literal">true</span>,<span class="hljs-literal">true</span>,<span class="hljs-literal">true</span>,<span class="hljs-literal">true</span>]}
+                    accuracy={[<span class="hljs-number">3</span>,<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>]}
+                /&gt;
+                &lt;h5&gt;barColor&lt;/h5&gt;
+                &lt;<span class="hljs-type">ProgressGroup</span> 
+                    percent={[<span class="hljs-number">100</span>,<span class="hljs-number">80</span>,<span class="hljs-number">60</span>,<span class="hljs-number">40</span>,<span class="hljs-number">20</span>]}
+                    barColor={[
+                        <span class="hljs-symbol">'re</span>d',
+                        '#<span class="hljs-number">000</span>',
+                        <span class="hljs-symbol">'rgb</span>(<span class="hljs-number">204</span>,<span class="hljs-number">204</span>,<span class="hljs-number">204</span>)',
+                        <span class="hljs-symbol">'rgba</span>(<span class="hljs-number">230</span>,<span class="hljs-number">25</span>,<span class="hljs-number">224</span>,<span class="hljs-number">0.3</span>)',
+                        <span class="hljs-symbol">'unknowColo</span>r'
+                    ]} <span class="hljs-comment">// =&gt; [红,黑,灰,粉,(错误的颜色将由组件的主色调三个中随机一色替代)]</span>
+                /&gt;
+            &lt;/div&gt;
+        )
+    }
+}
+
+module.exports = <span class="hljs-type">Group</span>
+</code></pre>
+                        </div>
+                        
+                    </div></div>
+</div>
+</div>
+</div>
+<script>
+Array.from(document.querySelectorAll('.face-one-nav-item-label')).forEach(function (node) {
+    if (node.href) {
+        var pathname = node.href.replace(/\?.*/, '')
+        if (pathname === location.origin + location.pathname + location.hash) {
+            node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-nav-item-label--on')
+        }
+    }
+})
+var faceOneGetParent = function faceOneGetParent (el, className) {
+   if (el.parentNode.nodeName.toLowerCase() === 'html') {
+       return null
+   }
+   var parentClassName = el.parentNode.getAttribute('class')
+   var classNames = ''
+   if (parentClassName) {
+       classNames = parentClassName.split(' ')
+   }
+   if (classNames.indexOf(className) !== -1) {
+       return el.parentNode
+   }
+   else {
+       return faceOneGetParent(el.parentNode, className)
+   }
+}
+Array.from(document.querySelectorAll('.face-one-nav-item-group-item')).forEach(function (node) {
+    addAvativeClass(node)
+    function addAvativeClass (node)  {
+        if (node.href) {
+            var pathname = node.href.replace(/\?.*/, '')
+            if (pathname === location.origin + location.pathname + location.hash) {
+                node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-nav-item-group-item--on')
+                var parentNode = faceOneGetParent(node, 'face-one-nav-item--group')
+                if (parentNode) {
+                    parentNode.setAttribute('class', parentNode.getAttribute('class') + ' ' + 'face-one-nav-item--group-on')
+                }
+            }
+        }
+    }
+
+})
+</script>
+<div class="face-one-foot">
+    <div class="face-one-foot-F-inner">
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-github"></span>
+                Github
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/Grifree/progress.react" class="face-one-foot-group-item-link">progress.react</a>
+                - 项目源码
+            </div>
+        </div>
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-link"></span>
+                相关站点
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://onface.github.io/component-spec">component-spec</a>
+                - 组件规范
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/module" class="face-one-foot-group-item-link">module</a>
+                - 开源项目脚手架
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="http://onface.cc/" class="face-one-foot-group-item-link">onface.cc</a>
+                - 资源集合
+            </div>
+        </div>
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-users"></span>
+                社区
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/Grifree/progress.react/issues" class="face-one-foot-group-item-link">Github issues</a>
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/Grifree/progress.react/issues/new" class="face-one-foot-group-item-link">提交bug</a>
+            </div>
+        </div>
+        <div class="face-one-foot-copyright">
+            <a href="../index.html" class="face-one-foot-copyright-title">
+                <img src="theme/media/logo.svg" class="face-one-foot-copyright-title-logo" />
+            </a>
+        </div>
+    </div>
+</div>
+
+<script src="theme/jquery.js"></script>
+<script>delete window.$</script>
+<script src="theme/face/face.js" ></script>
+<script data-markrun-lastrun="true">
+                        document.write('<scri' + 'pt src="./basic.demo.js?v=0.1.0"' + '" ></sc' + 'ript>')
+                        </script><script data-markrun-lastrun="true">
+                        document.write('<scri' + 'pt src="./inset.demo.js?v=0.1.0"' + '" ></sc' + 'ript>')
+                        </script><script data-markrun-lastrun="true">
+                        document.write('<scri' + 'pt src="./circle.demo.js?v=0.1.0"' + '" ></sc' + 'ript>')
+                        </script><script data-markrun-lastrun="true">
+                        document.write('<scri' + 'pt src="./size.demo.js?v=0.1.0"' + '" ></sc' + 'ript>')
+                        </script><script data-markrun-lastrun="true">
+                        document.write('<scri' + 'pt src="./change.demo.js?v=0.1.0"' + '" ></sc' + 'ript>')
+                        </script><script data-markrun-lastrun="true">
+                        document.write('<scri' + 'pt src="./costom.demo.js?v=0.1.0"' + '" ></sc' + 'ript>')
+                        </script><script data-markrun-lastrun="true">
+                        document.write('<scri' + 'pt src="./group.demo.js?v=0.1.0"' + '" ></sc' + 'ript>')
+                        </script></body>
+</html>

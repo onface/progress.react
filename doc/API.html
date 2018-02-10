@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="theme/face/face.css">
+<meta name="keywords" content="">
+<meta name="description" content="API">
+<title>API</title>
+</head>
+<body>
+<div class="face-one-head">
+    <a class="face-one-head-logo" href="../index.html">
+        <img src="theme/media/logo.svg" alt="" class="face-one-head-logo-photo" />
+        face
+    </a>
+    <span class="face-one-head-slogan">
+        Write less code, do more things!
+    </span>
+    <!-- <div class="face-one-head-search">
+        <span class="face-one-head-search-icon fi fi-search"></span>
+        <input type="text" class="face-one-head-search-input" placeholder="搜索..." />
+    </div> -->
+    <div class="face-one-head-nav">
+        <span class="face-one-head-nav-switch fi fi-bars"></span>
+        <div class="face-one-head-nav-F-cnt">
+            <a href="../index.html" class="face-one-head-nav-link">首页</a>
+            <a href="intro.html" class="face-one-head-nav-link">指引</a>
+            <a href="index.html" class="face-one-head-nav-link">示例</a>
+            <a href="API.html" class="face-one-head-nav-link">API</a>
+        </div>
+        <script>
+        Array.from(document.querySelectorAll('.face-one-head-nav-link')).forEach(function (node) {
+            if (node.href) {
+                var pathname = node.href.replace(/\?.*/, '')
+                if (pathname === location.origin + location.pathname) {
+                    node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-head-nav-link--on')
+                }
+            }
+        })
+        </script>
+    </div>
+</div>
+
+<div class="face-one-layout">
+<div class="face-one-layout-F-line">
+<div class="face-one-layout-sidebar">
+<div class="face-one-nav">
+<span class="face-one-nav-switch fi fi-angle-double-right"></span>
+<div class="face-one-nav-F-inner">
+<div class="face-one-nav-item">
+    <a href="intro.html" class="face-one-nav-item-label">指引</a>
+</div>
+<div class="face-one-nav-item">
+    <a href="index.html" class="face-one-nav-item-label">示例</a>
+</div>
+<!-- face-one-nav-item--group-on 控制默认展开 -->
+<div class="face-one-nav-item face-one-nav-item--group face-one-nav-item--group-on">
+    <span class="face-one-nav-item-switch fi fi-angle-down"></span>
+    <span class="face-one-nav-item-label">
+        API
+    </span>
+    <div class="face-one-nav-item-group">
+        <a href="API.html#Progress" class="face-one-nav-item-group-item">Progress</a>
+        <a href="API.html#ProgressGroup" class="face-one-nav-item-group-item">ProgressGroup</a>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+<div class="face-one-layout-cnt">
+<div id="face-one-cnt" class="face-one-cnt markdown-body">
+<div id="face-one-sidebar" class="face-one-sidebar"></div>
+<h1 id="API" ><a class="markrun-anchor" href="../Users/guyifei/Documents/github/progress.react/#API"><span class="markrun-anchor-link"></span></a>API</h1><blockquote>
+<p>详细的介绍了提供的所有接口, 对应的可配置参数, 以及可能的使用示例和说明</p>
+</blockquote>
+<h2 id="Progress" ><a class="markrun-anchor" href="../Users/guyifei/Documents/github/progress.react/#Progress"><span class="markrun-anchor-link"></span></a>Progress</h2>
+    <div class="face-one-code  face-one-code--open ">
+                        <div class="face-one-code-F-view">
+                            <div class="face-one-code-example">
+                                
+                            </div>
+                            <div class="face-one-code-info">
+                                <div class="face-one-code-info-title">props api</div>
+                                <div class="face-one-code-info-desc">
+                                    
+                                </div>
+                                <span class="face-one-code-info-switchCode fi fi-code"></span>
+                            </div>
+                        </div>
+                        <div class="face-one-code-source">
+                            <div class="face-one-code-source-tool">
+                                <span class="face-one-code-source-tool-copy fi fi-files-o"></span>
+                            </div>
+                            <pre><code class="lang-js"><span class="hljs-keyword">import</span> p <span class="hljs-keyword">from</span> <span class="hljs-string">'prop-types'</span>
+<span class="hljs-keyword">var</span> example = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{<span class="hljs-keyword">return</span> <span class="hljs-built_in">arguments</span>;}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">app</span>) </span>{
+    app.defaultProps = {
+        <span class="hljs-attr">prefixClassName</span>: <span class="hljs-string">'face-progress'</span>,
+        <span class="hljs-attr">themes</span>: <span class="hljs-string">''</span>,
+        <span class="hljs-attr">percent</span>: <span class="hljs-number">0</span> , <span class="hljs-comment">// 百分比(不带百分比符号的数字)</span>
+        accuracy: <span class="hljs-number">0</span> , <span class="hljs-comment">// 精确到小数点后几位</span>
+        type:<span class="hljs-string">'line'</span> , <span class="hljs-comment">// 进度条类型</span>
+        status:<span class="hljs-string">'default'</span> , <span class="hljs-comment">// 进度条状态</span>
+        active: <span class="hljs-literal">false</span> , <span class="hljs-comment">// 控制显示激活样式 (环形进度条暂不支持)</span>
+        info: <span class="hljs-literal">true</span> , <span class="hljs-comment">// 控制显示进度条右侧显示内容,或环内显示内容</span>
+        insetText: <span class="hljs-literal">false</span>, <span class="hljs-comment">// 控制进度条内置显示内容 (仅当type:'inset'时此属性生效)</span>
+        barColor:<span class="hljs-string">''</span>, <span class="hljs-comment">// 改变进度条颜色</span>
+        dashboard:<span class="hljs-literal">false</span> <span class="hljs-comment">// 控制是否显示为仪表盘样式 (仅当type:'circle'时此属性生效)</span>
+    }
+    app.propTypes = {
+        <span class="hljs-attr">prefixClassName</span>: p.string,
+        <span class="hljs-attr">themes</span>: p.string ,
+        <span class="hljs-attr">percent</span>: p.number ,
+        <span class="hljs-attr">accuracy</span>: p.number ,
+        <span class="hljs-attr">type</span>: p.string ,
+        <span class="hljs-attr">status</span>: p.string ,
+        <span class="hljs-attr">active</span>: p.bool ,
+        <span class="hljs-attr">info</span>: p.oneOfType([
+            p.bool ,
+            p.func 
+        ]),
+        <span class="hljs-attr">insetText</span>: p.oneOfType([
+            p.bool ,
+            p.func 
+        ]),
+        <span class="hljs-attr">barColor</span>: p.string ,
+        <span class="hljs-attr">dashboard</span>: p.bool ,
+    }
+    app.propExample = {
+        <span class="hljs-attr">percent</span>: example(
+            <span class="hljs-number">20</span>, <span class="hljs-comment">// int</span>
+            <span class="hljs-number">99.99</span>, <span class="hljs-comment">// float</span>
+            <span class="hljs-number">-12</span>, <span class="hljs-comment">// =&gt; 0 会被转化为有效数据0</span>
+            <span class="hljs-number">120</span>, <span class="hljs-comment">// =&gt; 100 会被转化为有效数据100</span>
+        ),
+        <span class="hljs-attr">accuracy</span>: example(
+            <span class="hljs-number">2</span>, <span class="hljs-comment">// 精确到小数后2位</span>
+            <span class="hljs-number">8</span>, <span class="hljs-comment">// 精确到小数后8位, !不建议精确到那么多位数,影响样式不好看</span>
+            <span class="hljs-number">-1</span> <span class="hljs-comment">// 请别这么写,Please!</span>
+        ),
+        <span class="hljs-attr">type</span>: example(
+            <span class="hljs-string">'line'</span>, <span class="hljs-comment">// 横向进度条</span>
+            <span class="hljs-string">'inset'</span>, <span class="hljs-comment">// 横向进度条 - 可显示内置内容</span>
+            <span class="hljs-string">'circle'</span> <span class="hljs-comment">// 环形进度条</span>
+        ),
+        <span class="hljs-attr">status</span>: example(
+            <span class="hljs-string">'default'</span> , <span class="hljs-comment">// 进度条以及进度条右侧或环内显示内容 为 蓝色</span>
+            <span class="hljs-string">'error'</span> , <span class="hljs-comment">// 进度条以及进度条右侧或环内显示内容 为 红色</span>
+            <span class="hljs-string">'success'</span> , <span class="hljs-comment">// 进度条以及进度条右侧或环内显示内容 为 绿色</span>
+        ),
+        <span class="hljs-attr">active</span>: example(
+            <span class="hljs-literal">true</span> ,
+            <span class="hljs-literal">false</span>
+        ),
+        <span class="hljs-attr">info</span>: example(
+            <span class="hljs-literal">false</span> , <span class="hljs-comment">// 不显示</span>
+            <span class="hljs-literal">true</span> , <span class="hljs-comment">// 默认显示百分比</span>
+            <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">percent</span>)</span>{
+                <span class="hljs-keyword">return</span> (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"fi fi-times-circle"</span>&gt;</span> {percent}%<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>)
+            } , <span class="hljs-comment">// 显示函数返回的React.Element</span>
+        ),
+        <span class="hljs-attr">insetText</span>: example(
+            <span class="hljs-literal">true</span> , <span class="hljs-comment">// 默认显示内置内容为百分比</span>
+            <span class="hljs-literal">false</span> , <span class="hljs-comment">// 不显示</span>
+            <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">percent</span>)</span>{
+                <span class="hljs-keyword">return</span> (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"fi fi-times-circle"</span>&gt;</span> {percent}%<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>)
+            } , <span class="hljs-comment">// 显示函数返回的React.Element</span>
+        ),
+        <span class="hljs-attr">barColor</span>: example(
+            <span class="hljs-string">'red'</span>,
+            <span class="hljs-string">'#999'</span>,
+            <span class="hljs-string">'rgb(0,0,0)'</span>,
+            <span class="hljs-string">'rgba(200,200,200,0.3)'</span>,
+            <span class="hljs-string">'unknowColor'</span> <span class="hljs-comment">// 如果设置的颜色无法识别, 将会在组件自身提供的三中主色调中随机一个替代</span>
+        ),
+        <span class="hljs-attr">dashboard</span>: example(
+            <span class="hljs-literal">true</span> , <span class="hljs-comment">// 显示为仪表盘样式 ( 只有在'type:circle'时才有效 )</span>
+            <span class="hljs-literal">false</span>
+        )
+    }
+}
+</code></pre>
+                        </div>
+                        
+                    </div>
+                                
+<p><strong> <em>如果暂时没有遇到多条进度条叠加的业务场景,就暂时不用继续看下面的api介绍</em> </strong></p>
+<h2 id="ProgressGroup" ><a class="markrun-anchor" href="../Users/guyifei/Documents/github/progress.react/#ProgressGroup"><span class="markrun-anchor-link"></span></a>ProgressGroup</h2>
+    <div class="face-one-code  face-one-code--open ">
+                        <div class="face-one-code-F-view">
+                            <div class="face-one-code-example">
+                                
+                            </div>
+                            <div class="face-one-code-info">
+                                <div class="face-one-code-info-title">group props api</div>
+                                <div class="face-one-code-info-desc">
+                                    
+                                </div>
+                                <span class="face-one-code-info-switchCode fi fi-code"></span>
+                            </div>
+                        </div>
+                        <div class="face-one-code-source">
+                            <div class="face-one-code-source-tool">
+                                <span class="face-one-code-source-tool-copy fi fi-files-o"></span>
+                            </div>
+                            <pre><code class="lang-js"><span class="hljs-keyword">import</span> p <span class="hljs-keyword">from</span> <span class="hljs-string">'prop-types'</span>
+<span class="hljs-keyword">var</span> example = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{<span class="hljs-keyword">return</span> <span class="hljs-built_in">arguments</span>;}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">app</span>) </span>{
+    app.defaultProps = {
+        <span class="hljs-attr">prefixClassName</span>: <span class="hljs-string">'face-progress'</span>,
+        <span class="hljs-attr">themes</span>: <span class="hljs-string">''</span>,
+        <span class="hljs-attr">percent</span>: [<span class="hljs-number">0</span>] , <span class="hljs-comment">// 百分比(不带百分比符号的数字)</span>
+        accuracy: <span class="hljs-number">0</span> , <span class="hljs-comment">// 精确到小数点后几位</span>
+        type:<span class="hljs-string">'line'</span> , <span class="hljs-comment">// 进度条类型 (暂只支持'line','inset'两种)</span>
+        status:<span class="hljs-string">'default'</span> , <span class="hljs-comment">// 进度条状态</span>
+        active: <span class="hljs-literal">false</span> , <span class="hljs-comment">// 控制显示激活样式</span>
+        info: <span class="hljs-literal">true</span> , <span class="hljs-comment">// 控制显示进度条右侧显示内容 (显示的是第一条进度条的信息)</span>
+        insetText: [<span class="hljs-literal">false</span>], <span class="hljs-comment">// 控制进度条内置显示内容 (仅当type:'inset'时此属性生效)</span>
+        barColor:[<span class="hljs-string">''</span>], <span class="hljs-comment">// 改变进度条颜色</span>
+    }
+    app.propTypes = {
+        <span class="hljs-attr">prefixClassName</span>: p.string,
+        <span class="hljs-attr">themes</span>: p.string ,
+        <span class="hljs-attr">percent</span>: p.arrayOf(p.number) ,
+        <span class="hljs-attr">accuracy</span>: p.oneOfType([
+            p.number,
+            p.arrayOf(p.number)
+        ]) ,
+        <span class="hljs-attr">type</span>: p.string ,
+        <span class="hljs-attr">status</span>: p.string ,
+        <span class="hljs-attr">active</span>: p.bool ,
+        <span class="hljs-attr">info</span>: p.oneOfType([
+            p.bool ,
+            p.func 
+        ]),
+        <span class="hljs-attr">insetText</span>: p.arrayOf(
+            p.oneOfType([
+                p.bool ,
+                p.func 
+            ])
+        ),
+        <span class="hljs-attr">barColor</span>: p.arrayOf(p.string) ,
+    }
+    app.propExample = {
+        <span class="hljs-attr">percent</span>: example(
+            [<span class="hljs-number">20</span>], <span class="hljs-comment">// 这样等同只有一条进度条, 那么就用回Progress组件吧,Progress支持更多样式类型</span>
+            [<span class="hljs-number">99.99</span>, <span class="hljs-number">60</span>, <span class="hljs-number">24.1</span>] <span class="hljs-comment">// 三条进度条叠加</span>
+            [<span class="hljs-number">90</span>, <span class="hljs-number">80</span>, <span class="hljs-number">70</span>, <span class="hljs-number">60</span>, <span class="hljs-number">50</span>] <span class="hljs-comment">// 如果超过三条以上进度条叠加, 就应该考虑是不是不应该使用这种组件了</span>
+        ),
+        <span class="hljs-attr">accuracy</span>: example(
+            <span class="hljs-number">2</span>, <span class="hljs-comment">// =&gt; [2, 2, 2, ...] 每一条进度条都精确到小数后2位</span>
+            [<span class="hljs-number">2</span>] <span class="hljs-comment">// =&gt; [2, 0, 0, ...] 第一条进度条都精确到小数后2位,其他进度条精确度采用默认值</span>
+            [<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">1</span>] <span class="hljs-comment">// 第一条进度条精确到小数后2位,第二条精确到后3位,第三条精确到后1位</span>
+        ),
+        <span class="hljs-attr">type</span>: example(
+            <span class="hljs-string">'line'</span>, <span class="hljs-comment">// 横向进度条</span>
+            <span class="hljs-string">'inset'</span>, <span class="hljs-comment">// 横向进度条 - 可显示内置内容</span>
+        ),
+        <span class="hljs-attr">status</span>: example(
+            <span class="hljs-string">'default'</span> , <span class="hljs-comment">// 进度条以及进度条右侧或环内显示内容 为 蓝色</span>
+            <span class="hljs-string">'error'</span> , <span class="hljs-comment">// 进度条以及进度条右侧或环内显示内容 为 红色</span>
+            <span class="hljs-string">'success'</span> , <span class="hljs-comment">// 进度条以及进度条右侧或环内显示内容 为 绿色</span>
+        ),
+        <span class="hljs-attr">active</span>: example(
+            <span class="hljs-literal">true</span> ,
+            <span class="hljs-literal">false</span>
+        ),
+        <span class="hljs-attr">info</span>: example(
+            <span class="hljs-literal">false</span> , <span class="hljs-comment">// 不显示</span>
+            <span class="hljs-literal">true</span> , <span class="hljs-comment">// 默认显示百分比</span>
+            <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">percent</span>)</span>{
+                <span class="hljs-keyword">return</span> (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"fi fi-times-circle"</span>&gt;</span> {percent}%<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>)
+            } , <span class="hljs-comment">// 显示函数返回的React.Element</span>
+        ),
+        <span class="hljs-attr">insetText</span>: example(
+            [<span class="hljs-literal">true</span>] , 
+            <span class="hljs-comment">// =&gt; [true, false, false, ...] 第一条显示默认百分比,其他进度条的会被转化为默认false</span>
+            [ <span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>{ <span class="hljs-keyword">return</span> (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span>加载中...<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span></span>) } ] , 
+            <span class="hljs-comment">// =&gt; [fn, false, false, ...] 第一条显示自定义的函数返回内容,其他进度条会被转化为默认false</span>
+            [<span class="hljs-literal">true</span>,<span class="hljs-literal">false</span>,<span class="hljs-literal">true</span>] , <span class="hljs-comment">// 如果是四条进度条的话, 你应该知道我默认补足第四条为false咯</span>
+            [
+                <span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>{ <span class="hljs-keyword">return</span> (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span>已缓存<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span></span>) },
+                ()=&gt;{ <span class="hljs-keyword">return</span> (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span>已播放<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span></span>) },
+            ], 
+            <span class="hljs-comment">// 多嘴补一句, 多条进度条叠加事实上不太适合显示有自己的内置内容, 不是'不适合都显示',而是'不适合显示'</span>
+        ),
+        <span class="hljs-attr">barColor</span>: example(
+            [<span class="hljs-string">'red'</span>, <span class="hljs-string">'#000'</span>, <span class="hljs-string">'rgb(204,204,204)'</span>, <span class="hljs-string">'rgba(230,25,224,0.3)'</span>] ,
+            <span class="hljs-comment">// 第一条红,第二条黑,第三条灰,第四条粉</span>
+            [<span class="hljs-string">'unknow'</span>,<span class="hljs-string">'green'</span>] ,
+            <span class="hljs-comment">// 第一条无法识别的颜色会被组件三个主色调中随机一个替代,</span>
+            <span class="hljs-comment">// 第二条绿, </span>
+            <span class="hljs-comment">// 如果配置了两条进度条以上,其他进度条会和第一条一样被随机替代,</span>
+            <span class="hljs-comment">// 但放心是间隔替代,不会是相邻重复颜色,您故意配置与主色调相同的颜色混在其中, 对不起,我没做那么细致</span>
+        )
+    }
+}
+</code></pre>
+                        </div>
+                        
+                    </div></div>
+</div>
+</div>
+</div>
+<script>
+Array.from(document.querySelectorAll('.face-one-nav-item-label')).forEach(function (node) {
+    if (node.href) {
+        var pathname = node.href.replace(/\?.*/, '')
+        if (pathname === location.origin + location.pathname + location.hash) {
+            node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-nav-item-label--on')
+        }
+    }
+})
+var faceOneGetParent = function faceOneGetParent (el, className) {
+   if (el.parentNode.nodeName.toLowerCase() === 'html') {
+       return null
+   }
+   var parentClassName = el.parentNode.getAttribute('class')
+   var classNames = ''
+   if (parentClassName) {
+       classNames = parentClassName.split(' ')
+   }
+   if (classNames.indexOf(className) !== -1) {
+       return el.parentNode
+   }
+   else {
+       return faceOneGetParent(el.parentNode, className)
+   }
+}
+Array.from(document.querySelectorAll('.face-one-nav-item-group-item')).forEach(function (node) {
+    addAvativeClass(node)
+    function addAvativeClass (node)  {
+        if (node.href) {
+            var pathname = node.href.replace(/\?.*/, '')
+            if (pathname === location.origin + location.pathname + location.hash) {
+                node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-nav-item-group-item--on')
+                var parentNode = faceOneGetParent(node, 'face-one-nav-item--group')
+                if (parentNode) {
+                    parentNode.setAttribute('class', parentNode.getAttribute('class') + ' ' + 'face-one-nav-item--group-on')
+                }
+            }
+        }
+    }
+
+})
+</script>
+<div class="face-one-foot">
+    <div class="face-one-foot-F-inner">
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-github"></span>
+                Github
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/Grifree/progress.react" class="face-one-foot-group-item-link">progress.react</a>
+                - 项目源码
+            </div>
+        </div>
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-link"></span>
+                相关站点
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://onface.github.io/component-spec">component-spec</a>
+                - 组件规范
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/module" class="face-one-foot-group-item-link">module</a>
+                - 开源项目脚手架
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="http://onface.cc/" class="face-one-foot-group-item-link">onface.cc</a>
+                - 资源集合
+            </div>
+        </div>
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-users"></span>
+                社区
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/Grifree/progress.react/issues" class="face-one-foot-group-item-link">Github issues</a>
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/Grifree/progress.react/issues/new" class="face-one-foot-group-item-link">提交bug</a>
+            </div>
+        </div>
+        <div class="face-one-foot-copyright">
+            <a href="../index.html" class="face-one-foot-copyright-title">
+                <img src="theme/media/logo.svg" class="face-one-foot-copyright-title-logo" />
+            </a>
+        </div>
+    </div>
+</div>
+
+<script src="theme/jquery.js"></script>
+<script>delete window.$</script>
+<script src="theme/face/face.js" ></script>
+<script data-markrun-lastrun="true">
+                        document.write('<scri' + 'pt src="undefined?v=0.1.0"' + '" ></sc' + 'ript>')
+                        </script><script data-markrun-lastrun="true">
+                        document.write('<scri' + 'pt src="undefined?v=0.1.0"' + '" ></sc' + 'ript>')
+                        </script></body>
+</html>
