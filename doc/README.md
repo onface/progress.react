@@ -39,19 +39,6 @@
 }
 ````
 
-## group
-
-````code
-{
-    title: '基础使用',
-    desc: '**多进度条叠加**',
-    html: '<div id="group-demo" ></div>',
-    js: './group.demo.js',
-    source: './Group.js',
-    open: true
-}
-````
-
 ## size
 
 ````code
@@ -88,5 +75,18 @@
     js: './costom.demo.js',
     source: './Costom.js',
     open: false
+}
+````
+
+## group
+
+````code
+{
+    title: '基础使用',
+    desc: '**多进度条叠加**',
+    html: '<div id="group-demo" ></div>',
+    js: './group.demo.js',
+    source: './Group.js',
+    open: true
 }
 ````

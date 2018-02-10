@@ -9,10 +9,21 @@ class Change extends React.Component {
     }
     render () {
         let self = this
+
         return (
             <div className="changeDemo" >
                 <div style={{width:'300px',fontSize:'16px'}} >
-                    <Progress percent={self.state.percent} />
+                    <Progress 
+                        percent={self.state.percent}
+                        status={self.state.percent == 100 ? 'success' : 'default'}
+                        info={(value)=>{
+                            if(self.state.percent == 100){
+                                return (<span className="fi fi-check-circle"></span>)
+                            }else{
+                                return (<i>{value}%</i>)
+                            }
+                        }}
+                    />
                 </div>
                 <div style={{width:'100px',fontSize:'16px'}} >
                     <Progress percent={self.state.percent} type="circle"/>

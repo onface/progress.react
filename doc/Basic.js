@@ -8,7 +8,7 @@ class Basic extends React.Component {
             >
                 <Progress percent={0} />
                 <Progress percent={6.2345} accuracy={2}/>
-                <Progress percent={20} />
+                <Progress percent={20} barColor={'red'} />
                 <Progress percent={40} active={true} />
                 <Progress percent={60} info={false} />
                 <Progress
