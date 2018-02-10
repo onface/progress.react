@@ -82,7 +82,7 @@
 
 ````code
 {
-    title: '基础使用',
+    title: 'Progress',
     desc: '**这里尝试下各种属性改变吧 ( 表单没做校验,请手下留情测试 ) **',
     html: '<div id="costom-demo" ></div>',
     js: './costom.demo.js',

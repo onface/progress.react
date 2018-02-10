@@ -5,7 +5,7 @@ class Costom extends React.Component {
         super(props)
         this.state = {
             accuracy: 0 ,
-            percent: 20.00 ,
+            percent: 80.00 ,
             info: true ,
             active: false ,
             type:'line' ,
@@ -25,32 +25,6 @@ class Costom extends React.Component {
         let state = self.state
         return (
             <div className="costomDemo">
-                accuracy&nbsp;:&nbsp;
-                <input
-                    value={state.accuracy}
-                    type="number"
-                    min={0}
-                    max={10}
-                    onChange={(e)=>{
-                        self.change('accuracy',parseInt(e.target.value))
-                    }}
-                />&ensp;
-                percent&nbsp;:&nbsp;
-                <input
-                    style={{width:'100px'}}
-                    value={state.percent}
-                    type="number"
-                    step={5}
-                    min={0}
-                    max={100}
-                    onChange={(e)=>{
-                        self.change('percent',parseFloat(e.target.value))
-                    }}
-                />&ensp;
-                info&nbsp;:&nbsp;
-                <input checked={state.info} type="checkbox" onChange={(e)=>{ self.change('info',!state.info) }} />&ensp;
-                active&nbsp;:&nbsp;
-                <input checked={state.active} type="checkbox" onChange={(e)=>{ self.change('active',!state.active) }} />&ensp;  
                 type&nbsp;:&nbsp;
                 <select value={state.type} onChange={(e)=>{ self.change('type',e.target.value) }}>
                     <option>line</option>
@@ -63,6 +37,34 @@ class Costom extends React.Component {
                     <option>success</option>
                     <option>error</option>
                 </select>&ensp;
+                percent&nbsp;:&nbsp;
+                <input
+                    style={{width:'100px'}}
+                    value={state.percent}
+                    type="number"
+                    step={0.1}
+                    min={0}
+                    max={100}
+                    onChange={(e)=>{
+                        self.change('percent',parseFloat(e.target.value))
+                    }}
+                />&ensp;
+                accuracy&nbsp;:&nbsp;
+                <input
+                    value={state.accuracy}
+                    type="number"
+                    min={0}
+                    max={10}
+                    onChange={(e)=>{
+                        self.change('accuracy',parseInt(e.target.value))
+                    }}
+                />&ensp;
+                active&nbsp;:&nbsp;
+                <input checked={state.active} type="checkbox" onChange={(e)=>{ self.change('active',!state.active) }} />&ensp;  
+                info&nbsp;:&nbsp;
+                <input checked={state.info} type="checkbox" onChange={(e)=>{ self.change('info',!state.info) }} />&ensp;
+                insetText&nbsp;:&nbsp;
+                <input checked={state.insetText} type="checkbox" onChange={(e)=>{ self.change('insetText',!state.insetText) }} />&ensp;
                 barColor&nbsp;:&nbsp;
                 <input
                     style={{width:'150px'}}
@@ -71,8 +73,6 @@ class Costom extends React.Component {
                         self.change('barColor',e.target.value)
                     }}
                 />&ensp;
-                insetText&nbsp;:&nbsp;
-                <input checked={state.insetText} type="checkbox" onChange={(e)=>{ self.change('insetText',!state.insetText) }} />&ensp;
                 dashboard&nbsp;:&nbsp;
                 <input checked={state.dashboard} type="checkbox" onChange={(e)=>{ self.change('dashboard',!state.dashboard) }} />&ensp;
                 <br/><br/>
