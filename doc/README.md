@@ -9,6 +9,7 @@
     html: '<div id="basic-demo" ></div>',
     js: './basic.demo.js',
     source: './Basic.js',
+    horiz: true,
     open: true
 }
 ````
@@ -22,6 +23,7 @@
     html: '<div id="inset-demo" ></div>',
     js: './inset.demo.js',
     source: './Inset.js',
+    horiz: true,
     open: true
 }
 ````
@@ -35,6 +37,7 @@
     html: '<div id="circle-demo" ></div>',
     js: './circle.demo.js',
     source: './Circle.js',
+    horiz: true,
     open: true
 }
 ````
@@ -48,6 +51,7 @@
     html: '<div id="size-demo" ></div>',
     js: './size.demo.js',
     source: './Size.js',
+    horiz: true,
     open: true
 }
 ````
@@ -61,6 +65,7 @@
     html: '<div id="change-demo" ></div>',
     js: './change.demo.js',
     source: './Change.js',
+    horiz: true,
     open: true
 }
 ````
