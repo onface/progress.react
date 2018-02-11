@@ -19,7 +19,7 @@
 ````code
 {
     title: '基础使用',
-    desc: '**线形进度条 — 内显**',
+    desc: '**线形进度条 — 内置显示内容**',
     html: '<div id="inset-demo" ></div>',
     js: './inset.demo.js',
     source: './Inset.js',
