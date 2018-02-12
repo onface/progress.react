@@ -1,10 +1,10 @@
 @import "./settings.less";
 
-.@{face-progress-prefix} {
+.@{prefix} {
 }
 
 // 线条样式
-.@{face-progress-prefix}-line {
+.@{prefix}-line {
     position: relative;
     line-height: 1em;
     display: table;
@@ -13,7 +13,7 @@
         margin-top: 0.5em;
     }
 }
-.@{face-progress-prefix}-line-box {
+.@{prefix}-line-box {
     width: 100%;
     vertical-align: middle;
     position: relative;
@@ -21,13 +21,13 @@
     padding-bottom: 0.3125em;
     padding-top: 0.3125em;
 }
-.@{face-progress-prefix}-line-box-track {
+.@{prefix}-line-box-track {
     position: relative;
     height: 0.375em; 
     border-radius: 0.1875em; 
     background-color: @face-progress-default-color;
 }
-.@{face-progress-prefix}-line-box-track-bar {
+.@{prefix}-line-box-track-bar {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -37,14 +37,17 @@
     text-align: right;
     transition: all .3s ease-in-out;
     background-color: @face-progress-primary-color;
+    &:nth-child(3n + 1) {
+        background-color: @face-progress-primary-color;
+    }
     &:nth-child(3n + 2) {
         background-color: @face-progress-success-color;
     }
     &:nth-child(3n + 3) {
-        background-color: @face-progress-danger-color;
+        background-color: @face-progress-error-color;
     }
 }
-.@{face-progress-prefix}-line-box-track-bar-text {
+.@{prefix}-line-box-track-bar-text {
     color:#fff;
     font-size: 0.7em;
     line-height: 1.33333em;
@@ -53,7 +56,7 @@
     display: block;
     white-space: nowrap;
 }
-.@{face-progress-prefix}-line-info {
+.@{prefix}-line-info {
     font-size: 0.8em; //14px
     line-height: 1.25em;
     display: table-cell;
@@ -64,66 +67,9 @@
     white-space: nowrap;
 }
 
-    .@{face-progress-prefix}-line--theme-danger {
-        .@{face-progress-prefix}-line-box-track-bar {
-            background-color: @face-progress-danger-color;
-            &:nth-child(3n + 2) {
-                background-color: @face-progress-success-color;
-            }
-            &:nth-child(3n + 3) {
-                background-color: @face-progress-primary-color;
-            }
-        }
-        .@{face-progress-prefix}-line-info {
-            color: @face-progress-danger-color;
-        }
-    }
-    .@{face-progress-prefix}-line--theme-success {
-        .@{face-progress-prefix}-line-box-track-bar {
-            background-color: @face-progress-success-color;
-            &:nth-child(3n + 2) {
-                background-color: @face-progress-danger-color;
-            }
-            &:nth-child(3n + 3) {
-                background-color: @face-progress-primary-color;
-            }
-        }
-        .@{face-progress-prefix}-line-info {
-            color: @face-progress-success-color;
-        }
-    }
-    .@{face-progress-prefix}-line--thick {
-        padding-bottom: 0;
-        padding-top: 0;
-        .@{face-progress-prefix}-line-box {
-            padding-top: 0;
-            padding-bottom: 0;
-        }
-        .@{face-progress-prefix}-line-box-track {
-            height: 1em;
-            border-radius: 0.5em;
-        }
-    }
-    .@{face-progress-prefix}-line--loading {
-        .@{face-progress-prefix}-line-box-track-bar {
-            @keyframes smooth {
-                0% { opacity:0.4;width:0 }
-                to { opacity:0;width:100% }
-            }
-            &:before {
-                transition: all .2s linear;
-                content: "";
-                opacity: 0;
-                position: absolute;
-                top: 0; left: 0; right: 0; bottom: 0;
-                background: #fff;
-                border-radius: 10px;
-                animation: smooth 2s ease-in-out infinite;
-            }
-        }
-    }
-    // .@{face-progress-prefix}-line--wave {
-    //     .@{face-progress-prefix}-line-box-bar {
+    
+    // .@{prefix}-line--wave {
+    //     .@{prefix}-line-box-bar {
     //         @keyframes wave {
     //           from { background-position: 0 0; }
     //           to { background-position: 100% 100%;}
@@ -142,10 +88,10 @@
 
 
 // 圆环样式
-.@{face-progress-prefix}-circle {
+.@{prefix}-circle {
     position: relative;
 }
-.@{face-progress-prefix}-circle-svg-outer {
+.@{prefix}-circle-svg-outer {
     stroke-linecap: round ;
     stroke: @face-progress-default-color ;
     stroke-width: 6 ;
@@ -154,7 +100,7 @@
     stroke-dashoffset: 0px;
     transition: all .3s ease-in-out;
 }
-.@{face-progress-prefix}-circle-svg-inner {
+.@{prefix}-circle-svg-inner {
     stroke-linecap: round ;
     stroke: @face-progress-primary-color;
     stroke-width: 6 ;
@@ -163,7 +109,7 @@
     stroke-dashoffset: 295.3097094374406px;
     transition: all .3s ease-in-out;
 }
-.@{face-progress-prefix}-circle-info {
+.@{prefix}-circle-info {
     color: @face-progress-default-hd-color;
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -176,31 +122,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-    .@{face-progress-prefix}-circle--theme-success {
-        .@{face-progress-prefix}-circle-svg-inner {
-            stroke: @face-progress-success-color;
-        }
-        .@{face-progress-prefix}-circle-info {
-            color: @face-progress-success-color;
-        }
-    }
-    .@{face-progress-prefix}-circle--theme-danger {
-        .@{face-progress-prefix}-circle-svg-inner {
-            stroke: @face-progress-danger-color;
-        }
-        .@{face-progress-prefix}-circle-info {
-            color: @face-progress-danger-color;
-        }
-    }
-    .@{face-progress-prefix}-circle--dashboard {
-        .@{face-progress-prefix}-circle-svg {
-            transform:rotate(225deg);
-        }
-        .@{face-progress-prefix}-circle-svg-inner {
-            stroke-dashoffset: 221.48228207808043px;
-        }
-        .@{face-progress-prefix}-circle-svg-outer ,
-        .@{face-progress-prefix}-circle-svg-inner {
-            stroke-dasharray: 221.48228207808043px, 295.3097094374406px;
-        }
-    }
+
+/* themes */
+@import "./style.less";
