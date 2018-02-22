@@ -76,15 +76,20 @@
 <h1 id="指引" ><a class="markrun-anchor" href="../Users/GrifreeMac/Documents/github/onface/progress.react/#指引"><span class="markrun-anchor-link"></span></a>指引</h1><blockquote>
 <p>展示操作的当前进度。</p>
 </blockquote>
-<h2 id="Progress" ><a class="markrun-anchor" href="../Users/GrifreeMac/Documents/github/onface/progress.react/#Progress"><span class="markrun-anchor-link"></span></a>Progress</h2><p><code>progress.react</code>实现了常见的三种类型进度条，并默认提供了三种状态色。示例显示的是默认尺寸，可以根据容器和<code>fontsize</code>自适应大小。
-提供了自定义样式的方式。通过修改格式清晰的 <code>less</code> 文件改变视觉风格。只需要修改几个变量，就可以与使用者项目中的按钮样式一致。
-并且提供了优化过的 API，基本满足常见的业务场景。</p>
+<h2 id="Progress" ><a class="markrun-anchor" href="../Users/GrifreeMac/Documents/github/onface/progress.react/#Progress"><span class="markrun-anchor-link"></span></a>Progress</h2><p><code>progress.react</code>实现了常见的三种类型进度条，并默认提供了三种状态色。示例显示的是默认尺寸，可以根据容器和<code>fontsize</code>自适应大小。<br>提供了自定义样式的方式。通过修改格式清晰的 <code>less</code>         文件改变视觉风格。只需要修改几个变量，就可以与使用者项目中的按钮样式一致。<br>并且提供了优化过的 API，基本满足常见的业务场景。</p>
+<p><br/><br/></p>
 <h2 id="ProgressGroup" ><a class="markrun-anchor" href="../Users/GrifreeMac/Documents/github/onface/progress.react/#ProgressGroup"><span class="markrun-anchor-link"></span></a>ProgressGroup</h2><blockquote>
-<p>适用多条进度条叠加的场景，但是务必需要明白如下几点</p>
+<p>如果还未遇到多条进度条叠加场景，可以暂时忽略以下内容，直接开始预览示例吧</p>
+<p>使用之前务必需要明白如下几点</p>
 </blockquote>
-<p>因为叠加的情况，所以被叠放在相对底层的进度条总是应该比相对顶层的进度条要更长(即数据量更大)，例如 <strong>总数</strong> 永远是&gt;= <strong>成功数</strong> 的。</p>
-<p>所以，如果两个数据的出现此涨彼伏/此伏彼涨的交替变化情况，那么用该组件去呈现数据是不太合理的。可以用两个进度条<code>Progress</code>去显示。</p>
-<p>另外一点是，叠加的进度条数量不宜过多，建议至多2~3条进度条叠加并且永远<code>第一条百分比</code>&gt;=<code>第二条百分比</code>&gt;=<code>第三条百分比</code></p></div>
+<ul>
+<li><p>合理的数据变化<br>因为叠加的情况，所以被叠放在相对底层的进度条总是应该比相对顶层的进度条要更长(即数据量更大)，例如 <strong>总数</strong> 永远是&gt;= <strong>成功数</strong> 的。</p>
+</li>
+<li><p>不合理的数据变化<br>所以，如果两个数据的出现此涨彼伏/此伏彼涨的交替变化情况，那么用该组件去呈现数据是不太合理的。可以用两个进度条<code>Progress</code>去显示。</p>
+</li>
+<li><p>数量控制<br>另外一点是，叠加的进度条数量不宜过多，建议至多2~3条进度条叠加并且永远<code>第一条百分比</code>&gt;=<code>第二条百分比</code>&gt;=<code>第三条百分比</code></p>
+</li>
+</ul></div>
 </div>
 </div>
 </div>
