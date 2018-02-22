@@ -85,13 +85,16 @@
 
 ## addStatus
 
-如果你想要新增一种状态风格，只需要修改 `less/style.less` 和 `less/settings.less` 文件。比如找到这两个文件的 `// dark` 部分，取消注释，就可以使用      
+如果你想要新增一种状态风格，只需要修改 `less/style.less` 和 `less/settings.less` 文件。        
+比如找到这两个文件的 `// dark` 部分，取消注释，就可以使用      
 `<Progress percent={80} status={'dark'}/>`      
 `<ProgressGroup percent={[90,50]} status={'dark'} />`
 
 
 
 ## group
+
+> 使用之前需要了解一些注意点 [点此查看](../doc/intro.html#ProgressGroup)
 
 ````code
 {
