@@ -7,7 +7,7 @@
 -->
 
 <div class="face-one-intro">
-    <div class="face-one-intro-title">progress.react</div>
+    <div class="face-one-intro-title">进度条</div>
     <h2 class="face-one-intro-desc">
         Progress.react
     </h2>
@@ -38,14 +38,14 @@
                     <div class="face-one-feature-item-desc">界面细致、即时反馈，更好的用户体验</div>
                 </div>
             </td>
-            <td align="center" >
+            <!-- <td align="center" >
                 <div class="face-one-feature-item">
                     <img src="./doc/theme/media/share.svg" alt="" class="face-one-feature-item-photo">
                     <br />
                     <div class="face-one-feature-item-label">逻辑封装</div>
                     <div class="face-one-feature-item-desc">提供业务逻辑封装，快速开发</div>
                 </div>
-            </td>
+            </td> -->
         </tr>
     </table>
 </div>
