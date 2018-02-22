@@ -94,7 +94,7 @@
 
 ## group
 
-> 使用之前需要了解一些注意点 [点此查看](../doc/intro.html#ProgressGroup)
+> 使用之前需要了解一些注意点 [点此查看](/doc/intro.html#ProgressGroup)
 
 ````code
 {
