@@ -273,7 +273,7 @@ var ProgressGroup = function (_Component) {
     }, {
         key: "render",
         value: function render() {
-            var _cls;
+            var _lineStyle;
 
             var self = this;
             var rootClassName = [self.props.prefixClassName, _util2.default.themes(self.props)].join(' ');
@@ -281,6 +281,11 @@ var ProgressGroup = function (_Component) {
 
             var insetText = new Array(self.props.percent.length).fill(false);
             insetText = (0, _extend2.default)(true, insetText, self.props.insetText);
+
+            var lineStyle = (_lineStyle = {}, _defineProperty(_lineStyle, self.props.prefixClassName + "-line", true), _defineProperty(_lineStyle, self.props.prefixClassName + "-line--thick", self.props.type === 'inset'), _defineProperty(_lineStyle, self.props.prefixClassName + "-line--loading", self.props.active), _lineStyle);
+            if (self.props.status) {
+                lineStyle[self.props.prefixClassName + "-line--" + self.props.status] = true;
+            }
 
             return __webpack_require__("./node_modules/react/index.js").createElement(
                 "div",
@@ -290,7 +295,7 @@ var ProgressGroup = function (_Component) {
                 self.props.type === 'line' || self.props.type === 'inset' ? __webpack_require__("./node_modules/react/index.js").createElement(
                     "div",
                     {
-                        className: (0, _classnames2.default)((_cls = {}, _defineProperty(_cls, self.props.prefixClassName + "-line", true), _defineProperty(_cls, self.props.prefixClassName + "-line--thick", self.props.type === 'inset'), _defineProperty(_cls, self.props.prefixClassName + "-line--loading", self.props.active), _defineProperty(_cls, self.props.prefixClassName + "-line--theme-danger", self.props.status === 'error'), _defineProperty(_cls, self.props.prefixClassName + "-line--theme-success", self.props.status === 'success'), _cls))
+                        className: (0, _classnames2.default)(lineStyle)
                     },
                     __webpack_require__("./node_modules/react/index.js").createElement(
                         "div",
@@ -569,11 +574,20 @@ var Progress = (_temp = _class = function (_Component) {
     }, {
         key: "render",
         value: function render() {
-            var _cls, _cls2;
+            var _lineStyle, _circleStyle;
 
             var self = this;
             var rootClassName = [self.props.prefixClassName, _util2.default.themes(self.props)].join(' ');
+
             var percent = self.getFloatNum(self.props.percent);
+
+            var lineStyle = (_lineStyle = {}, _defineProperty(_lineStyle, self.props.prefixClassName + "-line", true), _defineProperty(_lineStyle, self.props.prefixClassName + "-line--thick", self.props.type === 'inset'), _defineProperty(_lineStyle, self.props.prefixClassName + "-line--loading", self.props.active), _lineStyle);
+            var circleStyle = (_circleStyle = {}, _defineProperty(_circleStyle, self.props.prefixClassName + "-circle", true), _defineProperty(_circleStyle, self.props.prefixClassName + "-circle--dashboard", self.props.dashboard), _circleStyle);
+            if (self.props.status) {
+                lineStyle[self.props.prefixClassName + "-line--" + self.props.status] = true;
+                circleStyle[self.props.prefixClassName + "-circle--" + self.props.status] = true;
+            }
+
             return __webpack_require__("./node_modules/react/index.js").createElement(
                 "div",
                 {
@@ -582,7 +596,7 @@ var Progress = (_temp = _class = function (_Component) {
                 self.props.type === 'line' || self.props.type === 'inset' ? __webpack_require__("./node_modules/react/index.js").createElement(
                     "div",
                     {
-                        className: (0, _classnames2.default)((_cls = {}, _defineProperty(_cls, self.props.prefixClassName + "-line", true), _defineProperty(_cls, self.props.prefixClassName + "-line--thick", self.props.type === 'inset'), _defineProperty(_cls, self.props.prefixClassName + "-line--loading", self.props.active), _defineProperty(_cls, self.props.prefixClassName + "-line--theme-danger", self.props.status === 'error'), _defineProperty(_cls, self.props.prefixClassName + "-line--theme-success", self.props.status === 'success'), _cls))
+                        className: (0, _classnames2.default)(lineStyle)
                     },
                     __webpack_require__("./node_modules/react/index.js").createElement(
                         "div",
@@ -613,7 +627,7 @@ var Progress = (_temp = _class = function (_Component) {
                 self.props.type === 'circle' ? __webpack_require__("./node_modules/react/index.js").createElement(
                     "div",
                     _defineProperty({ className: self.props.prefixClassName + "-circle"
-                    }, "className", (0, _classnames2.default)((_cls2 = {}, _defineProperty(_cls2, self.props.prefixClassName + "-circle", true), _defineProperty(_cls2, self.props.prefixClassName + "-circle--theme-danger", self.props.status === 'error'), _defineProperty(_cls2, self.props.prefixClassName + "-circle--theme-success", self.props.status === 'success'), _defineProperty(_cls2, self.props.prefixClassName + "-circle--dashboard", self.props.dashboard), _cls2))),
+                    }, "className", (0, _classnames2.default)(circleStyle)),
                     __webpack_require__("./node_modules/react/index.js").createElement(
                         "svg",
                         {
@@ -839,7 +853,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, ".face-progress-line {\n  position: relative;\n  line-height: 1em;\n  display: table;\n  width: 100%;\n}\n.face-progress-line + .face-progress-line {\n  margin-top: 0.5em;\n}\n.face-progress-line-box {\n  width: 100%;\n  vertical-align: middle;\n  position: relative;\n  display: table-cell;\n  padding-bottom: 0.3125em;\n  padding-top: 0.3125em;\n}\n.face-progress-line-box-track {\n  position: relative;\n  height: 0.375em;\n  border-radius: 0.1875em;\n  background-color: #f5f5f5;\n}\n.face-progress-line-box-track-bar {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  display: block;\n  border-radius: inherit;\n  text-align: right;\n  transition: all 0.3s ease-in-out;\n  background-color: #4387fd;\n}\n.face-progress-line-box-track-bar:nth-child(3n + 2) {\n  background-color: #5dc75d;\n}\n.face-progress-line-box-track-bar:nth-child(3n + 3) {\n  background-color: #d85c4b;\n}\n.face-progress-line-box-track-bar-text {\n  color: #fff;\n  font-size: 0.7em;\n  line-height: 1.33333em;\n  padding-right: 0.5em;\n  padding-left: 0.5em;\n  display: block;\n  white-space: nowrap;\n}\n.face-progress-line-info {\n  font-size: 0.8em;\n  line-height: 1.25em;\n  display: table-cell;\n  padding-left: 0.78125em;\n  box-sizing: border-box;\n  color: rgba(0, 0, 0, 0.45);\n  min-width: 4.0625em;\n  white-space: nowrap;\n}\n.face-progress-line--theme-danger .face-progress-line-box-track-bar {\n  background-color: #d85c4b;\n}\n.face-progress-line--theme-danger .face-progress-line-box-track-bar:nth-child(3n + 2) {\n  background-color: #5dc75d;\n}\n.face-progress-line--theme-danger .face-progress-line-box-track-bar:nth-child(3n + 3) {\n  background-color: #4387fd;\n}\n.face-progress-line--theme-danger .face-progress-line-info {\n  color: #d85c4b;\n}\n.face-progress-line--theme-success .face-progress-line-box-track-bar {\n  background-color: #5dc75d;\n}\n.face-progress-line--theme-success .face-progress-line-box-track-bar:nth-child(3n + 2) {\n  background-color: #d85c4b;\n}\n.face-progress-line--theme-success .face-progress-line-box-track-bar:nth-child(3n + 3) {\n  background-color: #4387fd;\n}\n.face-progress-line--theme-success .face-progress-line-info {\n  color: #5dc75d;\n}\n.face-progress-line--thick {\n  padding-bottom: 0;\n  padding-top: 0;\n}\n.face-progress-line--thick .face-progress-line-box {\n  padding-top: 0;\n  padding-bottom: 0;\n}\n.face-progress-line--thick .face-progress-line-box-track {\n  height: 1em;\n  border-radius: 0.5em;\n}\n@keyframes smooth {\n  0% {\n    opacity: 0.4;\n    width: 0;\n  }\n  to {\n    opacity: 0;\n    width: 100%;\n  }\n}\n.face-progress-line--loading .face-progress-line-box-track-bar:before {\n  transition: all .2s linear;\n  content: \"\";\n  opacity: 0;\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: #fff;\n  border-radius: 10px;\n  animation: smooth 2s ease-in-out infinite;\n}\n.face-progress-circle {\n  position: relative;\n}\n.face-progress-circle-svg-outer {\n  stroke-linecap: round ;\n  stroke: #f5f5f5;\n  stroke-width: 6 ;\n  fill-opacity: 0 ;\n  stroke-dasharray: 295.3097094374406px, 295.3097094374406px;\n  stroke-dashoffset: 0px;\n  transition: all 0.3s ease-in-out;\n}\n.face-progress-circle-svg-inner {\n  stroke-linecap: round ;\n  stroke: #4387fd;\n  stroke-width: 6 ;\n  fill-opacity: 0 ;\n  stroke-dasharray: 295.3097094374406px, 295.3097094374406px;\n  stroke-dashoffset: 295.3097094374406px;\n  transition: all 0.3s ease-in-out;\n}\n.face-progress-circle-info {\n  color: rgba(0, 0, 0, 0.65);\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  margin: auto;\n  text-align: center;\n  height: 1.5em;\n  font-size: 1.5em;\n  line-height: 1.5em;\n  width: 89%;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.face-progress-circle--theme-success .face-progress-circle-svg-inner {\n  stroke: #5dc75d;\n}\n.face-progress-circle--theme-success .face-progress-circle-info {\n  color: #5dc75d;\n}\n.face-progress-circle--theme-danger .face-progress-circle-svg-inner {\n  stroke: #d85c4b;\n}\n.face-progress-circle--theme-danger .face-progress-circle-info {\n  color: #d85c4b;\n}\n.face-progress-circle--dashboard .face-progress-circle-svg {\n  transform: rotate(225deg);\n}\n.face-progress-circle--dashboard .face-progress-circle-svg-inner {\n  stroke-dashoffset: 221.48228207808043px;\n}\n.face-progress-circle--dashboard .face-progress-circle-svg-outer,\n.face-progress-circle--dashboard .face-progress-circle-svg-inner {\n  stroke-dasharray: 221.48228207808043px, 295.3097094374406px;\n}\n", ""]);
+exports.push([module.i, ".face-progress-line {\n  position: relative;\n  line-height: 1em;\n  display: table;\n  width: 100%;\n}\n.face-progress-line + .face-progress-line {\n  margin-top: 0.5em;\n}\n.face-progress-line-box {\n  width: 100%;\n  vertical-align: middle;\n  position: relative;\n  display: table-cell;\n  padding-bottom: 0.3125em;\n  padding-top: 0.3125em;\n}\n.face-progress-line-box-track {\n  position: relative;\n  height: 0.375em;\n  border-radius: 0.1875em;\n  background-color: #f5f5f5;\n}\n.face-progress-line-box-track-bar {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  display: block;\n  border-radius: inherit;\n  text-align: right;\n  transition: all 0.3s ease-in-out;\n  background-color: #4387fd;\n}\n.face-progress-line-box-track-bar:nth-child(3n + 1) {\n  background-color: #4387fd;\n}\n.face-progress-line-box-track-bar:nth-child(3n + 2) {\n  background-color: #5dc75d;\n}\n.face-progress-line-box-track-bar:nth-child(3n + 3) {\n  background-color: #d85c4b;\n}\n.face-progress-line-box-track-bar-text {\n  color: #fff;\n  font-size: 0.7em;\n  line-height: 1.33333em;\n  padding-right: 0.5em;\n  padding-left: 0.5em;\n  display: block;\n  white-space: nowrap;\n}\n.face-progress-line-info {\n  font-size: 0.8em;\n  line-height: 1.25em;\n  display: table-cell;\n  padding-left: 0.78125em;\n  box-sizing: border-box;\n  color: rgba(0, 0, 0, 0.45);\n  min-width: 4.0625em;\n  white-space: nowrap;\n}\n.face-progress-circle {\n  position: relative;\n}\n.face-progress-circle-svg-outer {\n  stroke-linecap: round ;\n  stroke: #f5f5f5;\n  stroke-width: 6 ;\n  fill-opacity: 0 ;\n  stroke-dasharray: 295.3097094374406px, 295.3097094374406px;\n  stroke-dashoffset: 0px;\n  transition: all 0.3s ease-in-out;\n}\n.face-progress-circle-svg-inner {\n  stroke-linecap: round ;\n  stroke: #4387fd;\n  stroke-width: 6 ;\n  fill-opacity: 0 ;\n  stroke-dasharray: 295.3097094374406px, 295.3097094374406px;\n  stroke-dashoffset: 295.3097094374406px;\n  transition: all 0.3s ease-in-out;\n}\n.face-progress-circle-info {\n  color: rgba(0, 0, 0, 0.65);\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  margin: auto;\n  text-align: center;\n  height: 1.5em;\n  font-size: 1.5em;\n  line-height: 1.5em;\n  width: 89%;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n/* themes */\n.face-progress-line--thick {\n  padding-bottom: 0;\n  padding-top: 0;\n}\n.face-progress-line--thick .face-progress-line-box {\n  padding-top: 0;\n  padding-bottom: 0;\n}\n.face-progress-line--thick .face-progress-line-box-track {\n  height: 1em;\n  border-radius: 0.5em;\n}\n@keyframes smooth {\n  0% {\n    opacity: 0.4;\n    width: 0;\n  }\n  to {\n    opacity: 0;\n    width: 100%;\n  }\n}\n.face-progress-line--loading .face-progress-line-box-track-bar:before {\n  transition: all .2s linear;\n  content: \"\";\n  opacity: 0;\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: #fff;\n  border-radius: 10px;\n  animation: smooth 2s ease-in-out infinite;\n}\n.face-progress-circle--dashboard .face-progress-circle-svg {\n  transform: rotate(225deg);\n}\n.face-progress-circle--dashboard .face-progress-circle-svg-inner {\n  stroke-dashoffset: 221.48228207808043px;\n}\n.face-progress-circle--dashboard .face-progress-circle-svg-outer,\n.face-progress-circle--dashboard .face-progress-circle-svg-inner {\n  stroke-dasharray: 221.48228207808043px, 295.3097094374406px;\n}\n.face-progress-line--error .face-progress-line-box-track-bar {\n  background-color: #d85c4b;\n}\n.face-progress-line--error .face-progress-line-info {\n  color: #d85c4b;\n}\n.face-progress-line--error .face-progress-line-box-track-bar:nth-child(3n + 2) {\n  background-color: #5dc75d;\n}\n.face-progress-line--error .face-progress-line-box-track-bar:nth-child(3n + 3) {\n  background-color: #4387fd;\n}\n.face-progress-line--success .face-progress-line-box-track-bar {\n  background-color: #5dc75d;\n}\n.face-progress-line--success .face-progress-line-info {\n  color: #5dc75d;\n}\n.face-progress-line--success .face-progress-line-box-track-bar:nth-child(3n + 2) {\n  background-color: #d85c4b;\n}\n.face-progress-line--success .face-progress-line-box-track-bar:nth-child(3n + 3) {\n  background-color: #4387fd;\n}\n.face-progress-circle--success .face-progress-circle-svg-inner {\n  stroke: #5dc75d;\n}\n.face-progress-circle--success .face-progress-circle-info {\n  color: #5dc75d;\n}\n.face-progress-circle--error .face-progress-circle-svg-inner {\n  stroke: #d85c4b;\n}\n.face-progress-circle--error .face-progress-circle-info {\n  color: #d85c4b;\n}\n", ""]);
 
 // exports
 

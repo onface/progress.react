@@ -60,12 +60,12 @@
 /******/ 	__webpack_require__.p = "/progress.react/0.1.0";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./doc/Inset.js":
+/***/ "./doc/Status.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -81,85 +81,62 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var React = __webpack_require__("./node_modules/react/index.js");
 var Progress = __webpack_require__("./lib/index.js");
+var ProgressGroup = Progress.ProgressGroup;
 
-var Inset = function (_React$Component) {
-    _inherits(Inset, _React$Component);
+var Status = function (_React$Component) {
+    _inherits(Status, _React$Component);
 
-    function Inset() {
-        _classCallCheck(this, Inset);
+    function Status() {
+        _classCallCheck(this, Status);
 
-        return _possibleConstructorReturn(this, (Inset.__proto__ || Object.getPrototypeOf(Inset)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (Status.__proto__ || Object.getPrototypeOf(Status)).apply(this, arguments));
     }
 
-    _createClass(Inset, [{
+    _createClass(Status, [{
         key: 'render',
         value: function render() {
+            var self = this;
             return __webpack_require__("./node_modules/react/index.js").createElement(
                 'div',
-                { className: 'insetDemo',
-                    style: { width: '300px', fontSize: '16px' }
-                },
-                __webpack_require__("./node_modules/react/index.js").createElement(Progress, { type: 'inset', insetText: true, percent: 20 }),
-                ' ',
-                __webpack_require__("./node_modules/react/index.js").createElement('br', null),
-                __webpack_require__("./node_modules/react/index.js").createElement(Progress, { type: 'inset', insetText: true, percent: 40, active: true }),
-                ' ',
-                __webpack_require__("./node_modules/react/index.js").createElement('br', null),
-                __webpack_require__("./node_modules/react/index.js").createElement(Progress, { type: 'inset', insetText: true, percent: 60, info: false }),
-                ' ',
-                __webpack_require__("./node_modules/react/index.js").createElement('br', null),
-                __webpack_require__("./node_modules/react/index.js").createElement(Progress, { type: 'inset', insetText: true, percent: 80, status: 'error',
-                    info: function info(percent) {
-                        return __webpack_require__("./node_modules/react/index.js").createElement(
-                            'span',
-                            { className: 'fi fi-times-circle' },
-                            ' \u5931\u8D25'
-                        );
-                    }
-                }),
-                ' ',
-                __webpack_require__("./node_modules/react/index.js").createElement('br', null),
-                __webpack_require__("./node_modules/react/index.js").createElement(Progress, { type: 'inset', percent: 100, status: 'success',
-                    insetText: function insetText(percent) {
-                        return __webpack_require__("./node_modules/react/index.js").createElement('span', { className: 'fi fi-check-circle' });
-                    }
-                }),
-                ' ',
-                __webpack_require__("./node_modules/react/index.js").createElement('br', null),
-                __webpack_require__("./node_modules/react/index.js").createElement(Progress, { type: 'inset', percent: 85.24564, accuracy: 2,
-                    insetText: function insetText(percent) {
-                        return __webpack_require__("./node_modules/react/index.js").createElement(
-                            'span',
-                            null,
-                            '\u52A0\u8F7D\u4E2D : ',
-                            percent,
-                            '%'
-                        );
-                    }
-                })
+                { className: 'groupDemo' },
+                __webpack_require__("./node_modules/react/index.js").createElement(
+                    'div',
+                    { style: { width: '300px' } },
+                    __webpack_require__("./node_modules/react/index.js").createElement(Progress, { percent: 80, status: 'dark' })
+                ),
+                __webpack_require__("./node_modules/react/index.js").createElement(
+                    'div',
+                    { style: { width: '100px' } },
+                    __webpack_require__("./node_modules/react/index.js").createElement(Progress, { percent: 80, type: 'circle', status: 'dark' })
+                ),
+                __webpack_require__("./node_modules/react/index.js").createElement(
+                    'div',
+                    { style: { width: '300px' } },
+                    __webpack_require__("./node_modules/react/index.js").createElement(ProgressGroup, { percent: [90, 50], status: 'dark' })
+                )
             );
         }
     }]);
 
-    return Inset;
+    return Status;
 }(React.Component);
 /*ONFACE-DEL*/
 
-Inset = __webpack_require__("./node_modules/react-hot-loader/lib/index.js").hot(module)(Inset);
-module.exports = Inset;
+Status = __webpack_require__("./node_modules/react-hot-loader/lib/index.js").hot(module)(Status);
+module.exports = Status;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__("./node_modules/webpack/buildin/module.js")(module)))
 
 /***/ }),
 
-/***/ "./doc/inset.demo.js":
+/***/ "./doc/status.demo.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var ReactDOM = __webpack_require__("./node_modules/react-dom/index.js");
-var Inset = __webpack_require__("./doc/Inset.js");
-ReactDOM.render(__webpack_require__("./node_modules/react/index.js").createElement(Inset, null), document.getElementById('inset-demo'));
+var Status = __webpack_require__("./doc/Status.js");
+ReactDOM.render(__webpack_require__("./node_modules/react/index.js").createElement(Status, null), document.getElementById('status-demo'));
 
 /***/ }),
 
@@ -19688,10 +19665,10 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ 5:
+/***/ 7:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("./doc/inset.demo.js");
+module.exports = __webpack_require__("./doc/status.demo.js");
 
 
 /***/ })

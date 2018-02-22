@@ -1,0 +1,81 @@
+.face-progress-line--thick {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.face-progress-line--thick .face-progress-line-box {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.face-progress-line--thick .face-progress-line-box-track {
+  height: 1em;
+  border-radius: 0.5em;
+}
+@keyframes smooth {
+  0% {
+    opacity: 0.4;
+    width: 0;
+  }
+  to {
+    opacity: 0;
+    width: 100%;
+  }
+}
+.face-progress-line--loading .face-progress-line-box-track-bar:before {
+  transition: all .2s linear;
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  border-radius: 10px;
+  animation: smooth 2s ease-in-out infinite;
+}
+.face-progress-circle--dashboard .face-progress-circle-svg {
+  transform: rotate(225deg);
+}
+.face-progress-circle--dashboard .face-progress-circle-svg-inner {
+  stroke-dashoffset: 221.48228207808043px;
+}
+.face-progress-circle--dashboard .face-progress-circle-svg-outer,
+.face-progress-circle--dashboard .face-progress-circle-svg-inner {
+  stroke-dasharray: 221.48228207808043px, 295.3097094374406px;
+}
+.face-progress-line--error .face-progress-line-box-track-bar {
+  background-color: #d85c4b;
+}
+.face-progress-line--error .face-progress-line-info {
+  color: #d85c4b;
+}
+.face-progress-line--error .face-progress-line-box-track-bar:nth-child(3n + 2) {
+  background-color: #5dc75d;
+}
+.face-progress-line--error .face-progress-line-box-track-bar:nth-child(3n + 3) {
+  background-color: #4387fd;
+}
+.face-progress-line--success .face-progress-line-box-track-bar {
+  background-color: #5dc75d;
+}
+.face-progress-line--success .face-progress-line-info {
+  color: #5dc75d;
+}
+.face-progress-line--success .face-progress-line-box-track-bar:nth-child(3n + 2) {
+  background-color: #d85c4b;
+}
+.face-progress-line--success .face-progress-line-box-track-bar:nth-child(3n + 3) {
+  background-color: #4387fd;
+}
+.face-progress-circle--success .face-progress-circle-svg-inner {
+  stroke: #5dc75d;
+}
+.face-progress-circle--success .face-progress-circle-info {
+  color: #5dc75d;
+}
+.face-progress-circle--error .face-progress-circle-svg-inner {
+  stroke: #d85c4b;
+}
+.face-progress-circle--error .face-progress-circle-info {
+  color: #d85c4b;
+}

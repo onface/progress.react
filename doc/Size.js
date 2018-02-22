@@ -4,13 +4,13 @@ class Size extends React.Component {
     render () {
         return (
             <div className="basicDemo">
-                <div style={{width:'300px',fontSize:'16px'}} >
+                <div style={{width:'200px',fontSize:'16px'}} >
                     <Progress percent={80} />
                 </div>
-                <div style={{width:'300px',fontSize:'32px'}} >
+                <div style={{width:'200px',fontSize:'32px'}} >
                     <Progress percent={80} />
                 </div>
-                <div style={{width:'600px',fontSize:'32px'}} >
+                <div style={{width:'400px',fontSize:'32px'}} >
                     <Progress percent={80} />
                 </div>
                 <hr/>
