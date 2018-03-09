@@ -7,9 +7,9 @@
 -->
 
 <div class="face-one-intro">
-    <div class="face-one-intro-title">进度条</div>
+    <div class="face-one-intro-title">progress.react</div>
     <h2 class="face-one-intro-desc">
-        Progress.react
+        进度条
     </h2>
     <div class="face-one-intro-tool">
         <a href="https://onface.github.io/progress.react" class="face-one-intro-btn face-one-intro-btn--primary mr-online-hide" >在线文档</a>
