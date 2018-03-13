@@ -2,23 +2,22 @@
   position: relative;
   line-height: 1em;
   display: table;
+  border-collapse: separate;
+  border-collapse: initial;
   width: 100%;
-}
-.face-progress-line + .face-progress-line {
-  margin-top: 0.5em;
+  padding-bottom: .4375em;
+  padding-top: .4375em;
 }
 .face-progress-line-box {
   width: 100%;
   vertical-align: middle;
   position: relative;
   display: table-cell;
-  padding-bottom: 0.3125em;
-  padding-top: 0.3125em;
 }
 .face-progress-line-box-track {
   position: relative;
-  height: 0.375em;
-  border-radius: 0.1875em;
+  height: .375em;
+  border-radius: .1875em;
   background-color: #f5f5f5;
 }
 .face-progress-line-box-track-bar {
@@ -43,18 +42,18 @@
 }
 .face-progress-line-box-track-bar-text {
   color: #fff;
-  font-size: 0.7em;
+  font-size: .7em;
   line-height: 1.33333em;
-  padding-right: 0.5em;
-  padding-left: 0.5em;
+  padding-right: .5em;
+  padding-left: .5em;
   display: block;
   white-space: nowrap;
 }
 .face-progress-line-info {
-  font-size: 0.8em;
+  font-size: .8em;
   line-height: 1.25em;
   display: table-cell;
-  padding-left: 0.78125em;
+  padding-left: .78125em;
   box-sizing: border-box;
   color: rgba(0, 0, 0, 0.45);
   min-width: 4.0625em;
@@ -62,6 +61,7 @@
 }
 .face-progress-circle {
   position: relative;
+  line-height: 0;
 }
 .face-progress-circle-svg-outer {
   stroke-linecap: round ;
@@ -98,21 +98,17 @@
   text-overflow: ellipsis;
 }
 /* themes */
-.face-progress-line--thick {
-  padding-bottom: 0;
-  padding-top: 0;
-}
 .face-progress-line--thick .face-progress-line-box {
   padding-top: 0;
   padding-bottom: 0;
 }
 .face-progress-line--thick .face-progress-line-box-track {
   height: 1em;
-  border-radius: 0.5em;
+  border-radius: .5em;
 }
 @keyframes smooth {
   0% {
-    opacity: 0.4;
+    opacity: .4;
     width: 0;
   }
   to {
