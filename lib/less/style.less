@@ -2,21 +2,19 @@
 @import "./extend.less";
 
 .@{prefix}-line--thick {
-    padding-bottom: 0;
-    padding-top: 0;
     .@{prefix}-line-box {
         padding-top: 0;
         padding-bottom: 0;
     }
     .@{prefix}-line-box-track {
         height: 1em;
-        border-radius: 0.5em;
+        border-radius: .5em;
     }
 }
 .@{prefix}-line--loading {
     .@{prefix}-line-box-track-bar {
         @keyframes smooth {
-            0% { opacity:0.4;width:0 }
+            0% { opacity:.4;width:0 }
             to { opacity:0;width:100% }
         }
         &:before {
