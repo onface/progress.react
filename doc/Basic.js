@@ -20,6 +20,7 @@ class Basic extends React.Component {
                 />
                 <Progress percent={100} status={'success'} />
                 <Progress percent={120} />
+                <Progress percent={80} barColor={['red','green']} barMarkColor={'yellow'}/>
             </div>
         )
     }

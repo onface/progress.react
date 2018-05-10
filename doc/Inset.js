@@ -24,6 +24,11 @@ class Inset extends React.Component {
                         return (<span>加载中 : {percent}%</span>)
                     }}
                 />
+                <Progress type={'inset'} percent={80} 
+                    insetText={function(percent){
+                        return (<div style={{marginTop:'1.4em',color:'#000'}}>加载中 : {percent}%</div>)
+                    }}
+                /> 
             </div>
         )
     }
