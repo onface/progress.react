@@ -1,0 +1,175 @@
+.face-progress-line {
+  position: relative;
+  line-height: 1em;
+  display: table;
+  border-collapse: separate;
+  border-collapse: initial;
+  width: 100%;
+  padding-bottom: .4375em;
+  padding-top: .4375em;
+}
+.face-progress-line-box {
+  width: 100%;
+  vertical-align: middle;
+  position: relative;
+  display: table-cell;
+}
+.face-progress-line-box-track {
+  position: relative;
+  height: .375em;
+  border-radius: .1875em;
+}
+.face-progress-line-box-track-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  border-radius: inherit;
+  text-align: right;
+  transition: all 0.3s ease-in-out;
+  background-color: #4387fd;
+}
+.face-progress-line-box-track-bar:nth-child(3n + 1) {
+  background-color: #4387fd;
+}
+.face-progress-line-box-track-bar:nth-child(3n + 2) {
+  background-color: #5dc75d;
+}
+.face-progress-line-box-track-bar:nth-child(3n + 3) {
+  background-color: #d85c4b;
+}
+.face-progress-line-box-track-bar-text {
+  color: #fff;
+  font-size: .7em;
+  line-height: 1.33333em;
+  padding-right: .5em;
+  padding-left: .5em;
+  display: block;
+  white-space: nowrap;
+}
+.face-progress-line-info {
+  font-size: .8em;
+  line-height: 1.25em;
+  display: table-cell;
+  padding-left: .78125em;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.45);
+  min-width: 4.0625em;
+  white-space: nowrap;
+}
+.face-progress-circle {
+  position: relative;
+  line-height: 0;
+}
+.face-progress-circle-svg-outer {
+  stroke-linecap: round ;
+  stroke-width: 6 ;
+  fill-opacity: 0 ;
+  stroke-dasharray: 295.3097094374406px, 295.3097094374406px;
+  stroke-dashoffset: 0px;
+  transition: all 0.3s ease-in-out;
+}
+.face-progress-circle-svg-inner {
+  stroke-linecap: round ;
+  stroke: #4387fd;
+  stroke-width: 6 ;
+  fill-opacity: 0 ;
+  stroke-dasharray: 295.3097094374406px, 295.3097094374406px;
+  stroke-dashoffset: 295.3097094374406px;
+  transition: all 0.3s ease-in-out;
+}
+.face-progress-circle-info {
+  color: rgba(0, 0, 0, 0.65);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  height: 1.5em;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  width: 89%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* themes */
+.face-progress-line--thick .face-progress-line-box {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.face-progress-line--thick .face-progress-line-box-track {
+  height: 1em;
+  border-radius: .5em;
+}
+@keyframes smooth {
+  0% {
+    opacity: .4;
+    width: 0;
+  }
+  to {
+    opacity: 0;
+    width: 100%;
+  }
+}
+.face-progress-line--loading .face-progress-line-box-track-bar:before {
+  transition: all .2s linear;
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  border-radius: 10px;
+  animation: smooth 2s ease-in-out infinite;
+}
+.face-progress-circle--dashboard .face-progress-circle-svg {
+  transform: rotate(225deg);
+}
+.face-progress-circle--dashboard .face-progress-circle-svg-inner {
+  stroke-dashoffset: 221.48228207808043px;
+}
+.face-progress-circle--dashboard .face-progress-circle-svg-outer,
+.face-progress-circle--dashboard .face-progress-circle-svg-inner {
+  stroke-dasharray: 221.48228207808043px, 295.3097094374406px;
+}
+.face-progress-line--error .face-progress-line-box-track-bar {
+  background-color: #d85c4b;
+}
+.face-progress-line--error .face-progress-line-info {
+  color: #d85c4b;
+}
+.face-progress-line--error .face-progress-line-box-track-bar:nth-child(3n + 2) {
+  background-color: #5dc75d;
+}
+.face-progress-line--error .face-progress-line-box-track-bar:nth-child(3n + 3) {
+  background-color: #4387fd;
+}
+.face-progress-line--success .face-progress-line-box-track-bar {
+  background-color: #5dc75d;
+}
+.face-progress-line--success .face-progress-line-info {
+  color: #5dc75d;
+}
+.face-progress-line--success .face-progress-line-box-track-bar:nth-child(3n + 2) {
+  background-color: #d85c4b;
+}
+.face-progress-line--success .face-progress-line-box-track-bar:nth-child(3n + 3) {
+  background-color: #4387fd;
+}
+.face-progress-circle--success .face-progress-circle-svg-inner {
+  stroke: #5dc75d;
+}
+.face-progress-circle--success .face-progress-circle-info {
+  color: #5dc75d;
+}
+.face-progress-circle--error .face-progress-circle-svg-inner {
+  stroke: #d85c4b;
+}
+.face-progress-circle--error .face-progress-circle-info {
+  color: #d85c4b;
+}
