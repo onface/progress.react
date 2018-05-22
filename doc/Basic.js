@@ -1,5 +1,5 @@
 var React = require('react')
-var Progress = require('progress.react')
+import Progress, {getAccuracy} from 'progress.react'
 class Basic extends React.Component {
     render () {
         return (
@@ -21,6 +21,8 @@ class Basic extends React.Component {
                 <Progress percent={100} status={'success'} />
                 <Progress percent={120} />
                 <Progress percent={80} barColor={['red','green']} barMarkColor={'yellow'}/>
+                <hr/>
+                提供精确度方法:  {getAccuracy(34.2345, 2)}%  {getAccuracy(34, 2)}%
             </div>
         )
     }
