@@ -22,6 +22,7 @@ class Inset extends React.Component {
                     dashboard={true}
                     info={()=>{ return (<b>仪表盘</b>) }}
                 />
+                <Progress type={'circle'} percent={80} barColor={'pink'} barMarkColor={'yellow'}/>
             </div>
         )
     }
