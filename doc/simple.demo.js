@@ -6,11 +6,11 @@ class Simple extends React.Component {
     render () {
         return (
             <div className="simpleDemo" >
-                <Progress precent={60} /> <br/>
-                <Progress precent={60} themes="loading" /> <br/>
-                <Progress precent={60} themes="success" /> <br/>
-                <Progress precent={60} themes="warn" /> <br/>
-                <Progress precent={60} themes="error" />
+                <Progress percent={60} /> <br/>
+                <Progress percent={60} themes="loading" /> <br/>
+                <Progress percent={60} themes="success" /> <br/>
+                <Progress percent={60} themes="warn" /> <br/>
+                <Progress percent={60} themes="error" />
             </div>
         )
     }

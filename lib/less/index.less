@@ -36,8 +36,8 @@
 	position: relative;
 	width: 100%;
 	margin: auto;
+	box-sizing: border-box;
 	// display: flex;
-	// display: grid;
 }
 .@{prefix}-track {
 	position: relative;
@@ -61,8 +61,9 @@
 .@{prefix}-circle {
     line-height: 0; // 消除下边间隔
     position: relative;
+    width: 100%;
     .@{prefix}-F-text {
-    	font-size:  1.714285em; // 24px;
+    	font-size:  1.5em; // 24px;
 	    display: table;
 	    top: 0;
 	    left: 0;
@@ -89,22 +90,9 @@
     stroke: @face-progress-bar-default-color;
     stroke-dashoffset: 295.3097094374406px;
 }
-	.@{prefix}-circle--dashboard {
-	    .@{prefix}-circle-svg {
-	        transform:rotate(225deg);
-	    }
-	    .@{prefix}-circle-svg-bar {
-	        stroke-dashoffset: 221.48228207808043px;
-	    }
-	    .@{prefix}-circle-svg-track, 
-	    .@{prefix}-circle-svg-bar {
-	        stroke-dasharray: 221.48228207808043px, 295.3097094374406px;
-	    }
-	}
 
 
 /** themes **/	
-
 .@{prefix}--themes-success {
 	.@{prefix}-track-bar {
 		background-color: @face-progress-bar-success-color;
@@ -155,4 +143,16 @@
             animation: smooth 2s ease-in-out infinite;
         }
 	}
+}
+.@{prefix}--themes-dashboard {
+    .@{prefix}-circle-svg {
+        transform:rotate(225deg);
+    }
+    .@{prefix}-circle-svg-bar {
+        stroke-dashoffset: 221.48228207808043px;
+    }
+    .@{prefix}-circle-svg-track, 
+    .@{prefix}-circle-svg-bar {
+        stroke-dasharray: 221.48228207808043px, 295.3097094374406px;
+    }
 }
