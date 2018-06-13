@@ -1,6 +1,7 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
-var Progress = require('progress.react').default
+var Progress = require('progress.react').default;
+
 class Simple extends React.Component {
     render () {
         return (

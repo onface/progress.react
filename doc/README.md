@@ -8,7 +8,7 @@
     desc: '',
     html: '<div id="simple-demo" ></div>',
     source: './simple.demo.js',
-    open: true,
+    open: false,
     side: true
 }
 ````
@@ -16,15 +16,16 @@
 
 ## render
 
+可以任意处理`html结构` `样式` 等等, 进行二次封装调用        
+文字颜色没有跟随不同状态色变化,可自行配置
 
 ````code
 {
     title: '基础使用',
-    desc: '',
+    desc: '文字的位置放置基本示例',
     html: '<div id="render-demo" ></div>',
     source: './render.demo.js',
-    open: true,
-    side: true
+    open: false
 }
 ````
 
