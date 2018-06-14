@@ -8,7 +8,7 @@
     desc: '暂未提供loading样式',
     html: '<div id="simple-demo" ></div>',
     source: './circle/simple.demo.js',
-    open: true,
+    open: false,
     side: true
 }
 ````
@@ -22,7 +22,7 @@
     desc: '',
     html: '<div id="text-demo" ></div>',
     source: './circle/text.demo.js',
-    open: true,
+    open: false,
     side: true
 }
 ````
@@ -38,7 +38,24 @@
     desc: '',
     html: '<div id="width-demo" ></div>',
     source: './circle/width.demo.js',
-    open: true,
+    open: false,
     side: true
 }
 ````
+
+## render
+
+可以任意处理`html结构` `样式` 等等, 传递自定义`props`, 方便进行二次封装调用  
+
+````code
+{
+    title: '基础使用',
+    desc: '',
+    html: '<div id="render-demo" ></div>',
+    source: './circle/render.demo.js',
+    open: false,
+    side: true
+}
+````
+
+

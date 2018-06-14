@@ -38,7 +38,8 @@
     desc: '文字的位置放置基本示例',
     html: '<div id="render-demo" ></div>',
     source: './line/render.demo.js',
-    open: false
+    open: false,
+    side: true
 }
 ````
 

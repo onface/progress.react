@@ -7,12 +7,12 @@ class Width extends React.Component {
         return (
             <div className="textDemo">
                 <div style={{width:'100px'}}>
-                    <Progress percent={20} />
-                    <Progress percent={20} width={12}/>
-                    <Progress percent={20} width={'2em'}/>
+                    <Progress percent={20} /> <br/>
+                    <Progress percent={40} width={12}/> <br/>
+                    <Progress percent={60} width={'2em'}/> <br/>
                 </div>
                 <div style={{width:'200px',fontSize:'28px'}}>
-                    <Progress percent={20} />
+                    <Progress percent={80} />
                 </div>
             </div>
         )

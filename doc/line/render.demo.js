@@ -7,10 +7,10 @@ import Progress, {getAccuracy} from 'progress.react'
 class RenderDemo extends React.Component {
     render () {
         return (
-            <div className="simpleDemo" >
+            <div className="renderDemo" >
                 <h4>basic</h4>
                 <Progress 
-                	percent={80}
+                	percent={20}
                 	children={function(processSelf, ref, domProps){
                 		let ps = processSelf
                 		return (
@@ -19,7 +19,12 @@ class RenderDemo extends React.Component {
 			                    {...domProps}
 			                >
                     			<div className={`${ps.props.prefixClassName}-line`}>
-    			                    <div className={`${ps.props.prefixClassName}-track`}>
+    			                    <div 
+                                        className={`${ps.props.prefixClassName}-track`}
+                                        style={{
+                                            height: ps.props.width
+                                        }}
+                                    >
     			                        <div 
     			                            className={`${ps.props.prefixClassName}-track-bar`}
     			                            style={{
@@ -37,7 +42,7 @@ class RenderDemo extends React.Component {
 
                 <h4>文字位置(外置于整个进度条上下)</h4>
                 <Progress 
-                    percent={80}
+                    percent={70}
                     children={function(processSelf, ref, domProps){
                         let ps = processSelf
                         return (
@@ -74,7 +79,7 @@ class RenderDemo extends React.Component {
 
                 <h4>文字位置(内置于进度条轨道中)</h4>
                 <Progress 
-                    percent={80}
+                    percent={40}
                     children={function(processSelf, ref, domProps){
                         let ps = processSelf
                         let pcls = processSelf.props.prefixClassName
@@ -112,7 +117,7 @@ class RenderDemo extends React.Component {
 
                 <h4>文字位置(内置于进度条中)</h4>
                 <Progress 
-                    percent={80}
+                    percent={60}
                     children={function(processSelf, ref, domProps){
                         let ps = processSelf
                         let pcls = processSelf.props.prefixClassName
@@ -203,7 +208,7 @@ class RenderDemo extends React.Component {
 
                 <h4>文字位置(外置于进度条左右)</h4>
                 <Progress 
-                    percent={80}
+                    percent={50}
                     children={function(processSelf, ref, domProps){
                         let ps = processSelf
                         let pcls = processSelf.props.prefixClassName
@@ -245,10 +250,11 @@ class RenderDemo extends React.Component {
                         )
                     }}
                 />
+                {/*
                 <br/>
                 <small>下面这个利用flex垂直对齐, 可能会存在不兼容现象</small>
                 <Progress 
-                    percent={80}
+                    percent={90}
                     children={function(processSelf, ref, domProps){
                         let ps = processSelf
                         let pcls = processSelf.props.prefixClassName
@@ -273,6 +279,7 @@ class RenderDemo extends React.Component {
                         )
                     }}
                 />
+                */}
             </div>
         )
     }
