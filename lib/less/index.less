@@ -14,6 +14,7 @@
 .@{prefix} {
 	position: relative;
 	text-align: center;
+     width: 100%;
 	// display: flex;
 }
 .@{prefix}-F-text {
@@ -56,6 +57,21 @@
 }
 
 /* line group */
+.@{prefix}Group {
+	.@{prefix} {
+		margin-bottom: .5em;
+	}
+}
+	.@{prefix}Group--themes-lap {
+		position: relative;
+		.@{prefix}:not(:first-child){
+			position: absolute;
+			top: 0;
+			.@{prefix}-track {
+				background-color: transparent;
+			}
+		}
+	}
 
 /* circle */
 .@{prefix}-circle {
@@ -100,8 +116,10 @@
 	.@{prefix}-circle-svg-bar {
 		stroke: @face-progress-bar-success-color;
 	}
-	.@{prefix}-F-text {
-		color: @face-progress-bar-success-color;
+	.@{prefix}-circle {
+		.@{prefix}-F-text {
+			color: @face-progress-bar-success-color;
+		}
 	}
 }
 .@{prefix}--themes-error {
@@ -111,8 +129,10 @@
 	.@{prefix}-circle-svg-bar {
 		stroke: @face-progress-bar-error-color;
 	}
-	.@{prefix}-F-text {
-		color: @face-progress-bar-error-color;
+	.@{prefix}-circle {
+		.@{prefix}-F-text {
+			color: @face-progress-bar-error-color;
+		}
 	}
 }
 .@{prefix}--themes-warn {
@@ -122,8 +142,10 @@
 	.@{prefix}-circle-svg-bar {
 		stroke: @face-progress-bar-warn-color;
 	}
-	.@{prefix}-F-text {
-		color: @face-progress-bar-warn-color;
+	.@{prefix}-circle {
+		.@{prefix}-F-text {
+			color: @face-progress-bar-warn-color;
+		}
 	}
 }
 .@{prefix}--themes-loading {

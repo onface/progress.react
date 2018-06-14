@@ -57,7 +57,6 @@ class RenderDemo extends React.Component {
             		}}
             		children={function(processSelf, ref, domProps){
             			let ps = processSelf
-            			console.log(ps)
             			// 获取circle的样式属性
             			let circle = getCircle(ps.props.percent, ps.props.width)
 		                return (
