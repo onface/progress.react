@@ -8,15 +8,7 @@ class Text extends React.Component {
         return (
             <div className="textDemo" style={{width:'100px'}}>
                 <ProgressCircle percent={20} text={false}/>
-                <ProgressCircle percent={20} text={() => null}/>
-
-                <hr/>
-
                 <ProgressCircle percent={20} text={'Hello'}/>
-                <ProgressCircle percent={40} text={() => 'Hello'}/>
-
-                <hr/>
-                
                 <ProgressCircle percent={60} 
                     text={function(processSelf){
                         return (

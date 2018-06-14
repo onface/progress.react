@@ -7,7 +7,20 @@
     title: '基础使用',
     desc: '',
     html: '<div id="simple-demo" ></div>',
-    source: './simple.demo.js',
+    source: './line/simple.demo.js',
+    open: false,
+    side: true
+}
+````
+
+## width
+
+````code
+{
+    title: '基础使用',
+    desc: '',
+    html: '<div id="width-demo" ></div>',
+    source: './line/width.demo.js',
     open: false,
     side: true
 }
@@ -24,7 +37,7 @@
     title: '基础使用',
     desc: '文字的位置放置基本示例',
     html: '<div id="render-demo" ></div>',
-    source: './render.demo.js',
+    source: './line/render.demo.js',
     open: false
 }
 ````
