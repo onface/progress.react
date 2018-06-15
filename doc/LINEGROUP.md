@@ -48,5 +48,7 @@
 }
 ````
 
+## render
+复杂使用
 
 demo use secondary Progress to show new ProgressGroup

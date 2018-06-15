@@ -27,6 +27,21 @@
 ````
 
 
+## color
+
+````code
+{
+    title: '基础使用',
+    desc: '',
+    html: '<div id="color-demo" ></div>',
+    source: './line/color.demo.js',
+    open: false,
+    side: true
+}
+````
+
+
+
 ## render
 
 可以任意处理`html结构` `样式` 等等, 进行二次封装调用        
