@@ -20,7 +20,7 @@
         <script data-markrun-lastrun="true">
         ;(function(){
             var  date = new Date().getFullYear() + '-' + new Date().getMonth() + '-' + new Date().getDate()
-            document.write('<scri' + 'pt src="./doc/simple.demo.js?v="' + date + '" ></sc' + 'ript>')
+            document.write('<scri' + 'pt src="./doc/line/simple.demo.js?v="' + date + '" ></sc' + 'ript>')
         }())
         </script>
     -->
@@ -55,8 +55,8 @@
                 <div class="face-one-feature-item">
                     <img src="./doc/theme/media/share.svg" alt="" class="face-one-feature-item-photo">
                     <br />
-                        <div class="face-one-feature-item-label">组件生态</div>
-                        <div class="face-one-feature-item-desc">可与 <a href="https://onface.live/">onface</a> 中任意组件组合使用</div>
+                        <div class="face-one-feature-item-label">场景丰富</div>
+                        <div class="face-one-feature-item-desc">基本满足进度条所需任何表现形式</div>
                 </div>
             </td>
         </tr>
