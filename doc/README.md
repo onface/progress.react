@@ -45,7 +45,9 @@
 ## render
 
 可以任意处理`html结构` `样式` 等等, 进行二次封装调用        
-文字颜色没有跟随不同状态色变化,可自行配置
+文字颜色没有跟随不同状态色变化,可自行配置           
+精确度配置`accuracy`与 [获取精确度](./ITOOL.md#getAccuracy) `getAccuracy`
+
 
 ````code
 {

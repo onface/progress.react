@@ -7,6 +7,8 @@ class Text extends React.Component {
     render () {
         return (
             <div className="textDemo" style={{width:'100px'}}>
+                <ProgressCircle percent={20} />
+                <ProgressCircle percent={20} accuracy={2}/>
                 <ProgressCircle percent={20} text={false}/>
                 <ProgressCircle percent={20} text={'Hello'}/>
                 <ProgressCircle percent={60} 

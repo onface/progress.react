@@ -32,6 +32,19 @@
 ````
 
 
+## color
+
+````code
+{
+    title: '基础使用',
+    desc: '',
+    html: '<div id="color-demo" ></div>',
+    source: './lineGroup/color.demo.js',
+    open: false,
+    side: true
+}
+````
+
 ## lap
 
 - dont suggest use lap 原因细述

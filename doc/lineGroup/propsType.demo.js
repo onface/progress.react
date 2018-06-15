@@ -13,7 +13,7 @@ class PropsType extends React.Component {
                         percent: [80, 60, 40, 20],
                         themes: 'success' ,
                         width: 10 ,
-                        barColor: 'yellow' ,
+                        barColor: 'pink' ,
                         strackColor: 'gray' ,
                     }}
 
@@ -24,7 +24,7 @@ class PropsType extends React.Component {
                         percent: [80, 60, 40, 20],
                         themes: [ 'success', 'success', 'success', 'success'] ,
                         width: [10, 10, 10, 10] ,
-                        barColor: ['yellow', 'yellow', 'yellow', 'yellow'] ,
+                        barColor: ['pink', 'pink', 'pink', 'pink'] ,
                         strackColor: ['gray', 'gray', 'gray', 'gray'] ,
                     }}
                 />

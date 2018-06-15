@@ -9,6 +9,9 @@ class Color extends React.Component {
                 <Progress percent={60} /> <br/>
                 <Progress percent={60} barColor="pink" /> <br/>
                 <Progress percent={60} strackColor="pink" /> <br/>
+                <h4>渐变色</h4>
+                <Progress percent={80} barColor={["pink","red"]} themes="loading" /> <br/>
+                <Progress percent={20} strackColor={["pink","red"]} /> <br/>
             </div>
         )
     }
