@@ -26,13 +26,15 @@ class RenderDemo extends React.Component {
 		                            <svg viewBox={circle.viewBox} className={`${ps.props.prefixClassName}-circle-svg`}>
 		                                <path className={`${ps.props.prefixClassName}-circle-svg-track`}
 		                                    style={{
-		                                        strokeWidth: circle.strokeWidth
+		                                        strokeWidth: circle.strokeWidth,
+		                                        stroke: self.props.barColor
 		                                    }}
 		                                ></path>
 		                                <path className={`${ps.props.prefixClassName}-circle-svg-bar`}
 		                                    style={{
 		                                        strokeWidth: circle.strokeWidth,
-		                                        strokeDashoffset: circle.strokeDashoffset
+		                                        strokeDashoffset: circle.strokeDashoffset,
+		                                        stroke: self.props.strackColor
 		                                    }}
 		                                ></path>
 		                            </svg>
