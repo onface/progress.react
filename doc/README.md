@@ -8,8 +8,7 @@
     desc: '',
     html: '<div id="simple-demo" ></div>',
     source: './line/simple.demo.js',
-    open: false,
-    side: true
+    open: true
 }
 ````
 
@@ -40,7 +39,52 @@
 }
 ````
 
-## themes
+## customThemes
+
+themes & prefixClassName & className
+
+可以右键审查元素, 查看三者的不同, 方便进行一些改动或二次封装
+
+
+````code
+{
+    title: '基础使用',
+    desc: '',
+    html: '<div id="cls-demo" ></div>',
+    source: './line/cls.demo.js',
+    open: false,
+    side: true
+}
+````
+
+> demo less
+
+````code
+{
+    title: 'themes',
+    desc: '',
+    source: './line/themes.demo.less',
+    open: false
+}
+````
+
+````code
+{
+    title: 'className',
+    desc: '',
+    source: './line/cls.demo.less',
+    open: false
+}
+````
+
+````code
+{
+    title: 'prefixClassName',
+    desc: '',
+    source: './line/pcls.demo.less',
+    open: false
+}
+````
 
 
 ## render
@@ -56,8 +100,7 @@
     desc: '文字的位置放置基本示例',
     html: '<div id="render-demo" ></div>',
     source: './line/render.demo.js',
-    open: false,
-    side: true
+    open: false
 }
 ````
 

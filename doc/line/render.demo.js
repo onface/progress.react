@@ -45,6 +45,7 @@ class RenderDemo extends React.Component {
                 <h4>文字位置(外置于整个进度条上下)</h4>
                 <Progress 
                     percent={70}
+                    accuracy={1}
                     children={function(processSelf, ref, domProps){
                         let ps = processSelf
                         return (
@@ -55,7 +56,8 @@ class RenderDemo extends React.Component {
                                 <div className={`${ps.props.prefixClassName}-line`}>
                                     <div className={`${ps.props.prefixClassName}-F-text`}>
                                         <span style={{float: 'left'}}>top left</span>
-                                        top center
+                                        top center : 
+                                        {getAccuracy(ps.props.percent, 2)} %
                                         <span style={{float: 'right'}}>top right</span>
                                     </div>
                                     <div className={`${ps.props.prefixClassName}-track`}>
@@ -68,7 +70,8 @@ class RenderDemo extends React.Component {
                                     </div>
                                     <div className={`${ps.props.prefixClassName}-F-text`}>
                                         <span style={{float: 'left'}}>bottom left</span>
-                                        bottom center
+                                        bottom center :  
+                                        {getAccuracy(ps.props.percent, ps.props.accuracy)} %
                                         <span style={{float: 'right'}}>bottom right</span>
                                     </div>
                                 </div>

@@ -61,7 +61,11 @@
 }
 ````
 
-## themes
+## customThemes
+
+themes & prefixClassName & className
+
+使用方式,参照[点此查看](/doc/README.md#customThemes)
 
 
 ## render
