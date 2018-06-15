@@ -24,13 +24,17 @@ class RenderDemo extends React.Component {
 		                    >
 		                        <div className={`${ps.props.prefixClassName}-circle`}>
 		                            <svg viewBox={circle.viewBox} className={`${ps.props.prefixClassName}-circle-svg`}>
-		                                <path className={`${ps.props.prefixClassName}-circle-svg-track`}
+		                                <path 
+		                                	className={`${ps.props.prefixClassName}-circle-svg-track`}
+			                                d={ps.props.d}
 		                                    style={{
 		                                        strokeWidth: circle.strokeWidth,
 		                                        stroke: ps.props.barColor
 		                                    }}
 		                                ></path>
-		                                <path className={`${ps.props.prefixClassName}-circle-svg-bar`}
+		                                <path 
+		                                	className={`${ps.props.prefixClassName}-circle-svg-bar`}
+		                                	d={ps.props.d}
 		                                    style={{
 		                                        strokeWidth: circle.strokeWidth,
 		                                        strokeDashoffset: circle.strokeDashoffset,
@@ -68,12 +72,16 @@ class RenderDemo extends React.Component {
 		                    >
 		                        <div className={`${ps.props.prefixClassName}-circle`}>
 		                            <svg viewBox={circle.viewBox} className={`${ps.props.prefixClassName}-circle-svg`}>
-		                                <path className={`${ps.props.prefixClassName}-circle-svg-track`}
+		                                <path 
+			                                className={`${ps.props.prefixClassName}-circle-svg-track`}
+			                                d={ps.props.d}
 		                                    style={{
 		                                        strokeWidth: circle.strokeWidth
 		                                    }}
 		                                ></path>
-		                                <path className={`${ps.props.prefixClassName}-circle-svg-bar`}
+		                                <path 
+			                                className={`${ps.props.prefixClassName}-circle-svg-bar`}
+			                                d={ps.props.d}
 		                                    style={{
 		                                        strokeWidth: circle.strokeWidth,
 		                                        strokeDashoffset: circle.strokeDashoffset
