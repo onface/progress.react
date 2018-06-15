@@ -18,6 +18,7 @@
     "$username": "onface",
     "$repository": "progress.react",
     "dependencies": {
+        "lodash": "^4.17.10",
         "prop-types": "^15.6.0",
         "react-spread-props": "^0.1.1",
         "util.react": "^1.6.0"

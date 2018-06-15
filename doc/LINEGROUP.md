@@ -13,3 +13,11 @@
     side: true
 }
 ````
+
+percent must be array
+dont suggest use lap
+
+array and string
+
+
+demo use secondary Progress to show new ProgressGroup

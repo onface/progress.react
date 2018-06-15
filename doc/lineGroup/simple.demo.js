@@ -16,11 +16,45 @@ class Simple extends React.Component {
                 </ProgressGroup>
                 <h5>-> 可以简化成这样</h5>
                 <ProgressGroup 
-                    progress={{
+                    children={{
                         percent: [80, 60, 40, 20],
-                        themes: [ 'loading', 'loading success', 'loading warn', 'loading error']
+                        themes: [ 'loading ', 'loading success', 'loading warn', 'loading error'] ,
                     }}
                 />
+                {/*
+                <hr/>
+                <ProgressGroup 
+                    themes="lap"
+                    children={{
+                        percent: [80, 60, 40, 20],
+                        themes: [ '', 'success', 'warn', 'error'] ,
+                    }}
+                />
+                <hr/>
+                <h5>string</h5>
+                <ProgressGroup 
+                    children={{
+                        percent: [80, 60, 40, 20],
+                        themes: 'success' ,
+                        width: 6 ,
+                        accuracy: 2 ,
+                        barColor: 'yellow' ,
+                        strackColor: 'gray' ,
+                    }}
+
+                />
+                <h5>array</h5>
+                <ProgressGroup 
+                    children={{
+                        percent: [80, 60, 40, 20],
+                        themes: [ 'success', 'success', 'success', 'success'] ,
+                        width: [6, 6, 6, 6] ,
+                        accuracy: [2, 2, 2, 2] ,
+                        barColor: ['yellow', 'yellow', 'yellow', 'yellow'] ,
+                        strackColor: ['gray', 'gray', 'gray', 'gray'] ,
+                    }}
+                />
+                */}
             </div>
         )
     }
