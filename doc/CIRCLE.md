@@ -27,6 +27,22 @@
 }
 ````
 
+
+## color
+
+````code
+{
+    title: '基础使用',
+    desc: '',
+    html: '<div id="color-demo" ></div>',
+    source: './circle/color.demo.js',
+    open: false,
+    side: true
+}
+````
+
+
+
 ## width
 虽然组件样式是以`em`为单位, 但`ProgressCircle`内以`svg`制作而成的部分以`px`为单位,		
 `svg`默认以`viewbox='0 0 100 100'` `width='6px'`基准制作,		
