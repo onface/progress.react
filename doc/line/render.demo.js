@@ -23,14 +23,14 @@ class RenderDemo extends React.Component {
                                         className={`${ps.props.prefixClassName}-track`}
                                         style={{
                                             height: ps.props.width,
-                                            backgroundColor: self.props.strackColor
+                                            backgroundColor: ps.props.strackColor
                                         }}
                                     >
     			                        <div 
     			                            className={`${ps.props.prefixClassName}-track-bar`}
     			                            style={{
     			                                width: ps.props.percent + '%',
-                                                backgroundColor: self.props.barColor
+                                                backgroundColor: ps.props.barColor
     			                            }}
     			                        ></div>
     			                    </div>
