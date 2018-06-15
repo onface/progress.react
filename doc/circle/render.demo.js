@@ -26,7 +26,7 @@ class RenderDemo extends React.Component {
 		                            <svg viewBox={circle.viewBox} className={`${ps.props.prefixClassName}-circle-svg`}>
 		                                <path 
 		                                	className={`${ps.props.prefixClassName}-circle-svg-track`}
-			                                d={ps.props.d}
+			                                d={ps.props.path}
 		                                    style={{
 		                                        strokeWidth: circle.strokeWidth,
 		                                        stroke: ps.props.barColor
@@ -34,7 +34,7 @@ class RenderDemo extends React.Component {
 		                                ></path>
 		                                <path 
 		                                	className={`${ps.props.prefixClassName}-circle-svg-bar`}
-		                                	d={ps.props.d}
+		                                	d={ps.props.path}
 		                                    style={{
 		                                        strokeWidth: circle.strokeWidth,
 		                                        strokeDashoffset: circle.strokeDashoffset,
@@ -74,14 +74,14 @@ class RenderDemo extends React.Component {
 		                            <svg viewBox={circle.viewBox} className={`${ps.props.prefixClassName}-circle-svg`}>
 		                                <path 
 			                                className={`${ps.props.prefixClassName}-circle-svg-track`}
-			                                d={ps.props.d}
+			                                d={ps.props.path}
 		                                    style={{
 		                                        strokeWidth: circle.strokeWidth
 		                                    }}
 		                                ></path>
 		                                <path 
 			                                className={`${ps.props.prefixClassName}-circle-svg-bar`}
-			                                d={ps.props.d}
+			                                d={ps.props.path}
 		                                    style={{
 		                                        strokeWidth: circle.strokeWidth,
 		                                        strokeDashoffset: circle.strokeDashoffset
