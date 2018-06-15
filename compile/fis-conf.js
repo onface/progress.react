@@ -135,42 +135,38 @@ if (fis.project.currentMedia() !== 'npm') {
                             return {
                                 lang: 'replace',
                                 code: `
-    <div class="face-one-code ${settings.open?' face-one-code--open':''} ${settings.run?' face-one-code--run':''} ${settings.side?' face-one-code--side':''}">
-                        <div class="face-one-code-F-view">
-                            <div class="face-one-code-example">
-                                ${settings.html}
-                            </div>
-                            <div class="face-one-code-info">
-                                <div class="face-one-code-info-title">${settings.title}</div>
-                                <div class="face-one-code-info-desc">
-                                    ${markrun(settings.desc, {template: '<%- content %>'})}
-                                </div>
-                                <span class="face-one-code-info-switchCode fi fi-${settings.side?'ellipsis':'code'}"></span>
-                            </div>
-                        </div>
-                        <div class="face-one-code-source"  >
-                            <div class="face-one-code-source-tool">
-                                <form class="face-one-code-source-tool-preview" action="https://codesandbox.io/api/v1/sandboxes/define" method="post" target="_blank" >
-                                    <input type="hidden" name="parameters" value="${parametersData}">
-                                    <button type="submit" class="fi fi-edit face-one-code-source-tool-preview-submit" ></button>
-                                </form>
-                                <span class="face-one-code-source-tool-copy fi fi-copy"></span>
-                            </div>
-                            ${code}
-                        </div>
-                        ${
-                            settings.run?
-                            `
-                            <script data-markrun-lastrun="true">
-                            document.write('<scri' + 'pt src="${settings.source}?v=${iPackage.version}"' + '" ></sc' + 'ript>')
-                            </script>
-                            `:''
-                        }
-
-
-
-
-                    </div>
+                                    <div class="face-one-code ${settings.open?' face-one-code--open':''} ${settings.run?' face-one-code--run':''} ${settings.side?' face-one-code--side':''}">
+                                        <div class="face-one-code-F-view">
+                                            <div class="face-one-code-example">
+                                                ${settings.html}
+                                            </div>
+                                            <div class="face-one-code-info">
+                                                <div class="face-one-code-info-title">${settings.title}</div>
+                                                <div class="face-one-code-info-desc">
+                                                    ${markrun(settings.desc, {template: '<%- content %>'})}
+                                                </div>
+                                                <span class="face-one-code-info-switchCode fi fi-${settings.side?'ellipsis':'code'}"></span>
+                                            </div>
+                                        </div>
+                                        <div class="face-one-code-source"  >
+                                            <div class="face-one-code-source-tool">
+                                                <form class="face-one-code-source-tool-preview" action="https://codesandbox.io/api/v1/sandboxes/define" method="post" target="_blank" >
+                                                    <input type="hidden" name="parameters" value="${parametersData}"/>
+                                                    <button type="submit" class="fi fi-edit face-one-code-source-tool-preview-submit" ></button>
+                                                </form>
+                                                <span class="face-one-code-source-tool-copy fi fi-copy"></span>
+                                            </div>
+                                            ${code}
+                                        </div>
+                                        ${
+                                            settings.run?
+                                            `
+                                            <script data-markrun-lastrun="true">
+                                            document.write('<scri' + 'pt src="${settings.source}?v=${iPackage.version}"' + '" ></sc' + 'ript>')
+                                            </script>
+                                            `:''
+                                        }
+                                    </div>
                                 `
                             }
                         }

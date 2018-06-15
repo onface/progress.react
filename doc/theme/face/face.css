@@ -2047,7 +2047,7 @@ a.face-one-feature-item .face-one-feature-item-label {
 .face-one-code-info-desc {
   padding: 1em;
   padding-top: .4em;
-  clear: both;
+  /*clear: both;*/
 }
 .face-one-code-info-desc p {
   margin-bottom: 0;
