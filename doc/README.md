@@ -1,108 +1,109 @@
 # 文档
 
+默认不提供文字, 需要的话, 至本章最后一节 [render](#render) 查看使用
+
 ## basic
 
 ````code
 {
     title: '基础使用',
-    desc: '**线形进度条**',
-    html: '<div id="basic-demo" ></div>',
-    js: './basic.demo.js',
-    source: './Basic.js',
-    horiz: true,
+    desc: '',
+    html: '<div id="simple-demo" ></div>',
+    source: './line/simple.demo.js',
     open: true
 }
 ````
 
-## inset
+## width
 
 ````code
 {
     title: '基础使用',
-    desc: '**线形进度条 — 内置显示内容**',
-    html: '<div id="inset-demo" ></div>',
-    js: './inset.demo.js',
-    source: './Inset.js',
-    horiz: true,
-    open: true
+    desc: '',
+    html: '<div id="width-demo" ></div>',
+    source: './line/width.demo.js',
+    open: false,
+    side: true
 }
 ````
 
-## circle
+
+## color
 
 ````code
 {
     title: '基础使用',
-    desc: '**环形进度条**',
-    html: '<div id="circle-demo" ></div>',
-    js: './circle.demo.js',
-    source: './Circle.js',
-    horiz: true,
-    open: true
+    desc: '',
+    html: '<div id="color-demo" ></div>',
+    source: './line/color.demo.js',
+    open: false,
+    side: true
 }
 ````
 
-## size
+## customThemes
+
+themes & prefixClassName & className
+
+可以右键审查元素, 查看三者的不同, 方便进行一些改动或二次封装
+
 
 ````code
 {
     title: '基础使用',
-    desc: '**通过改变包裹的div的`width`和`font-size`来自适应大小**',
-    html: '<div id="size-demo" ></div>',
-    js: './size.demo.js',
-    source: './Size.js',
-    horiz: true,
-    open: true
+    desc: '',
+    html: '<div id="cls-demo" ></div>',
+    source: './line/cls.demo.js',
+    open: false,
+    side: true
 }
 ````
 
-## change
+> demo less
 
 ````code
 {
-    title: '基础使用',
-    desc: '**改变数据**',
-    html: '<div id="change-demo" ></div>',
-    js: './change.demo.js',
-    source: './Change.js',
-    horiz: true,
-    open: true
-}
-````
-
-## costom
-
-````code
-{
-    title: 'Progress',
-    desc: '**这里尝试下各种属性改变吧 ( 表单没做校验,请手下留情测试 ) **',
-    html: '<div id="costom-demo" ></div>',
-    js: './costom.demo.js',
-    source: './Costom.js',
+    title: 'themes',
+    desc: '',
+    source: './line/themes.demo.less',
     open: false
 }
 ````
 
-## addStatus
+````code
+{
+    title: 'className',
+    desc: '',
+    source: './line/cls.demo.less',
+    open: false
+}
+````
 
-如果你想要新增一种状态风格，只需要修改 `less/style.less` 和 `less/settings.less` 文件。        
-比如找到这两个文件的 `// dark` 部分，取消注释，就可以使用      
-`<Progress percent={80} status={'dark'}/>`      
-`<ProgressGroup percent={[90,50]} status={'dark'} />`
+````code
+{
+    title: 'prefixClassName',
+    desc: '',
+    source: './line/pcls.demo.less',
+    open: false
+}
+````
 
 
+## render
 
-## group
+可以任意处理`html结构` `样式` 等等, 进行二次封装调用        
+文字颜色没有跟随不同状态色变化,可自行配置           
+精确度配置`accuracy`与 [获取精确度](./ITOOL.md#getAccuracy) `getAccuracy`
 
-> 使用之前需要了解一些注意点 [点此查看](/doc/intro.html#ProgressGroup)
 
 ````code
 {
     title: '基础使用',
-    desc: '**多进度条叠加**',
-    html: '<div id="group-demo" ></div>',
-    js: './group.demo.js',
-    source: './Group.js',
-    open: true
+    desc: '文字的位置放置基本示例',
+    html: '<div id="render-demo" ></div>',
+    source: './line/render.demo.js',
+    open: false
 }
 ````
+
+

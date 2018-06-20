@@ -58,7 +58,7 @@ Array.from(document.querySelectorAll('.face-one-nav-item-group-item')).forEach(f
                 相关站点
             </div>
             <div class="face-one-foot-group-item">
-                <a href="https://onface.github.io/component-spec">component-spec</a>
+                <a href="https://github.com/onface/component-spec">component-spec</a>
                 - 组件规范
             </div>
             <div class="face-one-foot-group-item">
@@ -66,13 +66,13 @@ Array.from(document.querySelectorAll('.face-one-nav-item-group-item')).forEach(f
                 - 开源项目脚手架
             </div>
             <div class="face-one-foot-group-item">
-                <a href="http://onface.cc/" class="face-one-foot-group-item-link">onface.cc</a>
+                <a href="https://onface.live/" class="face-one-foot-group-item-link">onface.live</a>
                 - 资源集合
             </div>
         </div>
         <div class="face-one-foot-group">
             <div class="face-one-foot-group-title">
-                <span class="face-one-foot-group-title-icon fi fi-users"></span>
+                <span class="face-one-foot-group-title-icon fi fi-team"></span>
                 社区
             </div>
             <div class="face-one-foot-group-item">
@@ -89,3 +89,10 @@ Array.from(document.querySelectorAll('.face-one-nav-item-group-item')).forEach(f
         </div>
     </div>
 </div>
+<script>
+PACKAGE_JSON = {
+    name: "<%= PACKAGE.name%>",
+    $repository: "<%= PACKAGE.$repository%>",
+    version: "<%= PACKAGE.version%>",
+}
+</script>
