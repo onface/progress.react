@@ -11,11 +11,13 @@ class RenderDemo extends React.Component {
                 <h4>basic</h4>
                 <Progress 
                 	percent={20}
-                	children={function(processSelf, ref, domProps){
-                		let ps = processSelf
+                	render={function(processSelf){
+                        let ps = processSelf
+                        let refRoot = ps.$method('ref')('root')
+                        let domProps = ps.$method('rootDomProps')
                 		return (
                 			<div
-			                    ref={ref`root`}
+			                    ref={refRoot}
 			                    {...domProps}
 			                >
                     			<div className={`${ps.props.prefixClassName}-line`}>
@@ -46,11 +48,13 @@ class RenderDemo extends React.Component {
                 <Progress 
                     percent={70}
                     accuracy={1}
-                    children={function(processSelf, ref, domProps){
+                    render={function(processSelf){
                         let ps = processSelf
+                        let refRoot = ps.$method('ref')('root')
+                        let domProps = ps.$method('rootDomProps')
                         return (
                             <div
-                                ref={ref`root`}
+                                ref={refRoot}
                                 {...domProps}
                             >
                                 <div className={`${ps.props.prefixClassName}-line`}>
@@ -85,12 +89,14 @@ class RenderDemo extends React.Component {
                 <h4>文字位置(内置于进度条轨道中)</h4>
                 <Progress 
                     percent={40}
-                    children={function(processSelf, ref, domProps){
+                    render={function(processSelf){
                         let ps = processSelf
-                        let pcls = processSelf.props.prefixClassName
+                        let refRoot = ps.$method('ref')('root')
+                        let domProps = ps.$method('rootDomProps')
+                        let pcls = ps.props.prefixClassName
                         return (
                             <div
-                                ref={ref`root`}
+                                ref={refRoot}
                                 {...domProps}
                             >
                                 <div className={`${pcls}-line`}>
@@ -123,12 +129,14 @@ class RenderDemo extends React.Component {
                 <h4>文字位置(内置于进度条中)</h4>
                 <Progress 
                     percent={60}
-                    children={function(processSelf, ref, domProps){
+                    render={function(processSelf){
                         let ps = processSelf
-                        let pcls = processSelf.props.prefixClassName
+                        let refRoot = ps.$method('ref')('root')
+                        let domProps = ps.$method('rootDomProps')
+                        let pcls = ps.props.prefixClassName
                         return (
                             <div
-                                ref={ref`root`}
+                                ref={refRoot}
                                 {...domProps}
                             >
                                 <div className={`${pcls}-line`}>
@@ -162,12 +170,14 @@ class RenderDemo extends React.Component {
                 <h4>文字位置(外置于进度条上下,文字位置(如center|right)可跟随进度条变化)</h4>
                 <Progress 
                     percent={80}
-                    children={function(processSelf, ref, domProps){
+                    render={function(processSelf){
                         let ps = processSelf
+                        let refRoot = ps.$method('ref')('root')
+                        let domProps = ps.$method('rootDomProps')
                         let pcls = processSelf.props.prefixClassName
                         return (
                             <div
-                                ref={ref`root`}
+                                ref={refRoot}
                                 {...domProps}
                             >
                                 <div className={`${pcls}-line`}
@@ -214,12 +224,14 @@ class RenderDemo extends React.Component {
                 <h4>文字位置(外置于进度条左右)</h4>
                 <Progress 
                     percent={50}
-                    children={function(processSelf, ref, domProps){
+                    render={function(processSelf){
                         let ps = processSelf
+                        let refRoot = ps.$method('ref')('root')
+                        let domProps = ps.$method('rootDomProps')
                         let pcls = processSelf.props.prefixClassName
                         return (
                             <div
-                                ref={ref`root`}
+                                ref={refRoot}
                                 {...domProps}
                                 style={{height:'14px'}}
                             >
@@ -260,12 +272,14 @@ class RenderDemo extends React.Component {
                 <small>下面这个利用flex垂直对齐, 可能会存在不兼容现象</small>
                 <Progress 
                     percent={90}
-                    children={function(processSelf, ref, domProps){
+                    render={function(processSelf){
                         let ps = processSelf
+                        let refRoot = ps.$method('ref')('root')
+                        let domProps = ps.$method('rootDomProps')
                         let pcls = processSelf.props.prefixClassName
                         return (
                             <div
-                                ref={ref`root`}
+                                ref={refRoot}
                                 {...domProps}
                             >
                                 <span className={`${pcls}-F-text`}>left&nbsp;&nbsp;</span>
