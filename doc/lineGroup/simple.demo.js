@@ -18,7 +18,12 @@ class Simple extends React.Component {
                 <ProgressGroup 
                     children={{
                         percent: [80, 60, 40, 20],
-                        themes: [ 'loading ', 'loading success', 'loading warn', 'loading error'] ,
+                        themes: [
+                            'loading ',
+                            'loading success',
+                            'loading warn',
+                            'loading error'
+                        ],
                     }}
                 />
             </div>

@@ -10,7 +10,8 @@
     desc: '',
     html: '<div id="simple-demo" ></div>',
     source: './line/simple.demo.js',
-    open: true
+    open: true,
+    side: true
 }
 ````
 
@@ -66,7 +67,8 @@ themes & prefixClassName & className
     title: 'themes',
     desc: '',
     source: './line/themes.demo.less',
-    open: false
+    open: false,
+    run:false
 }
 ````
 
@@ -75,7 +77,8 @@ themes & prefixClassName & className
     title: 'className',
     desc: '',
     source: './line/cls.demo.less',
-    open: false
+    open: false,
+    run:false
 }
 ````
 
@@ -84,7 +87,8 @@ themes & prefixClassName & className
     title: 'prefixClassName',
     desc: '',
     source: './line/pcls.demo.less',
-    open: false
+    open: false,
+    run:false
 }
 ````
 
