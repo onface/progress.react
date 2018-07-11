@@ -3,7 +3,7 @@
 
 ## basic
 
-````code
+`code
 {
     title: '基础使用',
     desc: '',
@@ -12,7 +12,7 @@
     open: true,
     side: true
 }
-````
+`
 
 
 ## props type
@@ -20,7 +20,7 @@
 当配置参数相同时, 可以简化至只配置字符串			
 > 但是参数`percent`数据格式必须是`propsType.arrayOf(propsType.string)`
 
-````code
+`code
 {
     title: '基础使用',
     desc: '',
@@ -29,17 +29,31 @@
     open: true,
     side: true
 }
-````
+`
 
 
 ## color
 
-````code
+`code
 {
     title: '基础使用',
     desc: '',
     html: '<div id="color-demo" ></div>',
     source: './lineGroup/color.demo.js',
+    open: true,
+    side: true
+}
+`
+
+## props & childProps
+
+
+````code
+{
+    title: '基础使用',
+    desc: '',
+    html: '<div id="props-demo" ></div>',
+    source: './lineGroup/props.demo.js',
     open: true,
     side: true
 }
@@ -53,7 +67,7 @@
 并且为了能够正常显示，`Progress`组件会根据**precent**的值，从高到低调节渲染先后顺序。
 
 
-````code
+`code
 {
     title: '基础使用',
     desc: '',
@@ -61,7 +75,7 @@
     source: './lineGroup/lap.demo.js',
     open: true,
 }
-````
+`
 
 ## customThemes
 

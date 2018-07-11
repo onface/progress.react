@@ -1,7 +1,0 @@
-# api
-
-defaultprops
-
-propstype
-
-example
