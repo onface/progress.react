@@ -8,7 +8,7 @@
     desc: '暂未提供loading样式',
     html: '<div id="simple-demo" ></div>',
     source: './circle/simple.demo.js',
-    open: false,
+    open: true,
     side: true
 }
 ````
@@ -24,7 +24,7 @@
     desc: '',
     html: '<div id="text-demo" ></div>',
     source: './circle/text.demo.js',
-    open: false,
+    open: true,
     side: true
 }
 ````
@@ -38,7 +38,7 @@
     desc: '',
     html: '<div id="color-demo" ></div>',
     source: './circle/color.demo.js',
-    open: false,
+    open: true,
     side: true
 }
 ````
@@ -56,7 +56,7 @@
     desc: '',
     html: '<div id="width-demo" ></div>',
     source: './circle/width.demo.js',
-    open: false,
+    open: true,
     side: true
 }
 ````
@@ -78,8 +78,7 @@ themes & prefixClassName & className
     desc: '',
     html: '<div id="render-demo" ></div>',
     source: './circle/render.demo.js',
-    open: false,
-    side: true
+    open: true,
 }
 ````
 

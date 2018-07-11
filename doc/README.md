@@ -23,7 +23,7 @@
     desc: '',
     html: '<div id="width-demo" ></div>',
     source: './line/width.demo.js',
-    open: false,
+    open: true,
     side: true
 }
 ````
@@ -37,7 +37,7 @@
     desc: '',
     html: '<div id="color-demo" ></div>',
     source: './line/color.demo.js',
-    open: false,
+    open: true,
     side: true
 }
 ````
@@ -55,7 +55,7 @@ themes & prefixClassName & className
     desc: '',
     html: '<div id="cls-demo" ></div>',
     source: './line/cls.demo.js',
-    open: false,
+    open: true,
     side: true
 }
 ````
@@ -106,7 +106,7 @@ themes & prefixClassName & className
     desc: '文字的位置放置基本示例',
     html: '<div id="render-demo" ></div>',
     source: './line/render.demo.js',
-    open: false
+    open: true
 }
 ````
 
