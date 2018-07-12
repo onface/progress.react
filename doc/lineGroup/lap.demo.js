@@ -8,7 +8,7 @@ class Lap extends React.Component {
         return (
             <div className="lapDemo" >
                 <ProgressGroup themes="lap"
-                    children={{
+                    render={{
                         percent: [60, 20, 40],
                         themes: [ '', 'success', 'warn'] ,
                     }}

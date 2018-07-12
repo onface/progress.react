@@ -7,20 +7,20 @@ class PropsDemo extends React.Component {
     render () {
         return (
             <div className="propsTypeDemo" >
-                <h5>props</h5>
+                <h5>merge props</h5>
                 <ProgressGroup 
 	                accuracy={2}
 	                width={10}
 	                barColor={'pink'}
 	                strackColor={'gray'}
-                    children={{
+                    render={{
                         percent: [80, 60, 40, 20],
                         themes: 'success' ,
                     }}
                 />
-                <h5>children props</h5>
+                <h5>render props</h5>
                 <ProgressGroup 
-                    children={{
+                    render={{
                         percent: [80, 60, 40, 20],
                         themes: [ 'success', 'success', 'success', 'success'],
                         accuracy: [2, 2, 2, 2],
@@ -29,6 +29,25 @@ class PropsDemo extends React.Component {
                         strackColor: ['gray', 'gray', 'gray', 'gray'],
                     }}
                 />
+                <h5>children component</h5>
+                <ProgressGroup>
+	                <Progress percent={80} themes={'success'} accuracy={2} width={10} barColor={'pink'} strackColor={'gray'} />
+	                <Progress percent={60} themes={'success'} accuracy={2} width={10} barColor={'pink'} strackColor={'gray'} />
+	                <Progress percent={40} themes={'success'} accuracy={2} width={10} barColor={'pink'} strackColor={'gray'} />
+	                <Progress percent={20} themes={'success'} accuracy={2} width={10} barColor={'pink'} strackColor={'gray'} />
+                </ProgressGroup>
+                <h5>merge children component</h5>
+                <ProgressGroup
+	                width={10}
+	                barColor={'pink'} 
+	                strackColor={'gray'}
+	                accuracy={2}
+                >
+	                <Progress percent={80} themes={'success'} />
+	                <Progress percent={60} themes={'success'} />
+	                <Progress percent={40} themes={'success'} />
+	                <Progress percent={20} themes={'success'} />
+                </ProgressGroup>
             </div>
         )
     }

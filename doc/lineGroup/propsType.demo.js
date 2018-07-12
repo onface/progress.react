@@ -9,7 +9,7 @@ class PropsType extends React.Component {
             <div className="propsTypeDemo" >
                 <h5>string</h5>
                 <ProgressGroup 
-                    children={{
+                    render={{
                         percent: [80, 60, 40, 20],
                         themes: 'success' ,
                         width: 10 ,
@@ -20,7 +20,7 @@ class PropsType extends React.Component {
                 />
                 <h5>array</h5>
                 <ProgressGroup 
-                    children={{
+                    render={{
                         percent: [80, 60, 40, 20],
                         themes: [ 'success', 'success', 'success', 'success'] ,
                         width: [10, 10, 10, 10] ,

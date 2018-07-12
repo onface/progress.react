@@ -8,7 +8,7 @@ class Color extends React.Component {
         return (
             <div className="colorDemo" >
                 <ProgressGroup 
-                    children={{
+                    render={{
                         percent: [80, 60, 40, 20],
                         themes: 'success' ,
                         width: 10 ,
@@ -17,7 +17,7 @@ class Color extends React.Component {
                 />
                 <h4>等同于</h4>
                 <ProgressGroup 
-                    children={{
+                    render={{
                         percent: [80, 60, 40, 20],
                         themes: 'success' ,
                         width: 10 ,
@@ -26,7 +26,7 @@ class Color extends React.Component {
                 />
                 <hr/>
                 <ProgressGroup 
-                    children={{
+                    render={{
                         percent: [80, 60, 40, 20],
                         themes: 'success' ,
                         width: 10 ,
@@ -38,7 +38,7 @@ class Color extends React.Component {
                 />
                 <h4>等同于</h4>
                 <ProgressGroup 
-                    children={{
+                    render={{
                         percent: [80, 60, 40, 20],
                         themes: 'success' ,
                         width: 10 ,
@@ -52,7 +52,7 @@ class Color extends React.Component {
                 />
                 <hr/>
                 <ProgressGroup 
-                    children={{
+                    render={{
                         percent: [80, 60, 40, 20],
                         themes: [ 'success', 'success', 'success', 'success'] ,
                         width: [10, 10, 10, 10] ,

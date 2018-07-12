@@ -49,7 +49,7 @@
 
 
 
-## childToArray
+## objToArray
 
 *由于`ProgressGroup`组件目前未提供`render`接口，所有这个工具函数使用者还不会接触到，仅仅记录在此*		
 

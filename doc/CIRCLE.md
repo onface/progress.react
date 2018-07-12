@@ -8,7 +8,7 @@
     desc: '暂未提供loading样式',
     html: '<div id="simple-demo" ></div>',
     source: './circle/simple.demo.js',
-    open: true,
+    open: false,
     side: true
 }
 ````

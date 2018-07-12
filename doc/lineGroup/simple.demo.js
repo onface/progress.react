@@ -16,7 +16,7 @@ class Simple extends React.Component {
                 </ProgressGroup>
                 <h5>-> 可以简化成这样</h5>
                 <ProgressGroup 
-                    children={{
+                    render={{
                         percent: [80, 60, 40, 20],
                         themes: [
                             'loading ',
