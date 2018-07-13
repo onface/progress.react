@@ -42,11 +42,12 @@
 }
 ````
 
-## customThemes
+## addStyle
 
 themes & prefixClassName & className
 
-可以右键审查元素, 查看三者的不同, 方便进行一些改动或二次封装
+可以右键审查元素, 查看三者的不同, 方便进行一些改动或二次封装        
+也可以复制 lib/index.less 和 lib/less/ 下的文件，修改部分或者其他代码。配置 `prefixClassName` `themes`
 
 
 ````code
@@ -87,6 +88,34 @@ themes & prefixClassName & className
     title: 'prefixClassName',
     desc: '',
     source: './line/pcls.demo.less',
+    open: false,
+    run:false
+}
+````
+
+## customThemes
+
+如果你想要快速新增一种风格，只需要修改 less/style.less 和 less/settings.less 文件。比如找到这两个文件的 /\* customPurple \*/ 部分，取消注释，就可以使用         
+`<Progress themes="customPurple" />`
+
+````code
+{
+    title: '基础使用',
+    desc: '以防和组件样式冲突，配置了`prefixClassName`',
+    html: '<div id="customThemes-demo" ></div>',
+    source: './line/customThemes.demo.js',
+    open: true,
+    side: true
+}
+````
+
+> demo less
+
+````code
+{
+    title: 'customThemes',
+    desc: '',
+    source: './line/customThemes.demo.less',
     open: false,
     run:false
 }
