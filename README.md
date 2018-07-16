@@ -90,7 +90,7 @@
         <tr>
             <td align="center" >
                 <a class="face-one-feature-item" href="https://github.com/onface">
-                    <img src="https://github.com/onface.png" width="150 height="150" alt="" class="face-one-feature-item-avatar">
+                    <img src="https://github.com/onface.png" width="150" height="150" alt="" class="face-one-feature-item-avatar">
                     <br />
                     <div class="face-one-feature-item-label">onface</div>
                 </a>
