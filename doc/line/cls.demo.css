@@ -1,0 +1,6 @@
+.customClassName {
+  border: 3px solid black;
+}
+.customClassName .face-progress-line {
+  padding: 20px;
+}

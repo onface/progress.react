@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="theme/face/face.css">
+<meta name="keywords" content="">
+<meta name="description" content="$render">
+<title>$render</title>
+</head>
+<body>
+<div class="face-one-head">
+    <a class="face-one-head-logo" href="../index.html">
+        <img src="theme/media/logo.svg" alt="" class="face-one-head-logo-photo" />
+        <span class="face-one-head-logo-text">
+        progress.react
+        </span>
+    </a>
+    <span class="face-one-head-slogan">
+        Write less code, do more things!
+    </span>
+    <!-- <div class="face-one-head-search">
+        <span class="face-one-head-search-icon fi fi-search"></span>
+        <input type="text" class="face-one-head-search-input" placeholder="搜索..." />
+    </div> -->
+    <div class="face-one-head-nav">
+        <span class="face-one-head-nav-switch fi fi-bars"></span>
+        <div class="face-one-head-nav-F-cnt">
+            <a href="../index.html" class="face-one-head-nav-link">首页</a>
+            <a href="intro.html" class="face-one-head-nav-link">指引</a>
+            <a href="index.html" class="face-one-head-nav-link">文档</a>
+            <a href="API.html" class="face-one-head-nav-link">API</a>
+        </div>
+        <script>
+        Array.from(document.querySelectorAll('.face-one-head-nav-link')).forEach(function (node) {
+            if (node.href) {
+                var pathname = node.href.replace(/\?.*/, '')
+                if (pathname === location.origin + location.pathname) {
+                    node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-head-nav-link--on')
+                }
+            }
+        })
+        </script>
+    </div>
+</div>
+
+<div class="face-one-layout">
+<div class="face-one-layout-F-line">
+<div class="face-one-layout-sidebar">
+<div class="face-one-nav">
+<span class="face-one-nav-switch fi fi-menu-unfold"></span>
+<div class="face-one-nav-F-inner">
+<div class="face-one-nav-item">
+    <a href="PROPS.html" class="face-one-nav-item-label">指引</a>
+</div>
+<!-- <div class="face-one-nav-item">
+    <a href="index.html" class="face-one-nav-item-label">文档</a>
+</div> -->
+<!-- face-one-nav-item--group-on 控制默认展开 -->
+<div class="face-one-nav-item face-one-nav-item--group face-one-nav-item--group-on">
+    <span class="face-one-nav-item-switch fi fi-down"></span>
+    <span class="face-one-nav-item-label">
+        文档
+    </span>
+    <div class="face-one-nav-item-group">
+        <a href="index.html" class="face-one-nav-item-group-item">Progress</a>
+        <a href="CIRCLE.html" class="face-one-nav-item-group-item">ProgressCircle</a>
+        <a href="LINEGROUP.html" class="face-one-nav-item-group-item">ProgressGroup</a>
+        <a href="ITOOL.html" class="face-one-nav-item-group-item">itool</a>
+    </div>
+    <!-- <div class="face-one-nav-item-group">
+        <div class="face-one-nav-item-group-title">line</div>
+        <a href="index.html#basic" class="face-one-nav-item-group-item">basic</a>
+        <a href="index.html#width" class="face-one-nav-item-group-item">width</a>
+        <a href="index.html#color" class="face-one-nav-item-group-item">barColor markColor</a>
+        <a href="index.html#customThemes" class="face-one-nav-item-group-item">customThemes</a>
+        <a href="index.html#render" class="face-one-nav-item-group-item">render</a>
+    </div>
+    <div class="face-one-nav-item-group">
+        <div class="face-one-nav-item-group-title">circle</div>
+        <a href="CIRCLE.html#basic" class="face-one-nav-item-group-item">basic</a>
+        <a href="CIRCLE.html#text" class="face-one-nav-item-group-item">text</a>
+        <a href="CIRCLE.html#color" class="face-one-nav-item-group-item">color</a>
+        <a href="CIRCLE.html#width" class="face-one-nav-item-group-item">width</a>
+        <a href="CIRCLE.html#customThemes" class="face-one-nav-item-group-item">customThemes</a>
+        <a href="CIRCLE.html#render" class="face-one-nav-item-group-item">render</a>
+    </div>
+    <div class="face-one-nav-item-group">
+        <div class="face-one-nav-item-group-title">lineGroup</div>
+        <a href="LINEGROUP.html#basic" class="face-one-nav-item-group-item">basic</a>
+        <a href="LINEGROUP.html#props%20type" class="face-one-nav-item-group-item">props type</a>
+        <a href="LINEGROUP.html#color" class="face-one-nav-item-group-item">color</a>
+        <a href="LINEGROUP.html#lap" class="face-one-nav-item-group-item">lap</a>
+        <a href="LINEGROUP.html#customThemes" class="face-one-nav-item-group-item">customThemes</a>
+        <a href="LINEGROUP.html#render" class="face-one-nav-item-group-item">render</a>
+    </div>
+    <div class="face-one-nav-item-group">
+        <div class="face-one-nav-item-group-title">itool</div>
+        <a href="ITOOL.html#getAccuracy" class="face-one-nav-item-group-item">getAccuracy</a>
+        <a href="ITOOL.html#getCircle" class="face-one-nav-item-group-item">getCircle</a>
+        <a href="ITOOL.html#transToFun" class="face-one-nav-item-group-item">transToFun</a>
+        <a href="ITOOL.html#objToArray" class="face-one-nav-item-group-item">objToArray</a>
+    </div> -->
+</div>
+<div class="face-one-nav-item">
+    <a href="API.html" class="face-one-nav-item-label">API</a>
+</div>
+</div>
+</div>
+</div>
+<div class="face-one-layout-cnt">
+<div id="face-one-cnt" class="face-one-cnt markdown-body">
+<div id="face-one-sidebar" class="face-one-sidebar"></div>
+<h1 id="$render" ><a class="markrun-anchor" href="../Users/rain1/Documents/github/progress.react/#$render"><span class="markrun-anchor-link"></span></a>$render</h1><p>只有使用到组件 <code>render</code> 接口时, 才会需要浏览本章节, 否则可以预先跳过这部分</p>
+<h2 id="getAccuracy" ><a class="markrun-anchor" href="../Users/rain1/Documents/github/progress.react/#getAccuracy"><span class="markrun-anchor-link"></span></a>getAccuracy</h2><p>获取精确度，搭配组件<code>render</code>接口使用，点此查看 <a href="../Users/rain1/Documents/github/progress.react/index.html#render">render示例</a></p>
+
+                                    <div class="face-one-code  face-one-code--open  face-one-code--run ">
+                                        <div class="face-one-code-F-view">
+                                            <div class="face-one-code-example">
+                                                <div id="accuracy-demo" ></div>
+                                            </div>
+                                            <div class="face-one-code-info">
+                                                <div class="face-one-code-info-title">基础使用</div>
+                                                <div class="face-one-code-info-desc">
+                                                    
+                                                </div>
+                                                <span class="face-one-code-info-switchCode fi fi-code"></span>
+                                            </div>
+                                        </div>
+                                        <div class="face-one-code-source"  >
+                                            <div class="face-one-code-source-tool">
+                                                <form class="face-one-code-source-tool-preview" action="https://codesandbox.io/api/v1/sandboxes/define" method="post" target="_blank" >
+                                                    <input type="hidden" name="parameters" value="N4IgZglgNgpgziAXKCA7AJjAHgOgBYAuAtlEqAMYD2qBMNSIAPOhAG4AEE6AvADogBDcuQCuAJyEBPALSYilfuwB8jAPQtWSkAF8ANCDSZcAKwTIQVGnQINWAsewBKMIQXbd2YmAEcRELwAUAORerkEAlLyodg7OrgAiAPIAsu6ePn6BIS7kBLKURBFREEQADpRibgAKYpQA5l5wcLrswHUwBACCwuJS2uxgtUTsQaW1DfBwOKG5QVFRlnBucpQAygRiaHVpANrzBEEADEG6-0EAjCf7h6eovATnt_dHOJdPB4evAEwAzAAsXzeZ0-h1B5x-VzuHxwx3eIPe4L-OB-vy-fwArLcALoLKACJrsbqiCTkSTsbC0DBwJw5Ag4ADCBXKqGsrSi7A56QwMAcAXCbNQnKF6QI4kFAXZwqlzDY7HIeKaADkBEQYHwDARKJQoPEYPJFEp9lLpTV6o1qZLjVbOUJiVJuMAftpLdarV5uWIHWARKhchBqAFKAB3VDhYAu12uryisTiiORhMyzTxhOu8OC1OZ-4rdabVB1HBEASlALe30Ef2oAIQWhEFqGbBhlOZ433e7RsXsCUZluRtsEe5J9gAaxgkgdDaw2kNPd71v792ANb1ztnc9bA83wAABuxpEp2NvV-vXQuCMBg6gcAASd2YMTBdpdHokyQRau1lo_cLHk9Ws9qBoM5_kKZ6RGuIEcvc2jgZBUq_nBnKAWwwFwbBJ7aAhqaqKhrrIcmEEcuhHKrquURxLkSTJNMdD3t2QqMESvSkuwOG3EK6CUKIqo0DgT4AKKwDxBAAEKSAAkugwS2sxMgrEUobzKgOj6KUQjDgI7Q4KY1BkBY1CUjY5iYKUtF0OQEDwHpUCUOg-J4AwAB6SLnAA7K8hwgKptSlNIBCSKZZggI55zojgABsMJeSAMx5HAYwuOg0hjJQpRBY5nznK80UiBWUA0a4TlZZFnn6LFRWRUipUxbS-REBVOBVdFKUTE0BW5AwnxfFFmG9UAA"/>
+                                                    <button type="submit" class="fi fi-edit face-one-code-source-tool-preview-submit" ></button>
+                                                </form>
+                                                <span class="face-one-code-source-tool-copy fi fi-copy"></span>
+                                            </div>
+                                            <pre><code class="lang-js"><span class="hljs-keyword">var</span> React = <span class="hljs-built_in">require</span>(<span class="hljs-string">'react'</span>)
+<span class="hljs-keyword">var</span> ReactDOM = <span class="hljs-built_in">require</span>(<span class="hljs-string">'react-dom'</span>)
+<span class="hljs-keyword">import</span> Progress, {getAccuracy} <span class="hljs-keyword">from</span> <span class="hljs-string">'progress.react'</span>
+
+<span class="hljs-keyword">const</span> demoString = [
+    <span class="hljs-string">'0'</span>,
+    <span class="hljs-string">'1'</span>,
+    <span class="hljs-number">0</span>,
+    <span class="hljs-number">1</span>,
+    <span class="hljs-string">'0.1'</span>,
+    <span class="hljs-string">'0.123421'</span>,
+    <span class="hljs-string">'0.00013'</span>,
+    <span class="hljs-string">'0.0'</span>,
+    <span class="hljs-number">0.0</span>,
+    <span class="hljs-number">134.323245</span>,
+]
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Accuracy</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+    render () {
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"itoolDemo"</span> &gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">Progress</span> 
+                    <span class="hljs-attr">accuracy</span>=<span class="hljs-string">{3}</span>
+                    <span class="hljs-attr">render</span>=<span class="hljs-string">{function(own){</span>
+                        <span class="hljs-attr">return</span> (
+                            &lt;<span class="hljs-attr">div</span>&gt;</span>
+                            {
+                                demoString.map(function(item, index){
+                                    return (
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{index}</span>&gt;</span>
+                                        {item}
+                                        {` -&gt; `}
+                                        {own.$render('getAccuracy')(item, 3)}
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                    )
+                                })
+                            }
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        )
+                    }}
+                /&gt;
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        )
+    }
+}
+
+ReactDOM.render(
+    <span class="hljs-tag">&lt;<span class="hljs-name">Accuracy</span> /&gt;</span>,
+    document.getElementById('accuracy-demo')
+)
+
+</span>
+</code></pre>
+                                        </div>
+                                        
+                                            
+                                            
+                                    </div>
+                                
+<h2 id="getColor" ><a class="markrun-anchor" href="../Users/rain1/Documents/github/progress.react/#getColor"><span class="markrun-anchor-link"></span></a>getColor</h2><p>获取进度条的颜色, 传入的颜色参数兼容<strong>单色</strong>和<strong>多色</strong><br><strong>只适用于 <code>Progress</code> 组件</strong></p>
+
+                                    <div class="face-one-code  face-one-code--open  face-one-code--run ">
+                                        <div class="face-one-code-F-view">
+                                            <div class="face-one-code-example">
+                                                <div id="color-demo" ></div>
+                                            </div>
+                                            <div class="face-one-code-info">
+                                                <div class="face-one-code-info-title">基础使用</div>
+                                                <div class="face-one-code-info-desc">
+                                                    
+                                                </div>
+                                                <span class="face-one-code-info-switchCode fi fi-code"></span>
+                                            </div>
+                                        </div>
+                                        <div class="face-one-code-source"  >
+                                            <div class="face-one-code-source-tool">
+                                                <form class="face-one-code-source-tool-preview" action="https://codesandbox.io/api/v1/sandboxes/define" method="post" target="_blank" >
+                                                    <input type="hidden" name="parameters" value="N4IgZglgNgpgziAXKCA7AJjAHgOgBYAuAtlEqAMYD2qBMNSIAPOhAG4AEE6AvADohUolAE4BaTEUr92APkYB6FqxkgAvgBoQaTLgBWCZAOq16iEKwCGw9gCUYF8gXbd2wmAEcArhDcAKAORuDgT-AJS8qJbWdsEAIgDyALLOrh7efoH2juKURGEREEQADiJOAArClADmbnBw6uzAVTAEAMKUQsKq7GCVROz-RZU18HA4QY7-ERHkUBZ17O2d7Ngm6HC2WQQ47cXUdE7AEewnqRgw1r6hjcend24EnsKo7L63dx_szGzss_NwADkLEQYHwtARKB1YjBJNIZNMnJ8PowKtVaht3kisScAO5cAh4bjAfwARhh_lUmOxSKKF3IByJAFYAAyUl7U7EOchPBwATyJAGY2RzsXACMIHABrJYiIn-XkwKBCHEUqki04AIysMuEcqKaElqvZ6o-bnOuuAYE8qEcEGovkoONQoSOxpNSNgTiKsw2LkdqBwQ0oRTGQxgkCwrTmdSBILV7tODyeLzeboTWO-rHj6axwBw-f9OAAJGbMMIApVKARUSGwsKc9j4WmGxmlL9o4DgaDgAADIvAb1QOCqURQNAwHuqJsthOZ9v_WPdvsDn0j8VSyfZmccsW82BEgD6OH-ECqqFT2-3wHYW8vCbwMFPhEQ7ELQZDODx6AJ6lvd-pGh_v-WKFiWdBlgEzRtB0IhhA6TqBpUH5ihK5DSjBwjhM2wFYqE9Y4Ui04ERyc5AcRpx_DGXZEsug7DqI65oaIWrCJu2HkUiu77sAR4nmeF4cQm15kYJSJfgSL5vkhoZ0gcADU_gAKRTOxolIoBqlqR8oGlhckEtDqcFScGYwsTqWFadieEicBciKGwRFqQoSiOcRzkOTZ6ruconm4b5pyqPh6ryK5IqMHgwghZ5KLDOiN6adS4mEsSZJ5EFCa0sI9I0IKrL-ScXI8uQ_LAEK-XsChUo6kSADagwGv4DT-DieAQLQ_gALrpe6ZkYbVmToI18qKsqnXdSaukWlaNoEHa57-i65V3J67B0SkxkfmGEZRguXZLYmLTJq8-2fJmJ3YnmBYIWB5oVpC1bSXW513KFOFzpRnYgjR_Z0SOY6oBOU7PSRbYfYu30rkOa6oZKbGWXcXHdrxdSnuewM5sJCXww-T4EJJCHvmMSW_ljgkafDSI6eBen-FBhmhPBAaEzglVoeZ6PqtZpOXq9TlthzCZg9RvY_auDEw8xVhwxTHyI4ex4o_xAsNpjMvqkl-NM9JgayTQCnKcrObk2rlPXZN-nQZ0RkE9rvWdBZJsnFzat2S5hvIvZPnczm3m8zOvvnQ7RvjdiUVYwH7FB-wbJshEMSOAkiTjNT5aYowOrsCFJN3OglDciCNA4FBACisAFwQABCvIAJLoAEggiOIMKUPkzrTKgaiaEUUoWM0OD6NQZBGDQBxD5gtLnDaEDwEPQjoPMeAMAAegALDgJIAOzr8yIBd0hDG8rSBggEvJKMjgABsOA75oEwEKIcBhhY6CiITy_Muv6-7yAnizVAyfBGXiSS-19v53yAVfNeN8QB3xyEQCBOAoHfyDCMOoADHAMA_gAJlAYFPBQA"/>
+                                                    <button type="submit" class="fi fi-edit face-one-code-source-tool-preview-submit" ></button>
+                                                </form>
+                                                <span class="face-one-code-source-tool-copy fi fi-copy"></span>
+                                            </div>
+                                            <pre><code class="lang-js">var React = require(<span class="hljs-string">'react'</span>)
+var ReactDOM = require(<span class="hljs-string">'react-dom'</span>)
+import Progress, {getColor} from <span class="hljs-string">'progress.react'</span>
+
+class Color extends React.Component {
+    render () {
+        return (
+            &lt;<span class="hljs-built-in">div</span> className=<span class="hljs-string">"itoolDemo"</span> &gt;
+                &lt;Progress 
+                    width={<span class="hljs-string">'1em'</span>}
+                    percent={<span class="hljs-number">50</span>}
+                    accuracy={<span class="hljs-number">3</span>}
+                    strackColor={<span class="hljs-string">'yellow'</span>}
+                    barColor={<span class="hljs-string">'pink'</span>}
+                    render={function(own){
+                        let pcls = own.props.prefixClassName
+                        return (
+                            &lt;<span class="hljs-built-in">div</span>
+                                {...own.<span class="hljs-symbol">$</span>render(<span class="hljs-string">'rootProps'</span>)}
+                            &gt;
+                                &lt;<span class="hljs-built-in">div</span> className={`<span class="hljs-symbol">$</span>{pcls}-line`}&gt;
+                                    &lt;<span class="hljs-built-in">div</span> className={`<span class="hljs-symbol">$</span>{pcls}-track`}
+                                        style={_.<span class="hljs-keyword">assign</span>(
+                                            { 
+                                                height: own.props.width,
+                                            },
+                                            own.<span class="hljs-symbol">$</span>render(<span class="hljs-string">'getColor'</span>)(own.props.strackColor)
+                                        )}
+                                    &gt;
+                                        &lt;<span class="hljs-built-in">div</span> 
+                                            className={`<span class="hljs-symbol">$</span>{pcls}-track-bar`}
+                                            style={_.<span class="hljs-keyword">assign</span>(
+                                                { 
+                                                    width: own.props.percent+<span class="hljs-string">'%'</span>
+                                                },
+                                                own.<span class="hljs-symbol">$</span>render(<span class="hljs-string">'getColor'</span>)(own.props.barColor)
+                                            )}
+                                        &gt;&lt;/<span class="hljs-built-in">div</span>&gt;
+                                    &lt;/<span class="hljs-built-in">div</span>&gt;
+                                &lt;/<span class="hljs-built-in">div</span>&gt;
+                            &lt;/<span class="hljs-built-in">div</span>&gt;
+                        )
+                    }}
+                /&gt;
+                &lt;hr/&gt;
+                &lt;Progress 
+                    width={<span class="hljs-string">'1em'</span>}
+                    percent={<span class="hljs-number">30</span>}
+                    accuracy={<span class="hljs-number">3</span>}
+                    strackColor={[<span class="hljs-string">'pink'</span>, <span class="hljs-string">'white'</span>]}
+                    barColor={[<span class="hljs-string">'red'</span>,<span class="hljs-string">'yellow'</span>]}
+                    render={function(own){
+                        let pcls = own.props.prefixClassName
+                        return (
+                            &lt;<span class="hljs-built-in">div</span>
+                                {...own.<span class="hljs-symbol">$</span>render(<span class="hljs-string">'rootProps'</span>)}
+                            &gt;
+                                &lt;<span class="hljs-built-in">div</span> className={`<span class="hljs-symbol">$</span>{pcls}-line`}&gt;
+                                    &lt;<span class="hljs-built-in">div</span> className={`<span class="hljs-symbol">$</span>{pcls}-track`}
+                                        style={_.<span class="hljs-keyword">assign</span>(
+                                            { 
+                                                height: own.props.width,
+                                            },
+                                            own.<span class="hljs-symbol">$</span>render(<span class="hljs-string">'getColor'</span>)(own.props.strackColor)
+                                        )}
+                                    &gt;
+                                        &lt;<span class="hljs-built-in">div</span> 
+                                            className={`<span class="hljs-symbol">$</span>{pcls}-track-bar`}
+                                            style={_.<span class="hljs-keyword">assign</span>(
+                                                { 
+                                                    width: own.props.percent+<span class="hljs-string">'%'</span>
+                                                },
+                                                own.<span class="hljs-symbol">$</span>render(<span class="hljs-string">'getColor'</span>)(own.props.barColor)
+                                            )}
+                                        &gt;&lt;/<span class="hljs-built-in">div</span>&gt;
+                                    &lt;/<span class="hljs-built-in">div</span>&gt;
+                                &lt;/<span class="hljs-built-in">div</span>&gt;
+                            &lt;/<span class="hljs-built-in">div</span>&gt;
+                        )
+                    }}
+                /&gt;
+            &lt;/<span class="hljs-built-in">div</span>&gt;
+        )
+    }
+}
+
+ReactDOM.render(
+    &lt;Color /&gt;,
+    document.getElementById(<span class="hljs-string">'color-demo'</span>)
+)
+
+
+</code></pre>
+                                        </div>
+                                        
+                                            
+                                            
+                                    </div>
+                                
+<h2 id="getCircle" ><a class="markrun-anchor" href="../Users/rain1/Documents/github/progress.react/#getCircle"><span class="markrun-anchor-link"></span></a>getCircle</h2><p>获取进度所需，传入参数<code>进度百分比percent</code>和<code>进度条宽度width</code>，返回组件显示所需<code>viewBox</code> <code>strokeWidth</code> <code>strokeDashoffset</code><br><a href="CIRCLE.html#render">点此查看示例</a><br><strong>只适用于 <code>ProgressCircle</code> 组件</strong></p>
+<h2 id="transToFunc" ><a class="markrun-anchor" href="../Users/rain1/Documents/github/progress.react/#transToFunc"><span class="markrun-anchor-link"></span></a>transToFunc</h2><p>使各种参数类型如<code>boolean</code> <code>string</code>转换后都可以正常react render中渲染<br><a href="CIRCLE.html#text">点此查看示例效果</a> 将不同类型<code>props.text</code>正常渲染<br><a href="CIRCLE.html#render">点此查看使用方法</a><br><strong>目前只有 <code>ProgressCircle</code> 组件需要用到</strong></p>
+<h2 id="objToArray" ><a class="markrun-anchor" href="../Users/rain1/Documents/github/progress.react/#objToArray"><span class="markrun-anchor-link"></span></a>objToArray</h2><p><em>由于<code>ProgressGroup</code>组件目前未提供<code>render</code>接口，所有这个工具函数使用者还不会接触到，仅仅记录在此</em>        </p>
+<p>将<code>props.children</code>转化成<code>Array</code>数组<br><strong>只适用于 <code>ProgressGroup</code> 组件</strong></p></div>
+</div>
+</div>
+</div>
+<script>
+Array.from(document.querySelectorAll('.face-one-nav-item-label')).forEach(function (node) {
+    if (node.href) {
+        var pathname = node.href.replace(/\?.*/, '')
+        if (pathname === location.origin + location.pathname + location.hash) {
+            node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-nav-item-label--on')
+        }
+    }
+})
+var faceOneGetParent = function faceOneGetParent (el, className) {
+   if (el.parentNode.nodeName.toLowerCase() === 'html') {
+       return null
+   }
+   var parentClassName = el.parentNode.getAttribute('class')
+   var classNames = ''
+   if (parentClassName) {
+       classNames = parentClassName.split(' ')
+   }
+   if (classNames.indexOf(className) !== -1) {
+       return el.parentNode
+   }
+   else {
+       return faceOneGetParent(el.parentNode, className)
+   }
+}
+Array.from(document.querySelectorAll('.face-one-nav-item-group-item')).forEach(function (node) {
+    addAvativeClass(node)
+    function addAvativeClass (node)  {
+        if (node.href) {
+            var pathname = node.href.replace(/\?.*/, '')
+            if (pathname === location.origin + location.pathname + location.hash) {
+                node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-nav-item-group-item--on')
+                var parentNode = faceOneGetParent(node, 'face-one-nav-item--group')
+                if (parentNode) {
+                    parentNode.setAttribute('class', parentNode.getAttribute('class') + ' ' + 'face-one-nav-item--group-on')
+                }
+            }
+        }
+    }
+
+})
+</script>
+<div class="face-one-foot">
+    <div class="face-one-foot-F-inner">
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-github"></span>
+                Github
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/progress.react" class="face-one-foot-group-item-link">progress.react</a>
+                - 项目源码
+            </div>
+        </div>
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-link"></span>
+                相关站点
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/component-spec">component-spec</a>
+                - 组件规范
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/module" class="face-one-foot-group-item-link">module</a>
+                - 开源项目脚手架
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://onface.live/" class="face-one-foot-group-item-link">onface.live</a>
+                - 资源集合
+            </div>
+        </div>
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-team"></span>
+                社区
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/progress.react/issues" class="face-one-foot-group-item-link">Github issues</a>
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/progress.react/issues/new" class="face-one-foot-group-item-link">提交bug</a>
+            </div>
+        </div>
+        <div class="face-one-foot-copyright">
+            <a href="../index.html" class="face-one-foot-copyright-title">
+                <img src="theme/media/logo.svg" class="face-one-foot-copyright-title-logo" />
+            </a>
+        </div>
+    </div>
+</div>
+<script>
+PACKAGE_JSON = {
+    name: "progress.react",
+    $repository: "progress.react",
+    version: "0.2.0",
+}
+</script>
+
+<script src="theme/jquery.js"></script>
+<script>delete window.$</script>
+<script src="theme/face/face.js" ></script>
+<script data-markrun-lastrun="true">
+                                            document.write('<scri' + 'pt src="./itool/getAccuracy.demo.js?v=0.2.0"' + '" ></sc' + 'ript>')
+                                            </script><script data-markrun-lastrun="true">
+                                            document.write('<scri' + 'pt src="./itool/getColor.demo.js?v=0.2.0"' + '" ></sc' + 'ript>')
+                                            </script></body>
+</html>

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="theme/face/face.css">
+<meta name="keywords" content="">
+<meta name="description" content="ProgressGroup">
+<title>ProgressGroup</title>
+</head>
+<body>
+<div class="face-one-head">
+    <a class="face-one-head-logo" href="../index.html">
+        <img src="theme/media/logo.svg" alt="" class="face-one-head-logo-photo" />
+        <span class="face-one-head-logo-text">
+        progress.react
+        </span>
+    </a>
+    <span class="face-one-head-slogan">
+        Write less code, do more things!
+    </span>
+    <!-- <div class="face-one-head-search">
+        <span class="face-one-head-search-icon fi fi-search"></span>
+        <input type="text" class="face-one-head-search-input" placeholder="搜索..." />
+    </div> -->
+    <div class="face-one-head-nav">
+        <span class="face-one-head-nav-switch fi fi-bars"></span>
+        <div class="face-one-head-nav-F-cnt">
+            <a href="../index.html" class="face-one-head-nav-link">首页</a>
+            <a href="intro.html" class="face-one-head-nav-link">指引</a>
+            <a href="index.html" class="face-one-head-nav-link">文档</a>
+            <a href="API.html" class="face-one-head-nav-link">API</a>
+        </div>
+        <script>
+        Array.from(document.querySelectorAll('.face-one-head-nav-link')).forEach(function (node) {
+            if (node.href) {
+                var pathname = node.href.replace(/\?.*/, '')
+                if (pathname === location.origin + location.pathname) {
+                    node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-head-nav-link--on')
+                }
+            }
+        })
+        </script>
+    </div>
+</div>
+
+<div class="face-one-layout">
+<div class="face-one-layout-F-line">
+<div class="face-one-layout-sidebar">
+<div class="face-one-nav">
+<span class="face-one-nav-switch fi fi-menu-unfold"></span>
+<div class="face-one-nav-F-inner">
+<div class="face-one-nav-item">
+    <a href="PROPS.html" class="face-one-nav-item-label">指引</a>
+</div>
+<!-- <div class="face-one-nav-item">
+    <a href="index.html" class="face-one-nav-item-label">文档</a>
+</div> -->
+<!-- face-one-nav-item--group-on 控制默认展开 -->
+<div class="face-one-nav-item face-one-nav-item--group face-one-nav-item--group-on">
+    <span class="face-one-nav-item-switch fi fi-down"></span>
+    <span class="face-one-nav-item-label">
+        文档
+    </span>
+    <div class="face-one-nav-item-group">
+        <a href="index.html" class="face-one-nav-item-group-item">Progress</a>
+        <a href="CIRCLE.html" class="face-one-nav-item-group-item">ProgressCircle</a>
+        <a href="LINEGROUP.html" class="face-one-nav-item-group-item">ProgressGroup</a>
+        <a href="ITOOL.html" class="face-one-nav-item-group-item">itool</a>
+    </div>
+    <!-- <div class="face-one-nav-item-group">
+        <div class="face-one-nav-item-group-title">line</div>
+        <a href="index.html#basic" class="face-one-nav-item-group-item">basic</a>
+        <a href="index.html#width" class="face-one-nav-item-group-item">width</a>
+        <a href="index.html#color" class="face-one-nav-item-group-item">barColor markColor</a>
+        <a href="index.html#customThemes" class="face-one-nav-item-group-item">customThemes</a>
+        <a href="index.html#render" class="face-one-nav-item-group-item">render</a>
+    </div>
+    <div class="face-one-nav-item-group">
+        <div class="face-one-nav-item-group-title">circle</div>
+        <a href="CIRCLE.html#basic" class="face-one-nav-item-group-item">basic</a>
+        <a href="CIRCLE.html#text" class="face-one-nav-item-group-item">text</a>
+        <a href="CIRCLE.html#color" class="face-one-nav-item-group-item">color</a>
+        <a href="CIRCLE.html#width" class="face-one-nav-item-group-item">width</a>
+        <a href="CIRCLE.html#customThemes" class="face-one-nav-item-group-item">customThemes</a>
+        <a href="CIRCLE.html#render" class="face-one-nav-item-group-item">render</a>
+    </div>
+    <div class="face-one-nav-item-group">
+        <div class="face-one-nav-item-group-title">lineGroup</div>
+        <a href="LINEGROUP.html#basic" class="face-one-nav-item-group-item">basic</a>
+        <a href="LINEGROUP.html#props%20type" class="face-one-nav-item-group-item">props type</a>
+        <a href="LINEGROUP.html#color" class="face-one-nav-item-group-item">color</a>
+        <a href="LINEGROUP.html#lap" class="face-one-nav-item-group-item">lap</a>
+        <a href="LINEGROUP.html#customThemes" class="face-one-nav-item-group-item">customThemes</a>
+        <a href="LINEGROUP.html#render" class="face-one-nav-item-group-item">render</a>
+    </div>
+    <div class="face-one-nav-item-group">
+        <div class="face-one-nav-item-group-title">itool</div>
+        <a href="ITOOL.html#getAccuracy" class="face-one-nav-item-group-item">getAccuracy</a>
+        <a href="ITOOL.html#getCircle" class="face-one-nav-item-group-item">getCircle</a>
+        <a href="ITOOL.html#transToFun" class="face-one-nav-item-group-item">transToFun</a>
+        <a href="ITOOL.html#objToArray" class="face-one-nav-item-group-item">objToArray</a>
+    </div> -->
+</div>
+<div class="face-one-nav-item">
+    <a href="API.html" class="face-one-nav-item-label">API</a>
+</div>
+</div>
+</div>
+</div>
+<div class="face-one-layout-cnt">
+<div id="face-one-cnt" class="face-one-cnt markdown-body">
+<div id="face-one-sidebar" class="face-one-sidebar"></div>
+<h1 id="ProgressGroup" ><a class="markrun-anchor" href="../Users/rain1/Documents/github/progress.react/#ProgressGroup"><span class="markrun-anchor-link"></span></a>ProgressGroup</h1><h2 id="basic" ><a class="markrun-anchor" href="../Users/rain1/Documents/github/progress.react/#basic"><span class="markrun-anchor-link"></span></a>basic</h2><p><code>render</code>优先于<code>props.children</code></p>
+
+                                    <div class="face-one-code  face-one-code--open  face-one-code--run  face-one-code--side">
+                                        <div class="face-one-code-F-view">
+                                            <div class="face-one-code-example">
+                                                <div id="simple-demo" ></div>
+                                            </div>
+                                            <div class="face-one-code-info">
+                                                <div class="face-one-code-info-title">基础使用</div>
+                                                <div class="face-one-code-info-desc">
+                                                    
+                                                </div>
+                                                <span class="face-one-code-info-switchCode fi fi-ellipsis"></span>
+                                            </div>
+                                        </div>
+                                        <div class="face-one-code-source"  >
+                                            <div class="face-one-code-source-tool">
+                                                <form class="face-one-code-source-tool-preview" action="https://codesandbox.io/api/v1/sandboxes/define" method="post" target="_blank" >
+                                                    <input type="hidden" name="parameters" value="N4IgZglgNgpgziAXKCA7AJjAHgOgBYAuAtlEqAMYD2qBMNSIAPOhAG4AEE6AvADohwIRAA6wAtJiKV-7AHyMA9C1ayQAXwA0INJlwArBMhBUadAg1YBDAE7sASjEvkC7bu2swAjgFcIHgBQA5B5OBIEAlLyoVrYOoQAiAPIAsq7uXr4BwY7OEpREEVEKCuwx7AAK1pQA5h5wcGkePn4wQcJVtfBwOCHOETiYYJbeUAQA3FFCwpTWLpU1dXAa7MDznfUA4lXewmrsYFVE7IHtC109OWETqFHkUJb17ADKU7Ds2LQYDXHOOADC-WmqDMKyi7HB6QwMFs_nCoNQEMR6QI3msCP8YKRWOYbHYdwecAAcpYiDA-AJXjB4jApDJZJisYz2Iw8ABWWSAY2tABx6gBC3QBMdoBl80Ay36AEPNFGz6QimYzGGtFltKDtJdKVcy5V12MJoeQzNxgAAOAAMewIeBp8HJUEolhYqGqMgUytVTNlHUWmu1uuAADZjexTea4Jbrbbquw4N5yDr6g6nc7serHlrrDqaHqACx-gOkoP8K02tBhgDuNhuIHYjoZ8cRrrOSc9aeAACYs2ac8GC3b3tYqtZY1XnYpE3AFUqB6qWeyxLJ2IB75UAp3KAAO9AGjKgAQjQCb8YB2C3F7PHKtr6xH22E7D38Y8UOseuAZ-r4OTqYIiHYAG0jctfctM8sWwBdDS3ne2bwM-L6AXeEKBPmobHABUoQSqUEhoW4aRtGcCBHBCGqkhnbFqWmHgQhuEwdCvaBERzr_pRjJqGoNHgpW8HSooyhxkikTMfRqDcVEPwEEkyQXJeGLMYwLwiG8jpYRC6CUOQ3ikjQODVDABAAKKwEpBAAEIAJ4AJLoEEgiSTAEg0pQhSoJxUTqFowhOAA1pYqk4AY1BkMY1CfOYRiYFqUKoOQEDwF5VroA8eAMAAeumOAAIwAOyJYaIAOVUwhiAQelaoYIAxQlrI4N6OBpVovQEGIcDtI46BiKcwj5TFhqJYl6UgN4BDQBcoSxQlJVlR1lX9aV8XlSAlV5EQo04ONHWnIevXOAwrVNkNdGbUAA"/>
+                                                    <button type="submit" class="fi fi-edit face-one-code-source-tool-preview-submit" ></button>
+                                                </form>
+                                                <span class="face-one-code-source-tool-copy fi fi-copy"></span>
+                                            </div>
+                                            <pre><code class="lang-js"><span class="hljs-keyword">var</span> <span class="hljs-type">React</span> = require(<span class="hljs-symbol">'reac</span>t')
+<span class="hljs-keyword">var</span> <span class="hljs-type">ReactDOM</span> = require(<span class="hljs-symbol">'react</span>-dom')
+<span class="hljs-comment">// var Progress = require('progress.react').default;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-type">Progress</span>, {<span class="hljs-type">ProgressGroup</span>} from <span class="hljs-symbol">'progress</span>.react';
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Simple</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+    render () {
+        <span class="hljs-keyword">return</span> (
+            &lt;div className=<span class="hljs-string">"simpleDemo"</span> &gt;
+                &lt;h5&gt;正常的渲染结构&lt;/h5&gt;
+                &lt;<span class="hljs-type">ProgressGroup</span>&gt;
+                    &lt;<span class="hljs-type">Progress</span> percent={<span class="hljs-number">80</span>} themes=<span class="hljs-string">"loading"</span> /&gt;
+                    &lt;<span class="hljs-type">Progress</span> percent={<span class="hljs-number">60</span>} themes=<span class="hljs-string">"loading success"</span> /&gt;
+                    &lt;<span class="hljs-type">Progress</span> percent={<span class="hljs-number">40</span>} themes=<span class="hljs-string">"loading warn"</span> /&gt;
+                    &lt;<span class="hljs-type">Progress</span> percent={<span class="hljs-number">20</span>} themes=<span class="hljs-string">"loading error"</span> /&gt;
+                &lt;/<span class="hljs-type">ProgressGroup</span>&gt;
+                &lt;h5&gt;-&gt; 可以简化成这样&lt;/h5&gt;
+                &lt;<span class="hljs-type">ProgressGroup</span> 
+                    render={{
+                        percent: [<span class="hljs-number">80</span>, <span class="hljs-number">60</span>, <span class="hljs-number">40</span>, <span class="hljs-number">20</span>],
+                        themes: [
+                            <span class="hljs-symbol">'loading</span> ',
+                            <span class="hljs-symbol">'loading</span> success',
+                            <span class="hljs-symbol">'loading</span> warn',
+                            <span class="hljs-symbol">'loading</span> error'
+                        ],
+                    }}
+                /&gt;
+            &lt;/div&gt;
+        )
+    }
+}
+
+<span class="hljs-type">ReactDOM</span>.render(
+    &lt;<span class="hljs-type">Simple</span> /&gt;,
+    document.getElementById(<span class="hljs-symbol">'simple</span>-demo')
+)
+
+
+</code></pre>
+                                        </div>
+                                        
+                                            
+                                            
+                                    </div>
+                                
+<h2 id="props type" ><a class="markrun-anchor" href="../Users/rain1/Documents/github/progress.react/#props type"><span class="markrun-anchor-link"></span></a>props type</h2><p>当配置参数相同时, 可以简化至只配置字符串            </p>
+<blockquote>
+<p>但是参数<code>percent</code>数据格式必须是<code>propsType.arrayOf(propsType.string)</code></p>
+</blockquote>
+
+                                    <div class="face-one-code  face-one-code--open  face-one-code--run  face-one-code--side">
+                                        <div class="face-one-code-F-view">
+                                            <div class="face-one-code-example">
+                                                <div id="props-type-demo" ></div>
+                                            </div>
+                                            <div class="face-one-code-info">
+                                                <div class="face-one-code-info-title">基础使用</div>
+                                                <div class="face-one-code-info-desc">
+                                                    
+                                                </div>
+                                                <span class="face-one-code-info-switchCode fi fi-ellipsis"></span>
+                                            </div>
+                                        </div>
+                                        <div class="face-one-code-source"  >
+                                            <div class="face-one-code-source-tool">
+                                                <form class="face-one-code-source-tool-preview" action="https://codesandbox.io/api/v1/sandboxes/define" method="post" target="_blank" >
+                                                    <input type="hidden" name="parameters" value="N4IgZglgNgpgziAXKCA7AJjAHgOgBYAuAtlEqAMYD2qBMNSIAPOhAG4AEE6AvADogAHAE6UBcALQEAngJjjMRSv3YA-RgHoWrFSAC-AGhBpMuAFYJkIKjToEGrAIZD2AJRgPyBdt3ZCYARwBXCD8ACgByPw8CcIBKXlRHZzdogBEAeQBZb18A4LDI9095SiI4hPV1diT2AAURAHM_ODgcvyCQmAjhSib4OBwozzicTDAHQKgCAG4EiCIBSiEvet7muH12YFW-loBxEUCBXXYwESJ2cJ7dgaGY2dQE8igHFrqRMQAVGRh2bFoMK0Up4cABhUqLVC2LYJdhw3IYGDOUKxGGoeEY3IEQJCdGhWGYwnMNjsZ6vOAAOQcRBgfEEHzg31kqRgimUKgJhK57EYeAArCo4AQhGgGhp-Rz0dyuYwdusDpQjuxOdLuX5EUJuMBgCrVarZEJyLZEOwANoADgADJsAGzW9gAFntACZLQBdfS6vXcgh4VnwE3hOCBchGlrhdieqXe1UAdy4vpNAEZLZGvTHMQAjJzgqBLQMCNAAawjUYzqqFQg8Rdz-cuTQcUlL6Zjul0CRb3PUkvLPIlTirUnFAs7Mrl_QVStHqvVmE12unMYNRpoJot9rtmydm1dHsX3t9_rga8uwdD_XCmyDIbDcEvp5vF6vZ9v4Tdaejvcx8fQibNKc2AD2CAlN3zLL9CWzIRayENcrmLe94NQEsr0LZDELQkswP3PVK2rGC4IbJsryIxDSJIwc3w_CC4TbHC4W7RcNC0HsuXiT921QTiEmBAgMkyQY6DnfFP1lBkmV-btwLhdBKHIQIaRoHAGhgAgAFFYEUggACEpAASXQboGUkH55FZShylQdiEj0QwBGrBwVJwcxqDIKxqABOxLEwWREVQcgIHgNy83QV48AYAA9B0cCTAB2GLLRAOyPhM2QLBACKkz5HAbRwRLDDucQ4GEdx0HEHoxEiy0YpipKQECAhoEE6JIqTHK8rqu5Wty6L8pAQrZKIbqcF6urrnWZrPAYarnQ6tt5qAA"/>
+                                                    <button type="submit" class="fi fi-edit face-one-code-source-tool-preview-submit" ></button>
+                                                </form>
+                                                <span class="face-one-code-source-tool-copy fi fi-copy"></span>
+                                            </div>
+                                            <pre><code class="lang-js"><span class="hljs-keyword">var</span> <span class="hljs-type">React</span> = require(<span class="hljs-symbol">'reac</span>t')
+<span class="hljs-keyword">var</span> <span class="hljs-type">ReactDOM</span> = require(<span class="hljs-symbol">'react</span>-dom')
+<span class="hljs-comment">// var Progress = require('progress.react').default;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-type">Progress</span>, {<span class="hljs-type">ProgressGroup</span>} from <span class="hljs-symbol">'progress</span>.react';
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PropsType</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+    render () {
+        <span class="hljs-keyword">return</span> (
+            &lt;div className=<span class="hljs-string">"propsTypeDemo"</span> &gt;
+                &lt;h5&gt;string&lt;/h5&gt;
+                &lt;<span class="hljs-type">ProgressGroup</span> 
+                    render={{
+                        percent: [<span class="hljs-number">80</span>, <span class="hljs-number">60</span>, <span class="hljs-number">40</span>, <span class="hljs-number">20</span>],
+                        themes: <span class="hljs-symbol">'succes</span>s' ,
+                        width: <span class="hljs-number">10</span> ,
+                        barColor: <span class="hljs-symbol">'pin</span>k' ,
+                        strackColor: <span class="hljs-symbol">'gra</span>y' ,
+                    }}
+
+                /&gt;
+                &lt;h5&gt;array&lt;/h5&gt;
+                &lt;<span class="hljs-type">ProgressGroup</span> 
+                    render={{
+                        percent: [<span class="hljs-number">80</span>, <span class="hljs-number">60</span>, <span class="hljs-number">40</span>, <span class="hljs-number">20</span>],
+                        themes: [ <span class="hljs-symbol">'succes</span>s', <span class="hljs-symbol">'succes</span>s', <span class="hljs-symbol">'succes</span>s', <span class="hljs-symbol">'succes</span>s'] ,
+                        width: [<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">10</span>] ,
+                        barColor: [<span class="hljs-symbol">'pin</span>k', <span class="hljs-symbol">'pin</span>k', <span class="hljs-symbol">'pin</span>k', <span class="hljs-symbol">'pin</span>k'] ,
+                        strackColor: [<span class="hljs-symbol">'gra</span>y', <span class="hljs-symbol">'gra</span>y', <span class="hljs-symbol">'gra</span>y', <span class="hljs-symbol">'gra</span>y'] ,
+                    }}
+                /&gt;
+            &lt;/div&gt;
+        )
+    }
+}
+
+<span class="hljs-type">ReactDOM</span>.render(
+    &lt;<span class="hljs-type">PropsType</span> /&gt;,
+    document.getElementById(<span class="hljs-symbol">'props</span>-<span class="hljs-class"><span class="hljs-keyword">type</span><span class="hljs-title">-demo</span>')</span>
+)
+
+
+</code></pre>
+                                        </div>
+                                        
+                                            
+                                            
+                                    </div>
+                                
+<h2 id="color" ><a class="markrun-anchor" href="../Users/rain1/Documents/github/progress.react/#color"><span class="markrun-anchor-link"></span></a>color</h2>
+                                    <div class="face-one-code  face-one-code--open  face-one-code--run  face-one-code--side">
+                                        <div class="face-one-code-F-view">
+                                            <div class="face-one-code-example">
+                                                <div id="color-demo" ></div>
+                                            </div>
+                                            <div class="face-one-code-info">
+                                                <div class="face-one-code-info-title">基础使用</div>
+                                                <div class="face-one-code-info-desc">
+                                                    
+                                                </div>
+                                                <span class="face-one-code-info-switchCode fi fi-ellipsis"></span>
+                                            </div>
+                                        </div>
+                                        <div class="face-one-code-source"  >
+                                            <div class="face-one-code-source-tool">
+                                                <form class="face-one-code-source-tool-preview" action="https://codesandbox.io/api/v1/sandboxes/define" method="post" target="_blank" >
+                                                    <input type="hidden" name="parameters" value="N4IgZglgNgpgziAXKCA7AJjAHgOgBYAuAtlEqAMYD2qBMNSIAPOhAG4AEE6AvADohUolAE4BaTEUr92APkYB6FqxkgAvgBoQaTLgBWCZAOq16iEKwCGw9gCUYF8gXbd2wmAEcArhDcAKAORuDgT-AJS8qJbWdsEAIgDyALLOrh7efoH2juKURGER8vLsUewACsKUAOZucHApbl4-MAEADhXV8HA4QY5hOJhgFp5QBADcERBELSJO5VU1cOrswHMdtQDiFZ4tquxgFUTs_m3znd1ZIeOoEeRQFrXsAMKUQtbYJuh1MY44z1PUdCcwAi7FBqQwMGsvlCyxBYPhbgInmEqHYvjh8Mx7GYbHYt3ucAAchYiDA-EZXrEYJJpDIMViGYxVgtNpRtux6QyueDMMJuMBgajucL4S1IeRAYh2ABtAAcAAYlgA2RXsAAsqoATPKALrqTkirkEPDU-BS_xwTzkCW1fzsfVCw3CgDuXGNUoAjPL7QanZiAEZWZ6vKXS45oADW_iWmXQ_h1PsdfrBqlUvu58jpScNjDwapkgElvQAwKoA4uQUeazyexzM6rPZ6cNbghfIFDeTYuEEpooYVytVGqW2r1bb9xtNcHNlutnTtDqrXNd6Hd7C9ifnDMDwmDIlD4dQUZjbjjMZakejR1P-_ja_X7FTI8xmYf8Nzwif2ZFTPaLK2LQ5H79JteX5QVb0xDsuwIHtVRVJYB3YIc5zAsEx1JCcjinG04FnZ8RUXZdVyQ5D2E3bdhFDCJeCcYiZT3A8jiPeNcOFBMiPne9rgAjNK2TXN82LMt5ArZjq2_Wtf3_MCgMhECRK5CDJRlXt2Fg9UtV1NiwNQs0MKtLCcK4qt8LwT1vU029SJeHcZUo6jiLDS96NjeMHSomjaMc89nOHa47OQhyz0PGA4x8tyaICq8gpCuSGVYmLQQ4qt3yrV9kt4msNgk-KeRk1tDPbcVFLlGD-3Unz3O09DpV06dbRjTCZ3qvTGpq_S4vyv1jNDL0lh6ldVS9dr3MskMPMCsbIoY4KXIvca6Ovcz1zgAhhAcCMyN3aoLAATy8rbdpjfbzzDZ08AgWho38f07nIKMdSG29EuTNLhQUJQeKxcIkzTVAfoib4CASRJzmbdEk0YMj2EzNj0EochPFJGgcEqGACAAUVgRGCAAIW2gBJdAAkEERxGpSh8lQL6IjUTQWjWiwUZwfRqDIIwaEBVnMDFCFUHICB4FZoR0HuPAGAAPTVHAPQAdil-UQFpioWlEAhtrFAwQDFj0AFYcCVHB5c0HoCFEOA2nsdBRBOFoNbF-UpalhWQE8AhoHOYJxY9PWDad43Pf1yXDZAY2ciIf2cEDp2TjWLo_bMe3NR91Nk6AA"/>
+                                                    <button type="submit" class="fi fi-edit face-one-code-source-tool-preview-submit" ></button>
+                                                </form>
+                                                <span class="face-one-code-source-tool-copy fi fi-copy"></span>
+                                            </div>
+                                            <pre><code class="lang-js">var <span class="hljs-symbol">React</span> = require(<span class="hljs-string">'react'</span>)
+var <span class="hljs-symbol">ReactDOM</span> = require(<span class="hljs-string">'react-dom'</span>)
+// var <span class="hljs-symbol">Progress</span> = require(<span class="hljs-string">'progress.react'</span>).default;
+import <span class="hljs-symbol">Progress</span>, {<span class="hljs-symbol">ProgressGroup</span>} from <span class="hljs-string">'progress.react'</span>;
+
+class <span class="hljs-symbol">Color</span> extends <span class="hljs-symbol">React</span>.<span class="hljs-symbol">Component</span> {
+    render () {
+        return (
+            &lt;div className=<span class="hljs-string">"colorDemo"</span> &gt;
+                &lt;<span class="hljs-symbol">ProgressGroup</span> 
+                    render={{
+                        percent: [<span class="hljs-number">80</span>, <span class="hljs-number">60</span>, <span class="hljs-number">40</span>, <span class="hljs-number">20</span>],
+                        themes: <span class="hljs-string">'success'</span> ,
+                        width: <span class="hljs-number">10</span> ,
+                        barColor: [<span class="hljs-string">'pink'</span>, <span class="hljs-string">'red'</span>] ,
+                    }}
+                /&gt;
+                &lt;h4&gt;等同于&lt;/h4&gt;
+                &lt;<span class="hljs-symbol">ProgressGroup</span> 
+                    render={{
+                        percent: [<span class="hljs-number">80</span>, <span class="hljs-number">60</span>, <span class="hljs-number">40</span>, <span class="hljs-number">20</span>],
+                        themes: <span class="hljs-string">'success'</span> ,
+                        width: <span class="hljs-number">10</span> ,
+                        barColor: [<span class="hljs-string">'pink'</span>, <span class="hljs-string">'red'</span>, <span class="hljs-string">'pink'</span>, <span class="hljs-string">'pink'</span>] ,
+                    }}
+                /&gt;
+                &lt;hr/&gt;
+                &lt;<span class="hljs-symbol">ProgressGroup</span> 
+                    render={{
+                        percent: [<span class="hljs-number">80</span>, <span class="hljs-number">60</span>, <span class="hljs-number">40</span>, <span class="hljs-number">20</span>],
+                        themes: <span class="hljs-string">'success'</span> ,
+                        width: <span class="hljs-number">10</span> ,
+                        barColor: [
+                            [<span class="hljs-string">'pink'</span>, <span class="hljs-string">'red'</span>]
+                        ] ,
+                    }}
+
+                /&gt;
+                &lt;h4&gt;等同于&lt;/h4&gt;
+                &lt;<span class="hljs-symbol">ProgressGroup</span> 
+                    render={{
+                        percent: [<span class="hljs-number">80</span>, <span class="hljs-number">60</span>, <span class="hljs-number">40</span>, <span class="hljs-number">20</span>],
+                        themes: <span class="hljs-string">'success'</span> ,
+                        width: <span class="hljs-number">10</span> ,
+                        barColor: [
+                            [<span class="hljs-string">'pink'</span>, <span class="hljs-string">'red'</span>],
+                            [<span class="hljs-string">'pink'</span>, <span class="hljs-string">'red'</span>],
+                            [<span class="hljs-string">'pink'</span>, <span class="hljs-string">'red'</span>],
+                            [<span class="hljs-string">'pink'</span>, <span class="hljs-string">'red'</span>]
+                        ] ,
+                    }}
+                /&gt;
+                &lt;hr/&gt;
+                &lt;<span class="hljs-symbol">ProgressGroup</span> 
+                    render={{
+                        percent: [<span class="hljs-number">80</span>, <span class="hljs-number">60</span>, <span class="hljs-number">40</span>, <span class="hljs-number">20</span>],
+                        themes: [ <span class="hljs-string">'success'</span>, <span class="hljs-string">'success'</span>, <span class="hljs-string">'success'</span>, <span class="hljs-string">'success'</span>] ,
+                        width: [<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">10</span>] ,
+                        barColor: [<span class="hljs-string">'pink'</span>, [<span class="hljs-string">'pink'</span>, <span class="hljs-string">'red'</span>], <span class="hljs-string">'pink'</span>, <span class="hljs-string">'pink'</span>] ,
+                        strackColor: [<span class="hljs-string">'gray'</span>, <span class="hljs-string">'gray'</span>, <span class="hljs-string">'gray'</span>, [<span class="hljs-string">'white'</span>,<span class="hljs-string">'black'</span>]] ,
+                    }}
+                /&gt;
+            &lt;/div&gt;
+        )
+    }
+}
+
+<span class="hljs-symbol">ReactDOM</span>.render(
+    &lt;<span class="hljs-symbol">Color</span> /&gt;,
+    document.getElementById(<span class="hljs-string">'color-demo'</span>)
+)
+
+
+</code></pre>
+                                        </div>
+                                        
+                                            
+                                            
+                                    </div>
+                                
+<h2 id="props" ><a class="markrun-anchor" href="../Users/rain1/Documents/github/progress.react/#props"><span class="markrun-anchor-link"></span></a>props</h2>
+                                    <div class="face-one-code  face-one-code--open  face-one-code--run  face-one-code--side">
+                                        <div class="face-one-code-F-view">
+                                            <div class="face-one-code-example">
+                                                <div id="props-demo" ></div>
+                                            </div>
+                                            <div class="face-one-code-info">
+                                                <div class="face-one-code-info-title">基础使用</div>
+                                                <div class="face-one-code-info-desc">
+                                                    
+                                                </div>
+                                                <span class="face-one-code-info-switchCode fi fi-ellipsis"></span>
+                                            </div>
+                                        </div>
+                                        <div class="face-one-code-source"  >
+                                            <div class="face-one-code-source-tool">
+                                                <form class="face-one-code-source-tool-preview" action="https://codesandbox.io/api/v1/sandboxes/define" method="post" target="_blank" >
+                                                    <input type="hidden" name="parameters" value="N4IgZglgNgpgziAXKCA7AJjAHgOgBYAuAtlEqAMYD2qBMNSIAPOhAG4AEE6AvADogAHAE6UBcALSYilfuwB8jAPQtWckAF8ANCDSZcAKwTIQVGnQINWAQyHsASjCvkC7buyEwAjgFcIHgBQA5B5OBIEAlLyo1rYOoQAiAPIAsq7uXr4BwY7OkpREEVGKiuwx7AAKIgDmHnBwaR4-fjBBwpQ18HA4Ic4ROJhgVt5QBADcURBEApRCLpXttXCa7MDzHXUA4iLeAursYCJE7IFt6109YeOoUeRQVnUVImLxMNLs2LQY9XHOOADC-WmqHMKyi7HB6QwMFs_nCoNQEMR6QI3iECP8YKRWOYbHYt3ucAAclYiDA-IInnAACoATwEMBe0lkckxWLZ7EYeAArHJSUIqjB2G0xEpuSyEey2Yw1ostpQduworwXJKsU5yKinDTuMAAEzqJUq1WIgDuXAIeB1AEYAAwG65G43ggBGNgBUBmOpOaAA1oF7cqnYi4AQhE4fe7PcBAjUrDT_ayg4iPFChDrgImk1j6UJyOZEOwANoADhtywAbGX2AAWKu6m0AXU0maziItr3gBcCcG85DzdUC7GbEtb4PU9tbinFrc5PJTmFswrgop5LdV0uqsu2AkVI9H8-h6bXo5zeZoBZLVcry1ry3rTePrfbpLgF-OPb7nUCy27vf7cG_d8_y_H8P3_QIHz3UcIXVTVyBpC9dTvZD2F1SDoKxM10AtC9bWWPD2AI210IwxFXSESMhAvb1UD9H8BF9QCaLo44GNoiDh1I4NQ3DSjqNjeMfwEpjhKEsN4xI6Dx0fNkpxk7ExXIPBoHQFM8UBahzBXacsw3BZOjlHZxUDXSZU6IVoTPAgdVLPZn3gL0wK_PZYLDeCdX1dgsIta07XYcjKK9Ni_T2EM3IjSgPTTaNhL2OSHRnMyHlPcwdUrOy8A7OBHOAgcXL7ODtT1PZvMtYBbT2ALIqjZj_XYMLeOq6KY3Eur4pMpM9LOCzc1S4BawyrKcs_PL2FcrUPJK80yoq_y3SaoLGNCnjyAiqKvVi9h2sdJ0usWHqrI8vz7Oy6MnNG8b3OKrzpt8yr5vW6NgrqhrVsCmLWrinTOsUJK4EMgRvqDWdeWhAU8WUqBVLodSpk0mhtPkpE9oM7dDVbUq7vRrMqse2q9mxpNXrWmrYsJoNLqK_UkcRYyduNFHkssvrbPYE7hvAr7yd2v6Dr69K2cyl8Oecra6cSzdzJSmgdQGwWhrO3KAK5hLTMlpneplvVjqFhzFZG5WxZpiElD-gGgfZJQVAtiFIj3e0A1QH4CCSZJujoBcMT3PTnleSgxc4iF0EoDVSRoHABQIABRWAw4IAAhGkAEl0FaSlJD9wpUDtqING0ARwysAUcEMagyBMahPgsYxMHpKFUHICB4HLj10HuPAGAAPWrHArQAdl7m0QHzp5xAIOlm8QEBO6tLkcHLHAh-0C5xDgYRHHQcQly7m1e974eQG8AhoHd0Iu6tefF4Pi5z4Xnul5AFfg6IW-cHvg_TkWU_nAYXfdSv8cgCgA"/>
+                                                    <button type="submit" class="fi fi-edit face-one-code-source-tool-preview-submit" ></button>
+                                                </form>
+                                                <span class="face-one-code-source-tool-copy fi fi-copy"></span>
+                                            </div>
+                                            <pre><code class="lang-js">var React = require('react')
+var ReactDOM = require('react-dom')
+// var Progress = require('progress.react').default;
+import Progress, {ProgressGroup} from 'progress.react';
+
+class PropsDemo extends React.Component {
+    render () {
+        return (
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"propsTypeDemo"</span> &gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>merge props<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ProgressGroup</span> 
+                    <span class="hljs-attr">accuracy</span>=<span class="hljs-string">{2}</span>
+                    <span class="hljs-attr">width</span>=<span class="hljs-string">{10}</span>
+                    <span class="hljs-attr">barColor</span>=<span class="hljs-string">{</span>'<span class="hljs-attr">pink</span>'}
+                    <span class="hljs-attr">strackColor</span>=<span class="hljs-string">{</span>'<span class="hljs-attr">gray</span>'}
+                    <span class="hljs-attr">render</span>=<span class="hljs-string">{{</span>
+                        <span class="hljs-attr">percent:</span> [<span class="hljs-attr">80</span>, <span class="hljs-attr">60</span>, <span class="hljs-attr">40</span>, <span class="hljs-attr">20</span>],
+                        <span class="hljs-attr">themes:</span> '<span class="hljs-attr">success</span>' ,
+                    }}
+                /&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>render props<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ProgressGroup</span> 
+                    <span class="hljs-attr">render</span>=<span class="hljs-string">{{</span>
+                        <span class="hljs-attr">percent:</span> [<span class="hljs-attr">80</span>, <span class="hljs-attr">60</span>, <span class="hljs-attr">40</span>, <span class="hljs-attr">20</span>],
+                        <span class="hljs-attr">themes:</span> [ '<span class="hljs-attr">success</span>', '<span class="hljs-attr">success</span>', '<span class="hljs-attr">success</span>', '<span class="hljs-attr">success</span>'],
+                        <span class="hljs-attr">accuracy:</span> [<span class="hljs-attr">2</span>, <span class="hljs-attr">2</span>, <span class="hljs-attr">2</span>, <span class="hljs-attr">2</span>],
+                        <span class="hljs-attr">width:</span> [<span class="hljs-attr">10</span>, <span class="hljs-attr">10</span>, <span class="hljs-attr">10</span>, <span class="hljs-attr">10</span>],
+                        <span class="hljs-attr">barColor:</span> ['<span class="hljs-attr">pink</span>', '<span class="hljs-attr">pink</span>', '<span class="hljs-attr">pink</span>', '<span class="hljs-attr">pink</span>'],
+                        <span class="hljs-attr">strackColor:</span> ['<span class="hljs-attr">gray</span>', '<span class="hljs-attr">gray</span>', '<span class="hljs-attr">gray</span>', '<span class="hljs-attr">gray</span>'],
+                    }}
+                /&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>children component<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ProgressGroup</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Progress</span> <span class="hljs-attr">percent</span>=<span class="hljs-string">{80}</span> <span class="hljs-attr">themes</span>=<span class="hljs-string">{</span>'<span class="hljs-attr">success</span>'} <span class="hljs-attr">accuracy</span>=<span class="hljs-string">{2}</span> <span class="hljs-attr">width</span>=<span class="hljs-string">{10}</span> <span class="hljs-attr">barColor</span>=<span class="hljs-string">{</span>'<span class="hljs-attr">pink</span>'} <span class="hljs-attr">strackColor</span>=<span class="hljs-string">{</span>'<span class="hljs-attr">gray</span>'} /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Progress</span> <span class="hljs-attr">percent</span>=<span class="hljs-string">{60}</span> <span class="hljs-attr">themes</span>=<span class="hljs-string">{</span>'<span class="hljs-attr">success</span>'} <span class="hljs-attr">accuracy</span>=<span class="hljs-string">{2}</span> <span class="hljs-attr">width</span>=<span class="hljs-string">{10}</span> <span class="hljs-attr">barColor</span>=<span class="hljs-string">{</span>'<span class="hljs-attr">pink</span>'} <span class="hljs-attr">strackColor</span>=<span class="hljs-string">{</span>'<span class="hljs-attr">gray</span>'} /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Progress</span> <span class="hljs-attr">percent</span>=<span class="hljs-string">{40}</span> <span class="hljs-attr">themes</span>=<span class="hljs-string">{</span>'<span class="hljs-attr">success</span>'} <span class="hljs-attr">accuracy</span>=<span class="hljs-string">{2}</span> <span class="hljs-attr">width</span>=<span class="hljs-string">{10}</span> <span class="hljs-attr">barColor</span>=<span class="hljs-string">{</span>'<span class="hljs-attr">pink</span>'} <span class="hljs-attr">strackColor</span>=<span class="hljs-string">{</span>'<span class="hljs-attr">gray</span>'} /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Progress</span> <span class="hljs-attr">percent</span>=<span class="hljs-string">{20}</span> <span class="hljs-attr">themes</span>=<span class="hljs-string">{</span>'<span class="hljs-attr">success</span>'} <span class="hljs-attr">accuracy</span>=<span class="hljs-string">{2}</span> <span class="hljs-attr">width</span>=<span class="hljs-string">{10}</span> <span class="hljs-attr">barColor</span>=<span class="hljs-string">{</span>'<span class="hljs-attr">pink</span>'} <span class="hljs-attr">strackColor</span>=<span class="hljs-string">{</span>'<span class="hljs-attr">gray</span>'} /&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ProgressGroup</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>merge children component<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ProgressGroup</span>
+                    <span class="hljs-attr">width</span>=<span class="hljs-string">{10}</span>
+                    <span class="hljs-attr">barColor</span>=<span class="hljs-string">{</span>'<span class="hljs-attr">pink</span>'} 
+                    <span class="hljs-attr">strackColor</span>=<span class="hljs-string">{</span>'<span class="hljs-attr">gray</span>'}
+                    <span class="hljs-attr">accuracy</span>=<span class="hljs-string">{2}</span>
+                &gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Progress</span> <span class="hljs-attr">percent</span>=<span class="hljs-string">{80}</span> <span class="hljs-attr">themes</span>=<span class="hljs-string">{</span>'<span class="hljs-attr">success</span>'} /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Progress</span> <span class="hljs-attr">percent</span>=<span class="hljs-string">{60}</span> <span class="hljs-attr">themes</span>=<span class="hljs-string">{</span>'<span class="hljs-attr">success</span>'} /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Progress</span> <span class="hljs-attr">percent</span>=<span class="hljs-string">{40}</span> <span class="hljs-attr">themes</span>=<span class="hljs-string">{</span>'<span class="hljs-attr">success</span>'} /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Progress</span> <span class="hljs-attr">percent</span>=<span class="hljs-string">{20}</span> <span class="hljs-attr">themes</span>=<span class="hljs-string">{</span>'<span class="hljs-attr">success</span>'} /&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ProgressGroup</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        )
+    }
+}
+
+ReactDOM.render(
+    <span class="hljs-tag">&lt;<span class="hljs-name">PropsDemo</span> /&gt;</span>,
+    document.getElementById('props-demo')
+)
+
+
+</code></pre>
+                                        </div>
+                                        
+                                            
+                                            
+                                    </div>
+                                
+<h2 id="lap" ><a class="markrun-anchor" href="../Users/rain1/Documents/github/progress.react/#lap"><span class="markrun-anchor-link"></span></a>lap</h2><p>虽然有提供这个这接口，但是一般场景下不建议将进度条重叠显示，即使要显示成重叠模式，也建议不要像<code>Progress</code>组件那样，显示过多的信息，如文字、渐变等等。<br>!绝不适合使用的场景： 例<code>Progress1</code>的<strong>percent1</strong> &gt; <code>Progress2</code>的<strong>percent2</strong> 在变化过程中不是永久成立的。      </p>
+<p>并且为了能够正常显示，<code>Progress</code>组件会根据<strong>precent</strong>的值，从高到低调节渲染先后顺序。</p>
+
+                                    <div class="face-one-code  face-one-code--open  face-one-code--run ">
+                                        <div class="face-one-code-F-view">
+                                            <div class="face-one-code-example">
+                                                <div id="lap-demo" ></div>
+                                            </div>
+                                            <div class="face-one-code-info">
+                                                <div class="face-one-code-info-title">基础使用</div>
+                                                <div class="face-one-code-info-desc">
+                                                    
+                                                </div>
+                                                <span class="face-one-code-info-switchCode fi fi-code"></span>
+                                            </div>
+                                        </div>
+                                        <div class="face-one-code-source"  >
+                                            <div class="face-one-code-source-tool">
+                                                <form class="face-one-code-source-tool-preview" action="https://codesandbox.io/api/v1/sandboxes/define" method="post" target="_blank" >
+                                                    <input type="hidden" name="parameters" value="N4IgZglgNgpgziAXKCA7AJjAHgOgBYAuAtlEqAMYD2qBMNSIAPOhAG4AEE6AvADohQAhgAcAtJiKV-7AHyMA9C1YyQAXwA0INJlwArBMhBUadAg1aCATuwBKMQeQLtu7SzACOAVwhuAFAHI3BwJ_AEpeVAtrO2CAEQB5AFlnVw9vP0D7R3FKIjCI-Xl2KPYABUtKAHM3ODgUty8fGADhCur4OBwgxzCcTDBBTygCAG4IiCJhSksncqqauHV2YDn22oBxCs9hVXYwCqJ2f1b5jq6skLHUCPIhWvYAGRF2bFoMOpjHHABhXKnUUzLCLsEGpDAway-UJA1CguGpAieSyw3zA-Ho5hsdi3QS1ABygiIMD4AhEsRgkmkMjR6Np7EYqwWm0o23YBDwFPgJKEwn4NLpArc4Ms3GAwH5Asl7GEEPIpkQ7AA2gA2AAMSwATOr2AAWVUAXXUEqldPZnLgCsVR38S38cE85DltRtRwA7lZUP59ewjbCTbTVKpjZL5NS_f76XhLKGIrwnFKGW0mVthGyOUS4NyRPwwxGQXHE6d7jLLHKaKK1bsY-H_QXGR1pbLTKKtbszRnRXaHU64P4q7m83Wkw2S2WCKK9W301zgP53ci--xq3n6fJ6xsUwPJQolFv4eEa0HUEeIp8CAlEudhaia4wnqnQ764ehKORPESaDhKjACABRWAfgQABCACeACS6ABDy4gUpQ-SoAeERqJowgOAA1oI344Po1BkEY1BvGYhiYDK4KoOQEDwHhUCUOguJ4AwAB6Oo4AAjAA7GxqogChFRiAQIEygYICMaxACsODKjg3GaN0BCiHArT2OgognMIwmMaqbFsTxICeAQ0DnMETGsZJ0m6XJJlSSxMkgHJOREFZOA2bpJxrJ0lmICAWkauZgb-UAA"/>
+                                                    <button type="submit" class="fi fi-edit face-one-code-source-tool-preview-submit" ></button>
+                                                </form>
+                                                <span class="face-one-code-source-tool-copy fi fi-copy"></span>
+                                            </div>
+                                            <pre><code class="lang-js"><span class="hljs-keyword">var</span> <span class="hljs-type">React</span> = require(<span class="hljs-symbol">'reac</span>t')
+<span class="hljs-keyword">var</span> <span class="hljs-type">ReactDOM</span> = require(<span class="hljs-symbol">'react</span>-dom')
+<span class="hljs-comment">// var Progress = require('progress.react').default;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-type">Progress</span>, {<span class="hljs-type">ProgressGroup</span>} from <span class="hljs-symbol">'progress</span>.react';
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Lap</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+    render () {
+        <span class="hljs-keyword">return</span> (
+            &lt;div className=<span class="hljs-string">"lapDemo"</span> &gt;
+                &lt;<span class="hljs-type">ProgressGroup</span> themes=<span class="hljs-string">"lap"</span>
+                    render={{
+                        percent: [<span class="hljs-number">60</span>, <span class="hljs-number">20</span>, <span class="hljs-number">40</span>],
+                        themes: [ '', <span class="hljs-symbol">'succes</span>s', <span class="hljs-symbol">'war</span>n'] ,
+                    }}
+                /&gt;
+                &lt;hr/&gt;
+                &lt;<span class="hljs-type">ProgressGroup</span> themes=<span class="hljs-string">"lap"</span>&gt;
+                    &lt;<span class="hljs-type">Progress</span> percent={<span class="hljs-number">60</span>} /&gt;
+                    &lt;<span class="hljs-type">Progress</span> percent={<span class="hljs-number">20</span>} themes={<span class="hljs-symbol">'succes</span>s'} /&gt;
+                    &lt;<span class="hljs-type">Progress</span> percent={<span class="hljs-number">40</span>} themes={<span class="hljs-symbol">'war</span>n'} /&gt;
+                &lt;/<span class="hljs-type">ProgressGroup</span>&gt;
+            &lt;/div&gt;
+        )
+    }
+}
+
+<span class="hljs-type">ReactDOM</span>.render(
+    &lt;<span class="hljs-type">Lap</span> /&gt;,
+    document.getElementById(<span class="hljs-symbol">'lap</span>-demo')
+)
+
+
+</code></pre>
+                                        </div>
+                                        
+                                            
+                                            
+                                    </div>
+                                
+<h2 id="customThemes" ><a class="markrun-anchor" href="../Users/rain1/Documents/github/progress.react/#customThemes"><span class="markrun-anchor-link"></span></a>customThemes</h2><p>themes &amp; prefixClassName &amp; className</p>
+<p>使用方式,参照<a href="index.html#customThemes">点此查看</a></p>
+<!-- 
+## render
+复杂使用
+render 优先于 children
+demo use secondary Progress to show new ProgressGroup --></div>
+</div>
+</div>
+</div>
+<script>
+Array.from(document.querySelectorAll('.face-one-nav-item-label')).forEach(function (node) {
+    if (node.href) {
+        var pathname = node.href.replace(/\?.*/, '')
+        if (pathname === location.origin + location.pathname + location.hash) {
+            node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-nav-item-label--on')
+        }
+    }
+})
+var faceOneGetParent = function faceOneGetParent (el, className) {
+   if (el.parentNode.nodeName.toLowerCase() === 'html') {
+       return null
+   }
+   var parentClassName = el.parentNode.getAttribute('class')
+   var classNames = ''
+   if (parentClassName) {
+       classNames = parentClassName.split(' ')
+   }
+   if (classNames.indexOf(className) !== -1) {
+       return el.parentNode
+   }
+   else {
+       return faceOneGetParent(el.parentNode, className)
+   }
+}
+Array.from(document.querySelectorAll('.face-one-nav-item-group-item')).forEach(function (node) {
+    addAvativeClass(node)
+    function addAvativeClass (node)  {
+        if (node.href) {
+            var pathname = node.href.replace(/\?.*/, '')
+            if (pathname === location.origin + location.pathname + location.hash) {
+                node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-nav-item-group-item--on')
+                var parentNode = faceOneGetParent(node, 'face-one-nav-item--group')
+                if (parentNode) {
+                    parentNode.setAttribute('class', parentNode.getAttribute('class') + ' ' + 'face-one-nav-item--group-on')
+                }
+            }
+        }
+    }
+
+})
+</script>
+<div class="face-one-foot">
+    <div class="face-one-foot-F-inner">
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-github"></span>
+                Github
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/progress.react" class="face-one-foot-group-item-link">progress.react</a>
+                - 项目源码
+            </div>
+        </div>
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-link"></span>
+                相关站点
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/component-spec">component-spec</a>
+                - 组件规范
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/module" class="face-one-foot-group-item-link">module</a>
+                - 开源项目脚手架
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://onface.live/" class="face-one-foot-group-item-link">onface.live</a>
+                - 资源集合
+            </div>
+        </div>
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-team"></span>
+                社区
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/progress.react/issues" class="face-one-foot-group-item-link">Github issues</a>
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/progress.react/issues/new" class="face-one-foot-group-item-link">提交bug</a>
+            </div>
+        </div>
+        <div class="face-one-foot-copyright">
+            <a href="../index.html" class="face-one-foot-copyright-title">
+                <img src="theme/media/logo.svg" class="face-one-foot-copyright-title-logo" />
+            </a>
+        </div>
+    </div>
+</div>
+<script>
+PACKAGE_JSON = {
+    name: "progress.react",
+    $repository: "progress.react",
+    version: "0.2.0",
+}
+</script>
+
+<script src="theme/jquery.js"></script>
+<script>delete window.$</script>
+<script src="theme/face/face.js" ></script>
+<script data-markrun-lastrun="true">
+                                            document.write('<scri' + 'pt src="./lineGroup/simple.demo.js?v=0.2.0"' + '" ></sc' + 'ript>')
+                                            </script><script data-markrun-lastrun="true">
+                                            document.write('<scri' + 'pt src="./lineGroup/propsType.demo.js?v=0.2.0"' + '" ></sc' + 'ript>')
+                                            </script><script data-markrun-lastrun="true">
+                                            document.write('<scri' + 'pt src="./lineGroup/color.demo.js?v=0.2.0"' + '" ></sc' + 'ript>')
+                                            </script><script data-markrun-lastrun="true">
+                                            document.write('<scri' + 'pt src="./lineGroup/props.demo.js?v=0.2.0"' + '" ></sc' + 'ript>')
+                                            </script><script data-markrun-lastrun="true">
+                                            document.write('<scri' + 'pt src="./lineGroup/lap.demo.js?v=0.2.0"' + '" ></sc' + 'ript>')
+                                            </script></body>
+</html>

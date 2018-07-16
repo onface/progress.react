@@ -1,0 +1,193 @@
+/** form /lib/less/settings.less **/
+/* customPurple [start] */
+/* customPurple [end] */
+/** form /lib/less/index.less **/
+.face-progress-custom {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+.face-progress-custom-F-text {
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 0.875em;
+  margin: auto;
+}
+.face-progress-custom-F-text--inset {
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  line-height: 1;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+.face-progress-custom-line {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  box-sizing: border-box;
+}
+.face-progress-custom-track {
+  position: relative;
+  width: 100%;
+  height: 0.375em;
+  margin: auto;
+  border-radius: 9999px;
+  background-color: #f5f5f5;
+}
+.face-progress-custom-track-bar {
+  position: absolute;
+  height: 100%;
+  border-radius: inherit;
+  transition: all 0.3s ease-in-out;
+  background-color: #4387fd;
+}
+.face-progress-customGroup .face-progress-custom {
+  margin-bottom: .5em;
+}
+.face-progress-custom-circle {
+  line-height: 0;
+  position: relative;
+  width: 100%;
+}
+.face-progress-custom-circle .face-progress-custom-F-text {
+  font-size: 1.5em;
+  display: table;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.face-progress-custom-circle-svg-track,
+.face-progress-custom-circle-svg-bar {
+  stroke-linecap: round ;
+  stroke-width: 6px ;
+  fill-opacity: 0 ;
+  stroke-dasharray: 295.3097094374406px, 295.3097094374406px;
+  d: path("M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94");
+  transition: all 0.3s ease-in-out;
+}
+.face-progress-custom-circle-svg-track {
+  stroke: #f5f5f5;
+  stroke-dashoffset: 0px;
+}
+.face-progress-custom-circle-svg-bar {
+  stroke: #4387fd;
+  stroke-dashoffset: 295.3097094374406px;
+}
+/** form /lib/less/extend.less **/
+/** form /lib/less/style.less **/
+.face-progress-custom--themes-success .face-progress-custom-track-bar {
+  background-color: #5dc75d;
+}
+.face-progress-custom--themes-success .face-progress-custom-circle-svg-bar {
+  stroke: #5dc75d;
+}
+.face-progress-custom--themes-success .face-progress-custom-circle .face-progress-custom-F-text {
+  color: #5dc75d;
+}
+.face-progress-custom--themes-error .face-progress-custom-track-bar {
+  background-color: #d85c4b;
+}
+.face-progress-custom--themes-error .face-progress-custom-circle-svg-bar {
+  stroke: #d85c4b;
+}
+.face-progress-custom--themes-error .face-progress-custom-circle .face-progress-custom-F-text {
+  color: #d85c4b;
+}
+.face-progress-custom--themes-warn .face-progress-custom-track-bar {
+  background-color: #ff8c00;
+}
+.face-progress-custom--themes-warn .face-progress-custom-circle-svg-bar {
+  stroke: #ff8c00;
+}
+.face-progress-custom--themes-warn .face-progress-custom-circle .face-progress-custom-F-text {
+  color: #ff8c00;
+}
+@keyframes smooth {
+  0% {
+    opacity: 0.4;
+    width: 0;
+  }
+  to {
+    opacity: 0;
+    width: 100%;
+  }
+}
+.face-progress-custom--themes-loading .face-progress-custom-track-bar:before {
+  transition: all .2s linear;
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  border-radius: 99999px;
+  animation: smooth 2s ease-in-out infinite;
+}
+.face-progress-custom--themes-dashboard .face-progress-custom-circle-svg {
+  transform: rotate(225deg);
+}
+.face-progress-custom--themes-dashboard .face-progress-custom-circle-svg-bar {
+  stroke-dashoffset: 221.48228207808043px;
+}
+.face-progress-custom--themes-dashboard .face-progress-custom-circle-svg-track,
+.face-progress-custom--themes-dashboard .face-progress-custom-circle-svg-bar {
+  stroke-dasharray: 221.48228207808043px, 295.3097094374406px;
+}
+.face-progress-customGroup--themes-lap {
+  position: relative;
+}
+.face-progress-customGroup--themes-lap .face-progress-custom:not(:first-child) {
+  position: absolute;
+  top: 0;
+}
+.face-progress-customGroup--themes-lap .face-progress-custom:not(:first-child) .face-progress-custom-track {
+  background-color: transparent;
+}
+/* customPurple [start] */
+.face-progress-custom--themes-customPurple .face-progress-custom-F-text {
+  color: #7b0a84;
+}
+.face-progress-custom--themes-customPurple .face-progress-custom-track {
+  background-color: rgba(227, 210, 230, 0.3);
+}
+.face-progress-custom--themes-customPurple .face-progress-custom-track-bar {
+  background-color: #c571d4;
+}
+.face-progress-custom--themes-customPurple .face-progress-custom-circle-svg-track {
+  stroke: rgba(227, 210, 230, 0.3);
+}
+.face-progress-custom--themes-customPurple .face-progress-custom-circle-svg-bar {
+  stroke: #c571d4;
+}
+.face-progress-custom--themes-customPurple.face-progress-custom--themes-success .face-progress-custom-track-bar {
+  background-color: #5dc75d;
+}
+.face-progress-custom--themes-customPurple.face-progress-custom--themes-success .face-progress-custom-circle-svg-bar {
+  stroke: #5dc75d;
+}
+.face-progress-custom--themes-customPurple.face-progress-custom--themes-success .face-progress-custom-circle .face-progress-custom-F-text {
+  color: #5dc75d;
+}
+.face-progress-custom--themes-customPurple.face-progress-custom--themes-error .face-progress-custom-track-bar {
+  background-color: #d85c4b;
+}
+.face-progress-custom--themes-customPurple.face-progress-custom--themes-error .face-progress-custom-circle-svg-bar {
+  stroke: #d85c4b;
+}
+.face-progress-custom--themes-customPurple.face-progress-custom--themes-error .face-progress-custom-circle .face-progress-custom-F-text {
+  color: #d85c4b;
+}
+.face-progress-custom--themes-customPurple.face-progress-custom--themes-warn .face-progress-custom-track-bar {
+  background-color: #ff8c00;
+}
+.face-progress-custom--themes-customPurple.face-progress-custom--themes-warn .face-progress-custom-circle-svg-bar {
+  stroke: #ff8c00;
+}
+.face-progress-custom--themes-customPurple.face-progress-custom--themes-warn .face-progress-custom-circle .face-progress-custom-F-text {
+  color: #ff8c00;
+}
+/* customPurple [end] */
